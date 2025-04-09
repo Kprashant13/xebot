@@ -21,7 +21,7 @@
       <p class="subtitle">No boilerplate. No IDEs. Just clean intent and high-impact prompts. Assess your devs for the AI era.</p>
       <div class="actions">
         <a href="#early" class="btn primary">Get Early Access →</a>
-        <a href="#features" class="btn secondary">How it works?</a>
+        <a href="#early" class="btn secondary">How it works?</a>
       </div>
     </section>
 
@@ -54,11 +54,40 @@
     <section id="early" class="early-access">
       <h2>Get early access to Xebot</h2>
       <p>Sign up now – we’ll let you know as soon as we launch.</p>
-      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <input type="email" name="email" placeholder="Enter your email" required />
-        <button type="submit">Notify Me</button>
+      <form action="https://formspree.io/f/xpwpkwny" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Work Email" required />
+        <input type="tel" name="phone" placeholder="Phone Number (Optional)" />
+        <button type="submit">Request Early Access</button>
+        <p id="form-message" class="thank-you-message" style="display: none; margin-top: 1rem; color: #00ffe7;"></p>
       </form>
     </section>
   </div>
+  <script>
+    const form = document.getElementById("early-access-form");
+    const message = document.getElementById("form-message");
+  
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault(); // prevent default redirect
+  
+      const formData = new FormData(form);
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+          Accept: "application/json"
+        }
+      });
+  
+      if (response.ok) {
+        form.reset();
+        message.style.display = "block";
+        message.textContent = "🎉 Thank you! We'll be in touch soon.";
+      } else {
+        message.style.display = "block";
+        message.textContent = "Oops! Something went wrong. Please try again.";
+      }
+    });
+  </script>  
 </body>
 </html>

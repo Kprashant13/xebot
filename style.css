@@ -159,45 +159,61 @@ body {
   }
   
   /* Early Access */
-  .early-access {
-    margin-top: 6rem;
-    text-align: center;
-    padding-bottom: 4rem;
-  }
-  
-  .early-access h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  
-  .early-access p {
-    color: #ccc;
-    margin-bottom: 2rem;
-  }
-  
-  .early-access form {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-  
-  .early-access input {
-    padding: 0.8rem;
-    width: 260px;
-    border-radius: 5px;
-    border: none;
-    font-size: 1rem;
-  }
-  
-  .early-access button {
-    background-color: #00ffe7;
-    border: none;
-    color: black;
-    font-weight: 700;
-    padding: 0.8rem 1.4rem;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-  }
+.early-access {
+  margin-top: 6rem;
+  text-align: center;
+  padding-bottom: 4rem;
+}
+
+.early-access h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.early-access p {
+  color: #ccc;
+  margin-bottom: 2rem;
+}
+
+.early-access form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.early-access input {
+  padding: 0.9rem 1rem;
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #333;
+  background-color: #111;
+  color: white;
+  font-size: 1rem;
+}
+
+.early-access input::placeholder {
+  color: #777;
+}
+
+.early-access button {
+  background-color: #00ffe7;
+  color: black;
+  font-weight: 700;
+  padding: 0.9rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.early-access button:hover {
+  background-color: #00d9c5;
+}
+
   
