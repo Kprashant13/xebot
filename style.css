@@ -1,0 +1,203 @@
+/* Base Setup */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #000;
+    color: white;
+    overflow-x: hidden;
+    position: relative;
+  }
+  
+  /* Dot Grid Background - now slightly bigger */
+  .grid-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: radial-gradient(circle, #333 1px, transparent 1px);
+    background-size: 26px 26px;
+    z-index: -1;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    font-size: 1rem;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 900;
+  }
+  
+  .start-btn {
+    color: white;
+    background-color: #ff38a1;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  /* Hero Section */
+  .hero-container {
+    padding: 0 2rem;
+    text-align: center;
+  }
+  
+  .hero {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .hero h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+  }
+  
+  .subtitle {
+    color: #aaa;
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .btn {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.9rem 1.5rem;
+    border-radius: 8px;
+    transition: 0.3s ease;
+    font-size: 1rem;
+  }
+  
+  .primary {
+    background-color: #ff38a1;
+    color: #fff;
+  }
+  
+  .primary:hover {
+    background-color: #e02f8e;
+  }
+  
+  .secondary {
+    background-color: transparent;
+    border: 1px solid #444;
+    color: white;
+  }
+  
+  .secondary:hover {
+    background-color: #111;
+  }
+  
+  /* Vibe Coding Section */
+  .vibe-section {
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 0 1.5rem;
+    text-align: center;
+  }
+  
+  .vibe-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .vibe-section p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #ccc;
+    margin-bottom: 1rem;
+  }
+  
+  /* Features Grid Section */
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 5rem auto 3rem auto;
+    max-width: 1000px;
+    padding: 0 1.5rem;
+  }
+  
+  .card {
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: left;
+    transition: 0.3s ease;
+  }
+  
+  .card:hover {
+    background: #181818;
+    transform: scale(1.02);
+  }
+  
+  .card h2 {
+    margin-bottom: 0.75rem;
+    font-size: 1.4rem;
+  }
+  
+  .card p {
+    color: #ccc;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Early Access */
+  .early-access {
+    margin-top: 6rem;
+    text-align: center;
+    padding-bottom: 4rem;
+  }
+  
+  .early-access h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .early-access p {
+    color: #ccc;
+    margin-bottom: 2rem;
+  }
+  
+  .early-access form {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .early-access input {
+    padding: 0.8rem;
+    width: 260px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+  }
+  
+  .early-access button {
+    background-color: #00ffe7;
+    border: none;
+    color: black;
+    font-weight: 700;
+    padding: 0.8rem 1.4rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
