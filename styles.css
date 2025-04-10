@@ -809,6 +809,12 @@ section.visible {
   .container {
       padding: 0 1.5rem;
   }
+  .hero {
+    height: auto;
+    min-height: 80vh;
+    padding-top: 120px;
+    padding-bottom: 60px;
+  }
   
   .hero-title {
       font-size: 2.2rem;
@@ -857,6 +863,39 @@ section.visible {
 }
 
 @media (max-width: 576px) {
+  .hero {
+    min-height: 70vh;
+    padding-top: 100px;
+    padding-bottom: 40px;
+  }
+  .hero-content {
+    margin-top: 0;
+  }
+  .hero .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .particle-1 {
+    width: 200px;
+    height: 200px;
+    top: 5%;
+    right: 5%;
+  }
+
+  .particle-2 {
+    width: 250px;
+    height: 250px;
+    bottom: -5%;
+    left: 20%;
+  }
+  .particle-3 {
+    width: 150px;
+    height: 150px;
+    top: 40%;
+    left: 5%;
+  }
+
   .logo h1 {
       font-size: 1.5rem;
   }
