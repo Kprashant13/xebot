@@ -156,7 +156,7 @@ nav .container {
 .hero-subtitle {
   font-size: 1.5rem;
   color: var(--text-light);
-  margin-bottom: 4 rem;
+  margin-bottom: 5 rem;
   max-width: 600px;
 }
 
@@ -819,10 +819,12 @@ section.visible {
   
   .hero-title {
       font-size: 2.2rem;
+      margin-bottom: 3rem;
   }
   
   .hero-subtitle {
       font-size: 1.1rem;
+      margin-bottom: 4rem;
   }
   
   .value-items {
@@ -868,6 +870,13 @@ section.visible {
     min-height: 70vh;
     padding-top: 100px;
     padding-bottom: 40px;
+  }
+  .hero-title {
+    margin-bottom: 3.5rem;  /* Even more space on smaller screens */
+    font-size: 2.8rem;      /* Slightly smaller font but still impactful */
+  }
+  .hero-subtitle {
+    margin-bottom: 4.5rem;  /* More space before the button on smaller screens */
   }
   .hero-content {
     margin-top: 0;
