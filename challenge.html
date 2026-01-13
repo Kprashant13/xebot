@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Challenges - Xebot | AI-Age Coding Interview Platform</title>
+    <meta name="description" content="Practice AI-assisted coding challenges. Prepare for modern tech interviews with real-world problems.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>X</text></svg>">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">
+                <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32" height="32" rx="8" fill="url(#gradient)"/>
+                    <path d="M8 8L16 16M16 16L24 24M16 16L24 8M16 16L8 24" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    <defs><linearGradient id="gradient" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/></linearGradient></defs>
+                </svg>
+                XEBOT
+            </a>
+            <ul class="navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="companies.html">For Companies</a></li>
+                <li><a href="challenge.html" class="active">Practice</a></li>
+            </ul>
+            <div class="navbar-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                    <svg class="moon-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+                <a href="login.html" class="btn btn-secondary">Log in</a>
+                <a href="index.html#signup" class="btn btn-primary">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" style="min-height: 50vh;">
+        <div class="hero-grid"></div>
+        <div class="hero-glow"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="hero-badge-dot"></span>
+                    Free Practice
+                </div>
+                <h1>Practice <span class="gradient-text">AI-assisted</span> coding</h1>
+                <p class="hero-description">
+                    Prepare for modern interviews with real-world challenges. Use AI assistants just like in actual interviews.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters -->
+    <section class="section reveal" style="padding-top: 0;">
+        <div class="container">
+            <div class="flex gap-md mb-xl" style="flex-wrap: wrap;">
+                <button class="btn btn-primary btn-sm" data-filter="all">All Challenges</button>
+                <button class="btn btn-secondary btn-sm" data-filter="frontend">Frontend</button>
+                <button class="btn btn-secondary btn-sm" data-filter="backend">Backend</button>
+                <button class="btn btn-secondary btn-sm" data-filter="fullstack">Full Stack</button>
+                <button class="btn btn-secondary btn-sm" data-filter="data">Data & ML</button>
+                <button class="btn btn-secondary btn-sm" data-filter="devops">DevOps</button>
+            </div>
+
+            <!-- Challenge Grid -->
+            <div class="challenge-grid">
+                <!-- Challenge 1 -->
+                <div class="challenge-card" data-category="backend">
+                    <div class="challenge-header">
+                        <div>
+                            <h3 class="challenge-title">Build a Rate Limiter</h3>
+                            <p class="challenge-company">Common at: Stripe, Cloudflare</p>
+                        </div>
+                        <span class="challenge-badge challenge-badge-medium">Medium</span>
+                    </div>
+                    <p class="feature-description mb-md">
+                        Design and implement a distributed rate limiter with sliding window algorithm. Focus on observability and debugging.
+                    </p>
+                    <div class="challenge-tags">
+                        <span class="challenge-tag">Python</span>
+                        <span class="challenge-tag">Redis</span>
+                        <span class="challenge-tag">System Design</span>
+                    </div>
+                    <div class="challenge-meta">
+                        <span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                            45 min
+                        </span>
+                        <span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                            2.4k completed
+                        </span>
+                    </div>
+                    <a href="#" class="btn btn-gradient btn-sm mt-lg w-full start-challenge">Start Challenge</a>
+                </div>
+
+                <!-- Challenge 2 -->
+                <div class="challenge-card" data-category="frontend">
+                    <div class="challenge-header">
+                        <div>
+                            <h3 class="challenge-title">Real-time Dashboard</h3>
+                            <p class="challenge-company">Common at: Datadog, Grafana</p>
+                        </div>
+                        <span class="challenge-badge challenge-badge-hard">Hard</span>
+                    </div>
+                    <p class="feature-description mb-md">
+                        Build a real-time metrics dashboard with WebSocket updates, efficient re-rendering, and accessibility.
+                    </p>
+                    <div class="challenge-tags">
+                        <span class="challenge-tag">React</span>
+                        <span class="challenge-tag">TypeScript</span>
+                        <span class="challenge-tag">WebSocket</span>
+                    </div>
+                    <div class="challenge-meta">
+                        <span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                            60 min
+                        </span>
+                        <span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                            1.8k completed
+                        </span>
+                    </div>
+                    <a href="#" class="btn btn-gradient btn-sm mt-lg w-full start-challenge">Start Challenge</a>
+                </div>
+
+                <!-- Challenge 3 -->
+                <div class="challenge-card" data-category="fullstack">
+                    <div class="challenge-header">
+                        <div>
+                            <h3 class="challenge-title">API with Observability</h3>
+                            <p class="challenge-company">Common at: OpenAI, Anthropic</p>
+                        </div>
+                        <span class="challenge-badge challenge-badge-medium">Medium</span>
+                    </div>
+                    <p class="feature-description mb-md">
+                        Build a REST API with proper logging, tracing, and metrics. Debug production issues from traces.
+                    </p>
+                    <div class="challenge-tags">
+                        <span class="challenge-tag">Node.js</span>
+                        <span class="challenge-tag">OpenTelemetry</span>
+                        <span class="challenge-tag">Observability</span>
+                    </div>
+                    <div class="challenge-meta">
+                        <span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                            45 min
+                        </span>
+                        <span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                            3.1k completed
+                        </span>
+                    </div>
+                    <a href="#" class="btn btn-gradient btn-sm mt-lg w-full start-challenge">Start Challenge</a>
+                </div>
+
+                <!-- Challenge 4 -->
+                <div class="challenge-card" data-category="data">
+                    <div class="challenge-header">
+                        <div>
+                            <h3 class="challenge-title">ML Pipeline Debug</h3>
+                            <p class="challenge-company">Common at: Scale AI, Hugging Face</p>
+                        </div>
+                        <span class="challenge-badge challenge-badge-hard">Hard</span>
+                    </div>
+                    <p class="feature-description mb-md">
+                        Debug a failing ML training pipeline. Find data issues, fix preprocessing bugs, and improve model metrics.
+                    </p>
+                    <div class="challenge-tags">
+                        <span class="challenge-tag">Python</span>
+                        <span class="challenge-tag">PyTorch</span>
+                        <span class="challenge-tag">Debugging</span>
+                    </div>
+                    <div class="challenge-meta">
+                        <span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                            60 min
+                        </span>
+                        <span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                            892 completed
+                        </span>
+                    </div>
+                    <a href="#" class="btn btn-gradient btn-sm mt-lg w-full start-challenge">Start Challenge</a>
+                </div>
+
+                <!-- Challenge 5 -->
+                <div class="challenge-card" data-category="devops">
+                    <div class="challenge-header">
+                        <div>
+                            <h3 class="challenge-title">K8s Deployment Fix</h3>
+                            <p class="challenge-company">Common at: Google, AWS</p>
+                        </div>
+                        <span class="challenge-badge challenge-badge-medium">Medium</span>
+                    </div>
+                    <p class="feature-description mb-md">
+                        Debug a failing Kubernetes deployment. Fix resource limits, health checks, and rolling update issues.
+                    </p>
+                    <div class="challenge-tags">
+                        <span class="challenge-tag">Kubernetes</span>
+                        <span class="challenge-tag">YAML</span>
+                        <span class="challenge-tag">Debugging</span>
+                    </div>
+                    <div class="challenge-meta">
+                        <span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                            30 min
+                        </span>
+                        <span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                            1.5k completed
+                        </span>
+                    </div>
+                    <a href="#" class="btn btn-gradient btn-sm mt-lg w-full start-challenge">Start Challenge</a>
+                </div>
+
+                <!-- Challenge 6 -->
+                <div class="challenge-card" data-category="backend">
+                    <div class="challenge-header">
+                        <div>
+                            <h3 class="challenge-title">Event-Driven System</h3>
+                            <p class="challenge-company">Common at: Uber, Lyft</p>
+                        </div>
+                        <span class="challenge-badge challenge-badge-easy">Easy</span>
+                    </div>
+                    <p class="feature-description mb-md">
+                        Implement an event-driven order processing system with proper error handling and retry logic.
+                    </p>
+                    <div class="challenge-tags">
+                        <span class="challenge-tag">Go</span>
+                        <span class="challenge-tag">Kafka</span>
+                        <span class="challenge-tag">Events</span>
+                    </div>
+                    <div class="challenge-meta">
+                        <span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                            30 min
+                        </span>
+                        <span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                            4.2k completed
+                        </span>
+                    </div>
+                    <a href="#" class="btn btn-gradient btn-sm mt-lg w-full start-challenge">Start Challenge</a>
+                </div>
+
+                <!-- Challenge 7 -->
+                <div class="challenge-card" data-category="frontend">
+                    <div class="challenge-header">
+                        <div>
+                            <h3 class="challenge-title">Accessible Form Builder</h3>
+                            <p class="challenge-company">Common at: Typeform, Notion</p>
+                        </div>
+                        <span class="challenge-badge challenge-badge-easy">Easy</span>
+                    </div>
+                    <p class="feature-description mb-md">
+                        Build a drag-and-drop form builder with full keyboard navigation and screen reader support.
+                    </p>
+                    <div class="challenge-tags">
+                        <span class="challenge-tag">React</span>
+                        <span class="challenge-tag">A11y</span>
+                        <span class="challenge-tag">DnD</span>
+                    </div>
+                    <div class="challenge-meta">
+                        <span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                            45 min
+                        </span>
+                        <span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                            2.8k completed
+                        </span>
+                    </div>
+                    <a href="#" class="btn btn-gradient btn-sm mt-lg w-full start-challenge">Start Challenge</a>
+                </div>
+
+                <!-- Challenge 8 -->
+                <div class="challenge-card" data-category="fullstack">
+                    <div class="challenge-header">
+                        <div>
+                            <h3 class="challenge-title">OAuth Implementation</h3>
+                            <p class="challenge-company">Common at: Auth0, Okta</p>
+                        </div>
+                        <span class="challenge-badge challenge-badge-medium">Medium</span>
+                    </div>
+                    <p class="feature-description mb-md">
+                        Implement OAuth 2.0 with PKCE flow. Handle tokens securely and implement refresh token rotation.
+                    </p>
+                    <div class="challenge-tags">
+                        <span class="challenge-tag">Node.js</span>
+                        <span class="challenge-tag">Security</span>
+                        <span class="challenge-tag">OAuth</span>
+                    </div>
+                    <div class="challenge-meta">
+                        <span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                            45 min
+                        </span>
+                        <span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                            1.9k completed
+                        </span>
+                    </div>
+                    <a href="#" class="btn btn-gradient btn-sm mt-lg w-full start-challenge">Start Challenge</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How Practice Works -->
+    <section class="section bg-secondary reveal">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">How It Works</span>
+                <h2 class="section-title">Practice like the real interview</h2>
+            </div>
+
+            <div class="feature-grid" style="grid-template-columns: repeat(3, 1fr);">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">AI Assistants Included</h3>
+                    <p class="feature-description">
+                        Use Claude, ChatGPT, or Copilot during practice. Learn to collaborate effectively with AI.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Real-Time Feedback</h3>
+                    <p class="feature-description">
+                        Get instant feedback on your code, AI usage patterns, and debugging approach.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Detailed Reports</h3>
+                    <p class="feature-description">
+                        See how you compare across all 12 evaluation dimensions. Track improvement over time.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section reveal">
+        <div class="cta-glow"></div>
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to ace your next interview?</h2>
+                <p>Create a free account to track your progress and unlock more challenges.</p>
+                <div class="cta-actions">
+                    <a href="index.html#signup" class="btn btn-gradient btn-lg">Create Free Account</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+                <p class="footer-copyright">2025 Xebot. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        const sunIcon = themeToggle.querySelector('.sun-icon');
+        const moonIcon = themeToggle.querySelector('.moon-icon');
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+        if (savedTheme === 'dark') { sunIcon.classList.add('hidden'); moonIcon.classList.remove('hidden'); }
+        themeToggle.addEventListener('click', () => {
+            const newTheme = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            sunIcon.classList.toggle('hidden'); moonIcon.classList.toggle('hidden');
+        });
+
+        // Scroll Animations
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Filter functionality
+        const filterBtns = document.querySelectorAll('[data-filter]');
+        const challengeCards = document.querySelectorAll('.challenge-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filter = btn.dataset.filter;
+
+                filterBtns.forEach(b => {
+                    b.classList.remove('btn-primary');
+                    b.classList.add('btn-secondary');
+                });
+                btn.classList.remove('btn-secondary');
+                btn.classList.add('btn-primary');
+
+                challengeCards.forEach(card => {
+                    if (filter === 'all' || card.dataset.category === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Start challenge buttons
+        document.querySelectorAll('.start-challenge').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                alert('Sign up for free to start this challenge!');
+            });
+        });
+    </script>
+</body>
+</html>

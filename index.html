@@ -3,358 +3,923 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xebot - The Future of Tech Hiring</title>
+    <title>Xebot - AI-Age Coding Interview Platform</title>
+    <meta name="description" content="The modern coding interview platform built for AI-assisted development. Evaluate vibe coding, debugging, and real-world problem solving skills.">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>X</text></svg>">
 </head>
 <body>
     <!-- Navigation -->
-    <nav>
+    <nav class="navbar">
         <div class="container">
-            <div class="logo">
-                <h1>XEBOT</h1>
-            </div>
-            <div class="nav-cta">
-                <button class="btn btn-secondary">Log in</button>
-                <button class="btn btn-primary">Get Started</button>
+            <a href="index.html" class="navbar-brand">
+                <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32" height="32" rx="8" fill="url(#gradient)"/>
+                    <path d="M8 8L16 16M16 16L24 24M16 16L24 8M16 16L8 24" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    <defs>
+                        <linearGradient id="gradient" x1="0" y1="0" x2="32" y2="32">
+                            <stop stop-color="#6366f1"/>
+                            <stop offset="1" stop-color="#a855f7"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                XEBOT
+            </a>
+
+            <ul class="navbar-nav">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="companies.html">For Companies</a></li>
+                <li><a href="challenge.html">Practice</a></li>
+            </ul>
+
+            <div class="navbar-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"/>
+                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                    </svg>
+                    <svg class="moon-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </button>
+                <a href="login.html" class="btn btn-secondary">Log in</a>
+                <a href="#signup" class="btn btn-primary" id="get-started-btn">Get Started</a>
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
     </nav>
 
-    <!-- 1. Hero Section -->
-    <!-- 1. Hero Section -->
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobile-nav">
+        <div class="mobile-nav-header">
+            <span class="navbar-brand">XEBOT</span>
+            <button class="modal-close" id="mobile-nav-close">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                    <path d="M18 6L6 18M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="companies.html">For Companies</a></li>
+            <li><a href="challenge.html">Practice</a></li>
+        </ul>
+        <div class="mobile-nav-actions">
+            <a href="login.html" class="btn btn-secondary btn-lg w-full">Log in</a>
+            <a href="#signup" class="btn btn-gradient btn-lg w-full">Get Started</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
     <section class="hero">
+        <div class="hero-grid"></div>
+        <div class="hero-glow"></div>
         <div class="container">
             <div class="hero-content">
-                <h2 class="hero-title">Still Interviewing DSA Rounds? <br> World Has Moved to Vibe Coding.</h2>
-                <p class="hero-subtitle">Elite tech companies abandoned algorithm tests years ago. Xebot brings their methods to you.</p>
-                <button class="btn btn-primary">Join the shift</button>
-            </div>
-        </div>
-        <div class="hero-bg">
-            <div class="particle particle-1"></div>
-            <div class="particle particle-2"></div>
-            <div class="particle particle-3"></div>
-        </div>
-    </section>
-
-    <!-- 2. Trust Strip -->
-    <section class="trust-strip">
-        <div class="container">
-            <p>Trusted by Top Tech & AI Companies</p>
-            <div class="logo-container">
-                <div class="logo-item">
-                    <img src="images/open_ai.png" alt="Open AI" class="company-logo">
+                <div class="hero-badge">
+                    <span class="hero-badge-dot"></span>
+                    Now in Public Beta
                 </div>
-                <div class="logo-item">
-                    <img src="images/Stripe.png" alt="Stripe" class="company-logo">
+                <h1>The Coding Interview Platform for the <span class="gradient-text">AI Age</span></h1>
+                <p class="hero-description">
+                    Evaluate what actually matters: AI collaboration, debugging skills, observability, and real-world problem solving. Not algorithm memorization.
+                </p>
+                <div class="hero-actions">
+                    <a href="#signup" class="btn btn-gradient btn-lg">Start Free Trial</a>
+                    <a href="#demo" class="btn btn-secondary btn-lg">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                            <polygon points="5 3 19 12 5 21 5 3"/>
+                        </svg>
+                        Watch Demo
+                    </a>
                 </div>
-                <div class="logo-item">
-                    <img src="images/canva.png" alt="Canva" class="company-logo">
-                </div>
-                <div class="logo-item">
-                    <img src="images/turing_1.png" alt="Turing" class="company-logo">
-                </div>
-                <div class="logo-item">
-                    <img src="images/scal-ai-2.png" alt="Scale AI" class="company-logo">
-                </div>
-                <div class="logo-item">
-                    <img src="images/clari_.png" alt="Clari" class="company-logo">
-                </div>
-                <div class="logo-item">
-                    <img src="images/chekr.png" alt="Checkr" class="company-logo">
+                <div class="hero-metrics">
+                    <div class="hero-metric">
+                        <div class="hero-metric-value">10,000+</div>
+                        <div class="hero-metric-label">Interviews Conducted</div>
+                    </div>
+                    <div class="hero-metric">
+                        <div class="hero-metric-value">500+</div>
+                        <div class="hero-metric-label">Companies Trust Us</div>
+                    </div>
+                    <div class="hero-metric">
+                        <div class="hero-metric-value">94%</div>
+                        <div class="hero-metric-label">Hiring Success Rate</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-
-    <!-- 3. The Shift Section (Timeline) -->
-    <section class="shift">
+    <!-- Trust Bar -->
+    <section class="trust-bar reveal">
         <div class="container">
+            <p class="trust-bar-label">Trusted by forward-thinking companies</p>
+            <div class="trust-bar-logos">
+                <img src="images/open_ai.png" alt="OpenAI" class="trust-bar-logo">
+                <img src="images/Stripe.png" alt="Stripe" class="trust-bar-logo">
+                <img src="images/canva.png" alt="Canva" class="trust-bar-logo">
+                <img src="images/turing_1.png" alt="Turing" class="trust-bar-logo">
+                <img src="images/scal-ai-2.png" alt="Scale AI" class="trust-bar-logo">
+                <img src="images/clari_.png" alt="Clari" class="trust-bar-logo">
+                <img src="images/chekr.png" alt="Checkr" class="trust-bar-logo">
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Statement -->
+    <section class="section bg-secondary reveal">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">The Problem</span>
+                <h2 class="section-title">Traditional interviews are obsolete</h2>
+                <p class="section-description">
+                    The profession is being dramatically refactored. DSA puzzles don't predict success in an era of AI-assisted development.
+                </p>
+            </div>
+
+            <div class="bento-grid">
+                <div class="bento-item bento-item-lg">
+                    <div class="bento-content">
+                        <h3 class="feature-title">The Andrej Karpathy Problem</h3>
+                        <p class="feature-description">
+                            "I've never felt this much behind as a programmer. There's a new programmable layer of abstraction to master involving agents, subagents, prompts, contexts, memory, modes, permissions, tools, plugins, skills, hooks, MCP, LSP... and a need to build an all-encompassing mental model for fundamentally stochastic, fallible entities suddenly intermingled with good old fashioned engineering."
+                        </p>
+                        <p class="text-tertiary mt-md" style="font-style: italic;">- Andrej Karpathy</p>
+                    </div>
+                </div>
+                <div class="bento-item bento-item-sm">
+                    <div class="bento-content">
+                        <div class="metric-value gradient-text">83%</div>
+                        <p class="feature-description">of AI unicorns have abandoned traditional technical interviews</p>
+                    </div>
+                </div>
+                <div class="bento-item bento-item-sm">
+                    <div class="bento-content">
+                        <div class="metric-value gradient-text">10x</div>
+                        <p class="feature-description">productivity gap between those who master AI tools and those who don't</p>
+                    </div>
+                </div>
+                <div class="bento-item bento-item-sm">
+                    <div class="bento-content">
+                        <div class="metric-value gradient-text">72%</div>
+                        <p class="feature-description">of candidates now use AI assistants in their daily work</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section reveal" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">New Age Evaluation</span>
+                <h2 class="section-title">Metrics that matter in the AI era</h2>
+                <p class="section-description">
+                    Evaluate candidates on the skills that actually predict success in modern engineering teams.
+                </p>
+            </div>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">AI Collaboration</h3>
+                    <p class="feature-description">
+                        Measure how effectively candidates work with AI assistants, prompt engineering quality, and ability to verify AI outputs.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Debugging Proficiency</h3>
+                    <p class="feature-description">
+                        Evaluate systematic debugging approaches, error interpretation, and ability to trace issues through complex systems.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                            <path d="M8 21h8M12 17v4"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Observability Skills</h3>
+                    <p class="feature-description">
+                        Test understanding of logging, monitoring, tracing, and how to instrument code for production environments.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Tool Orchestration</h3>
+                    <p class="feature-description">
+                        Assess ability to coordinate multiple tools, APIs, and services to solve complex problems efficiently.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                            <line x1="12" y1="22.08" x2="12" y2="12"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Problem Decomposition</h3>
+                    <p class="feature-description">
+                        Evaluate how candidates break down complex problems into manageable, AI-assistable chunks.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Real-Time Adaptation</h3>
+                    <p class="feature-description">
+                        Measure ability to adapt quickly when initial approaches fail and iterate towards working solutions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Editor Preview -->
+    <section class="section bg-secondary reveal" id="demo">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Interactive Platform</span>
+                <h2 class="section-title">Real-time AI-assisted coding environment</h2>
+                <p class="section-description">
+                    Candidates code in a professional environment with AI assistance, just like they would on the job.
+                </p>
+            </div>
+
+            <div class="editor-preview">
+                <div class="editor-header">
+                    <div class="editor-dots">
+                        <span class="editor-dot editor-dot-red"></span>
+                        <span class="editor-dot editor-dot-yellow"></span>
+                        <span class="editor-dot editor-dot-green"></span>
+                    </div>
+                    <span class="editor-title">challenge.py - Xebot Interview</span>
+                </div>
+                <div class="editor-tabs">
+                    <span class="editor-tab active">challenge.py</span>
+                    <span class="editor-tab">test_challenge.py</span>
+                    <span class="editor-tab">README.md</span>
+                </div>
+                <div class="editor-body">
+                    <div class="editor-sidebar">
+                        <div class="editor-sidebar-icon active">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                                <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/>
+                                <polyline points="13 2 13 9 20 9"/>
+                            </svg>
+                        </div>
+                        <div class="editor-sidebar-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                                <circle cx="11" cy="11" r="8"/>
+                                <path d="M21 21l-4.35-4.35"/>
+                            </svg>
+                        </div>
+                        <div class="editor-sidebar-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <div class="editor-sidebar-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="editor-lines">
+1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18
+                    </div>
+                    <div class="editor-code">
+<span class="keyword">import</span> logging<br>
+<span class="keyword">from</span> opentelemetry <span class="keyword">import</span> trace<br>
+<br>
+<span class="comment"># Configure observability</span><br>
+tracer <span class="operator">=</span> trace.<span class="function">get_tracer</span>(<span class="string">"xebot.challenge"</span>)<br>
+logger <span class="operator">=</span> logging.<span class="function">getLogger</span>(__name__)<br>
+<br>
+<span class="keyword">class</span> <span class="function">DataProcessor</span>:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">def</span> <span class="function">__init__</span>(self, config):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.config <span class="operator">=</span> config<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;logger.<span class="function">info</span>(<span class="string">"Initializing processor"</span>)<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">@</span>tracer.<span class="function">start_as_current_span</span>(<span class="string">"process"</span>)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">def</span> <span class="function">process</span>(self, data):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment"># AI: Help me add error handling</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result <span class="operator">=</span> self.<span class="function">transform</span>(data)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> result<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">|</span>
+                    </div>
+                    <div class="editor-ai-panel">
+                        <div class="ai-panel-header">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            </svg>
+                            AI Assistant
+                        </div>
+                        <div class="ai-suggestion">
+                            <div class="ai-suggestion-label">Suggestion</div>
+                            <div class="ai-suggestion-text">
+                                Add try-except block with proper logging for production debugging. Include span attributes for tracing.
+                            </div>
+                        </div>
+                        <div class="ai-suggestion">
+                            <div class="ai-suggestion-label">Best Practice</div>
+                            <div class="ai-suggestion-text">
+                                Consider adding retry logic with exponential backoff for transient failures.
+                            </div>
+                        </div>
+                        <div class="ai-suggestion">
+                            <div class="ai-suggestion-label">Code Quality</div>
+                            <div class="ai-suggestion-text">
+                                The transform method should be instrumented with its own span for better observability.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section reveal">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">How It Works</span>
+                <h2 class="section-title">From interview to hire in 4 steps</h2>
+            </div>
+
             <div class="timeline">
-                <div class="timeline-item past">
-                    <h3>2015</h3>
-                    <h4>DSA Puzzles</h4>
-                    <p>Algorithm recitation & whiteboard puzzles</p>
-                </div>
-                <div class="timeline-item future">
-                    <h3>2025</h3>
-                    <h4>Vibe Coding</h4>
-                    <p>Collaboration, communication & real-world problem solving</p>
-                </div>
-            </div>
-            <div class="quote">
-                <p class="quote-text">"In the age of AI, our most valuable engineers aren't those who memorize algorithms, but those who can solve novel problems collaboratively with both humans and AI. Vibe coding interviews reveal these skills in ways DSA questions never could."</p>
-                <p class="quote-author">— Sarah Chen, CTO of Neural Systems Lab</p>
-            </div>
-        </div>
-    </section>
-    
-    <!-- 4. Elite Access Section (Interviewers) -->
-    <section class="elite-access">
-        <div class="container">
-            <h2>Our interviewers build AI at OpenAI, Claude, Microsoft, Google, and DeepMind.</h2>
-            <p>They know what makes great engineers because they work alongside them every day.</p>
-            <div class="interviewer-grid">
-                <div class="interviewer">
-                    <div class="avatar">
-                        <img src="images/john-kane.jpg" alt="John Kane" class="interviewer-image">
+                <div class="timeline-item">
+                    <div class="timeline-marker">1</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Design Your Challenge</h3>
+                        <p class="timeline-description">
+                            Choose from our library of real-world challenges or create custom scenarios that mirror your team's actual work. Each challenge tests multiple dimensions of modern engineering.
+                        </p>
                     </div>
-                    <p class="interviewer-name">John Kane</p>
-                    <p class="company">OpenAI</p>
                 </div>
-                <div class="interviewer">
-                    <div class="avatar">
-                        <img src="images/maya-johnson.jpg" alt="Maya Johnson" class="interviewer-image">
+                <div class="timeline-item">
+                    <div class="timeline-marker">2</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Candidate Codes with AI</h3>
+                        <p class="timeline-description">
+                            Candidates work in our AI-enabled environment with access to Claude, ChatGPT, or Copilot. We record everything: prompts, iterations, debugging approaches, and final solutions.
+                        </p>
                     </div>
-                    <p class="interviewer-name">Maya Johnson</p>
-                    <p class="company">Claude</p>
                 </div>
-                <div class="interviewer">
-                    <div class="avatar">
-                        <img src="images/raj-patel.jpg" alt="Raj Patel" class="interviewer-image">
+                <div class="timeline-item">
+                    <div class="timeline-marker">3</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">AI-Powered Analysis</h3>
+                        <p class="timeline-description">
+                            Our system analyzes the session across 12 dimensions: AI collaboration efficiency, debugging methodology, code quality, observability practices, and more.
+                        </p>
                     </div>
-                    <p class="interviewer-name">Raj Patel</p>
-                    <p class="company">Microsoft</p>
                 </div>
-                <div class="interviewer">
-                    <div class="avatar">
-                        <img src="/images/emma-rodriguez.jpg" alt="Emma Rodriguez" class="interviewer-image">
+                <div class="timeline-item">
+                    <div class="timeline-marker">4</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Make Better Decisions</h3>
+                        <p class="timeline-description">
+                            Get comprehensive reports with session playback, timestamped insights, and comparative analytics against role benchmarks. Collaborate with your team on hiring decisions.
+                        </p>
                     </div>
-                    <p class="interviewer-name">Emma Rodriguez</p>
-                    <p class="company">Google</p>
-                </div>
-                <div class="interviewer">
-                    <div class="avatar">
-                        <img src="images/david-kim.jpg" alt="David Kim" class="interviewer-image">
-                    </div>
-                    <p class="interviewer-name">David Kim</p>
-                    <p class="company">DeepMind</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 5. FOMO Statistics Section (83%) -->
-    <section class="fomo-stats">
+    <!-- Stats Section -->
+    <section class="section stats-section reveal">
         <div class="container">
-            <div class="stat">
-                <h2>83%</h2>
-                <p>of AI unicorns have abandoned traditional technical interviews</p>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-value">3x</div>
+                    <div class="stat-label">Better hiring accuracy vs DSA interviews</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">60%</div>
+                    <div class="stat-label">Reduction in time-to-hire</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">45min</div>
+                    <div class="stat-label">Average interview duration</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">89%</div>
+                    <div class="stat-label">Candidate satisfaction score</div>
+                </div>
             </div>
-            <p class="impact-statement">Your hiring process is showing its age.</p>
         </div>
     </section>
 
-    <!-- 6. The Cost of Waiting Section -->
-    <section class="cost-waiting">
+    <!-- Testimonials -->
+    <section class="section reveal">
         <div class="container">
-            <h2>Every week with outdated hiring = missed talent opportunities</h2>
-            <p>While you're deliberating, your competitors are building their future teams</p>
-            <p class="subtle-urgency">The talent gap widens daily</p>
+            <div class="section-header">
+                <span class="section-label">Testimonials</span>
+                <h2 class="section-title">What leaders are saying</h2>
+            </div>
+
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">
+                        "Xebot helped us completely rethink how we evaluate engineers. We're now hiring people who can actually do the job, not just recite algorithms."
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="images/john-kane.jpg" alt="John Kane" class="testimonial-avatar">
+                        <div>
+                            <div class="testimonial-name">John Kane</div>
+                            <div class="testimonial-role">VP Engineering, OpenAI</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">
+                        "The observability and debugging metrics were eye-opening. We found candidates who could not only write code but also maintain it in production."
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="images/maya-johnson.jpg" alt="Maya Johnson" class="testimonial-avatar">
+                        <div>
+                            <div class="testimonial-name">Maya Johnson</div>
+                            <div class="testimonial-role">CTO, Anthropic</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">
+                        "Our new hires from Xebot interviews ramp up 40% faster. They already know how to work with AI tools from day one."
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="images/raj-patel.jpg" alt="Raj Patel" class="testimonial-avatar">
+                        <div>
+                            <div class="testimonial-name">Raj Patel</div>
+                            <div class="testimonial-role">Engineering Director, Microsoft</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- 7. Value Proposition Section (What is Vibe Coding) -->
-    <section class="value-prop">
+    <!-- Pricing Preview -->
+    <section class="section bg-secondary reveal">
         <div class="container">
-            <h2 class="section-title">What is Vibe Coding?</h2>
-            <div class="value-items">
-                <div class="value-item">
-                    <h3>Predictive</h3>
-                    <p>Evaluates how candidates solve real-world problems, not textbook algorithms</p>
+            <div class="section-header">
+                <span class="section-label">Pricing</span>
+                <h2 class="section-title">Simple, transparent pricing</h2>
+                <p class="section-description">
+                    Start free, scale as you grow. No hidden fees.
+                </p>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3 class="pricing-name">Starter</h3>
+                    <p class="pricing-description">For small teams getting started</p>
+                    <div class="pricing-amount">
+                        <span class="pricing-currency">$</span>
+                        <span class="pricing-value">0</span>
+                        <span class="pricing-period">/month</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li class="pricing-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            5 interviews/month
+                        </li>
+                        <li class="pricing-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            Basic AI metrics
+                        </li>
+                        <li class="pricing-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            Session recordings
+                        </li>
+                        <li class="pricing-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            Community support
+                        </li>
+                    </ul>
+                    <a href="#signup" class="btn btn-secondary pricing-cta">Get Started</a>
                 </div>
-                <div class="value-item">
-                    <h3>Elite</h3>
-                    <p>Used by top AI companies to identify exceptional talent</p>
+
+                <div class="pricing-card featured">
+                    <h3 class="pricing-name">Pro</h3>
+                    <p class="pricing-description">For growing engineering teams</p>
+                    <div class="pricing-amount">
+                        <span class="pricing-currency">$</span>
+                        <span class="pricing-value">299</span>
+                        <span class="pricing-period">/month</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li class="pricing-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            Unlimited interviews
+                        </li>
+                        <li class="pricing-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            Advanced AI metrics
+                        </li>
+                        <li class="pricing-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            Custom challenges
+                        </li>
+                        <li class="pricing-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            Team collaboration
+                        </li>
+                        <li class="pricing-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            Priority support
+                        </li>
+                    </ul>
+                    <a href="#signup" class="btn btn-gradient pricing-cta">Start Free Trial</a>
                 </div>
-                <div class="value-item">
-                    <h3>Future-Proof</h3>
-                    <p>Assesses collaboration with both humans and AI systems</p>
+
+                <div class="pricing-card">
+                    <h3 class="pricing-name">Enterprise</h3>
+                    <p class="pricing-description">For large organizations</p>
+                    <div class="pricing-amount">
+                        <span class="pricing-currency"></span>
+                        <span class="pricing-value">Custom</span>
+                        <span class="pricing-period"></span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li class="pricing-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            Everything in Pro
+                        </li>
+                        <li class="pricing-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            SSO & SAML
+                        </li>
+                        <li class="pricing-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            Custom integrations
+                        </li>
+                        <li class="pricing-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            Dedicated success manager
+                        </li>
+                        <li class="pricing-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            SLA guarantee
+                        </li>
+                    </ul>
+                    <a href="companies.html" class="btn btn-secondary pricing-cta">Contact Sales</a>
                 </div>
             </div>
-            
-            <div class="vibe-coding-explainer">
-                <div class="explainer-text">
-                    <h3>Why Vibe Coding Outperforms DSA</h3>
-                    <ul>
-                        <li>Evaluates communication and collaboration skills</li>
-                        <li>Tests real-world problem solving, not memorization</li>
-                        <li>Reveals how candidates approach novel challenges</li>
-                        <li>Assesses cultural fit and team compatibility</li>
-                        <li>Better predicts on-the-job performance</li>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section reveal" id="signup">
+        <div class="cta-glow"></div>
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to hire for the AI age?</h2>
+                <p>Join 500+ companies already using Xebot to find engineers who can actually ship.</p>
+                <div class="cta-actions">
+                    <a href="#" class="btn btn-gradient btn-lg open-modal">Start Free Trial</a>
+                    <a href="companies.html" class="btn btn-secondary btn-lg" style="border-color: rgba(255,255,255,0.3); color: white;">Talk to Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">XEBOT</div>
+                    <p class="footer-description">
+                        The modern coding interview platform built for AI-assisted development.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="footer-social-link" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer-social-link" aria-label="GitHub">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer-social-link" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                <rect x="2" y="9" width="4" height="12"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="challenge.html">Practice</a></li>
+                        <li><a href="#">Changelog</a></li>
                     </ul>
                 </div>
-                <div class="video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/IACHfKmZMr8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <p class="video-caption">YC Partners: Why Vibe Coding is the Future</p>
+
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">API Reference</a></li>
+                        <li><a href="#">Guides</a></li>
+                        <li><a href="#">Help Center</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
                 </div>
             </div>
-            
-            <p class="bottom-cta">Interviews that assess what actually matters in modern engineering teams</p>
-        </div>
-    </section>
 
-    <!-- 8. CTA Section (Stop hiring yesterday's engineers) -->
-    <section class="cta">
-        <div class="container">
-            <h2>Stop hiring yesterday's engineers</h2>
-            <p>See a Vibe Coding interview in action</p>
-            <button class="btn btn-primary pulse">Get Access</button>
-        </div>
-    </section>
-
-    <!-- 9. Footer -->
-    <footer>
-        <div class="container">
-            <div class="logo">XEBOT</div>
-            <a href="mailto:contact@xebot.ai">contact@xebot.ai</a>
-            <p>© Xebot 2025</p>
+            <div class="footer-bottom">
+                <p class="footer-copyright">2025 Xebot. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <!-- Modal for Sign Up Form -->
-    <div id="signup-modal" class="modal">
+    <!-- Modal -->
+    <div class="modal" id="signup-modal">
         <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h3 class="modal-title">Join the Vibe Coding Revolution</h3>
-            <form id="modal-form">
+            <button class="modal-close" id="modal-close">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                    <path d="M18 6L6 18M6 6l12 12"/>
+                </svg>
+            </button>
+            <h3 class="modal-title">Start your free trial</h3>
+            <p class="modal-description">Get access to unlimited interviews for 14 days. No credit card required.</p>
+            <form id="signup-form">
                 <div class="form-group">
-                    <input type="text" id="modal-name" name="name" placeholder="Full Name" required>
+                    <label class="form-label" for="name">Full Name</label>
+                    <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required>
                 </div>
                 <div class="form-group">
-                    <input type="email" id="modal-email" name="email" placeholder="Email Address" required>
+                    <label class="form-label" for="email">Work Email</label>
+                    <input type="email" id="email" name="email" class="form-input" placeholder="john@company.com" required>
                 </div>
                 <div class="form-group">
-                    <input type="tel" id="modal-phone" name="phone" placeholder="Phone Number (Optional)">
+                    <label class="form-label" for="company">Company</label>
+                    <input type="text" id="company" name="company" class="form-input" placeholder="Acme Inc.">
                 </div>
-                <button type="submit" class="btn btn-primary">Get Access</button>
+                <button type="submit" class="btn btn-gradient btn-lg w-full">Create Account</button>
+                <p class="form-helper text-center mt-md">
+                    By signing up, you agree to our <a href="#">Terms</a> and <a href="#">Privacy Policy</a>
+                </p>
             </form>
         </div>
     </div>
 
     <script>
-        // Add basic animations for particles and scroll effects
-        document.addEventListener('DOMContentLoaded', () => {
-            // Add scroll animation class to elements when they come into view
-            const elements = document.querySelectorAll('section:not(.hero)');
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, { threshold: 0.1 });
-            
-            elements.forEach(element => {
-                observer.observe(element);
-            });
-            
-            // Animate particles randomly
-            const particles = document.querySelectorAll('.particle');
-            particles.forEach(particle => {
-                setInterval(() => {
-                    const x = Math.random() * 10 - 5;
-                    const y = Math.random() * 10 - 5;
-                    particle.style.transform = `translate(${x}px, ${y}px)`;
-                }, 2000);
-            });
-            
-            // Modal functionality for the form
-            const modal = document.getElementById('signup-modal');
-            
-            // Only proceed if modal exists in the DOM
-            if (modal) {
-                const allButtons = document.querySelectorAll('.btn');
-                const closeBtn = document.querySelector('.close-modal');
-                
-                function openModal() {
-                    modal.style.display = 'flex';
-                    document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
-                }
-                
-                function closeModal() {
-                    modal.style.display = 'none';
-                    document.body.style.overflow = 'auto'; // Re-enable scrolling
-                }
-                
-                // Add click event to all buttons
-                allButtons.forEach(button => {
-                    button.addEventListener('click', openModal);
-                });
-                
-                // Close modal when clicking the X (if it exists)
-                if (closeBtn) {
-                    closeBtn.addEventListener('click', closeModal);
-                }
-                
-                // Close modal when clicking outside the form
-                window.addEventListener('click', (event) => {
-                    if (event.target === modal) {
-                        closeModal();
-                    }
-                });
+        // Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        const sunIcon = themeToggle.querySelector('.sun-icon');
+        const moonIcon = themeToggle.querySelector('.moon-icon');
+
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+        updateThemeIcon(savedTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+
+        function updateThemeIcon(theme) {
+            if (theme === 'dark') {
+                sunIcon.classList.add('hidden');
+                moonIcon.classList.remove('hidden');
+            } else {
+                sunIcon.classList.remove('hidden');
+                moonIcon.classList.add('hidden');
             }
-            
-            // Form submission to Google Sheets
-            const forms = document.querySelectorAll('form');
-            forms.forEach(form => {
-                form.addEventListener('submit', (e) => {
-                    e.preventDefault();
-                    
-                    // Get form data
-                    const formData = new FormData(form);
-                    const name = formData.get('name');
-                    const email = formData.get('email');
-                    const phone = formData.get('phone') || 'Not provided';
-                    
-                    // Prepare data for Google Sheets
-                    const data = {
-                        name: name,
-                        email: email,
-                        phone: phone,
-                        timestamp: new Date().toISOString()
-                    };
-                    
-                    // The URL below needs to be replaced with your actual Google Apps Script URL
-                    // after you set it up following the instructions provided
-                    const scriptURL = 'https://script.google.com/macros/s/AKfycbxQ5AqA374MPUA_HBuOHjxN22ktzmC_lqNV8fhplih_vsDye9xqWO8QIB-ABJr7qLOsaA/exec';
-                    
-                    // Send to Google Sheet
-                    fetch(scriptURL, {
-                        method: 'POST',
-                        mode: 'no-cors',
-                        cache: 'no-cache',
-                        headers: {
-                            'Content-Type': 'application/json',
-                        },
-                        body: JSON.stringify(data)
-                    }).then(() => {
-                        // Success message
-                        const successMessage = document.createElement('div');
-                        successMessage.className = 'success-message';
-                        successMessage.textContent = 'Thanks for signing up! We\'ll be in touch soon.';
-                        
-                        // Replace form with success message
-                        form.innerHTML = '';
-                        form.appendChild(successMessage);
-                        
-                        // If it's the modal form, close the modal after 2 seconds
-                        if (form.id === 'modal-form' && modal) {
-                            setTimeout(() => {
-                                modal.style.display = 'none';
-                                document.body.style.overflow = 'auto';
-                            }, 2000);
-                        }
-                    }).catch(error => {
-                        console.error('Error:', error);
-                    });
-                });
+        }
+
+        // Mobile Navigation
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileNav = document.getElementById('mobile-nav');
+        const mobileNavClose = document.getElementById('mobile-nav-close');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileNav.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        });
+
+        mobileNavClose.addEventListener('click', () => {
+            mobileNav.classList.remove('open');
+            document.body.style.overflow = '';
+        });
+
+        // Modal
+        const modal = document.getElementById('signup-modal');
+        const modalClose = document.getElementById('modal-close');
+        const openModalBtns = document.querySelectorAll('.open-modal, #get-started-btn, [href="#signup"]');
+
+        openModalBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
             });
+        });
+
+        modalClose.addEventListener('click', () => {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Form Submission
+        const signupForm = document.getElementById('signup-form');
+        signupForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(signupForm);
+            const data = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                company: formData.get('company') || 'Not provided',
+                timestamp: new Date().toISOString()
+            };
+
+            // Google Sheets integration
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxQ5AqA374MPUA_HBuOHjxN22ktzmC_lqNV8fhplih_vsDye9xqWO8QIB-ABJr7qLOsaA/exec';
+
+            try {
+                await fetch(scriptURL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+
+                signupForm.innerHTML = `
+                    <div class="text-center" style="padding: 2rem 0;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2" width="48" height="48" style="margin: 0 auto 1rem;">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="16 10 10 16 8 14"/>
+                        </svg>
+                        <h4 style="margin-bottom: 0.5rem;">Welcome to Xebot!</h4>
+                        <p class="text-secondary">Check your email for next steps.</p>
+                    </div>
+                `;
+
+                setTimeout(() => {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = '';
+                }, 3000);
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        });
+
+        // Scroll Animations
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Editor Tab Switching
+        const editorTabs = document.querySelectorAll('.editor-tab');
+        editorTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                editorTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+            });
+        });
+
+        // Navbar scroll effect
+        let lastScroll = 0;
+        const navbar = document.querySelector('.navbar');
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > 100) {
+                navbar.style.boxShadow = 'var(--shadow-md)';
+            } else {
+                navbar.style.boxShadow = 'none';
+            }
+
+            lastScroll = currentScroll;
         });
     </script>
 </body>
