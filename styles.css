@@ -1952,6 +1952,84 @@ a:hover { color: var(--accent-secondary); }
   color: var(--success);
 }
 
+/* Mobile Comparison - Hidden by default */
+.comparison-mobile {
+  display: none;
+}
+
+.comparison-mobile-header {
+  display: flex;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+  padding: var(--space-md);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+}
+
+.comparison-mobile-col {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.comparison-mobile-col.comparison-mobile-old {
+  color: var(--error);
+}
+
+.comparison-mobile-col.comparison-mobile-new {
+  color: var(--success);
+}
+
+.comparison-mobile-icon {
+  font-size: 1rem;
+}
+
+.comparison-mobile-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  margin-bottom: var(--space-sm);
+}
+
+.comparison-mobile-label {
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-tertiary);
+  margin-bottom: var(--space-sm);
+  text-align: center;
+}
+
+.comparison-mobile-row {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.comparison-mobile-value {
+  flex: 1;
+  padding: var(--space-sm) var(--space-xs);
+  border-radius: var(--radius-md);
+  font-size: 0.8125rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.comparison-mobile-value.comparison-mobile-old {
+  background: var(--error-bg);
+  color: var(--error);
+}
+
+.comparison-mobile-value.comparison-mobile-new {
+  background: var(--success-bg);
+  color: var(--success);
+}
+
 /* ========================================
    Steps Grid
    ======================================== */
@@ -3462,32 +3540,13 @@ select.form-input {
     grid-template-columns: 1fr;
   }
 
-  .comparison-grid {
-    grid-template-columns: 1fr;
-    min-width: 100%;
-  }
-
-  .comparison-header .comparison-cell:first-child,
-  .comparison-row .comparison-cell:first-child {
+  /* Hide desktop comparison, show mobile */
+  .comparison-desktop {
     display: none;
   }
 
-  .comparison-header {
-    display: flex;
-  }
-
-  .comparison-header .comparison-cell {
-    flex: 1;
-  }
-
-  .comparison-row {
-    display: flex;
-    flex-direction: column;
-    border-top: 1px solid var(--border-primary);
-  }
-
-  .comparison-row .comparison-cell {
-    padding: var(--space-md);
+  .comparison-mobile {
+    display: block;
   }
 
   .cta-form-row {
