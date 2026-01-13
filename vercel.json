@@ -18,6 +18,9 @@
     { "source": "/blog/evaluating-ai-collaboration", "destination": "/blog/evaluating-ai-collaboration.html" },
     { "source": "/blog/debugging-as-core-skill", "destination": "/blog/debugging-as-core-skill.html" },
     { "source": "/blog/candidate-experience-matters", "destination": "/blog/candidate-experience-matters.html" },
-    { "source": "/blog/problem-decomposition", "destination": "/blog/problem-decomposition.html" }
+    { "source": "/blog/problem-decomposition", "destination": "/blog/problem-decomposition.html" },
+    { "source": "/blog/ai-coding-interviews-guide", "destination": "/blog/ai-coding-interviews-guide.html" },
+    { "source": "/blog/vibe-coding-interviews", "destination": "/blog/vibe-coding-interviews.html" },
+    { "source": "/blog/prepare-for-ai-interviews", "destination": "/blog/prepare-for-ai-interviews.html" }
   ]
 }

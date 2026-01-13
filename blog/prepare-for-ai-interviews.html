@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Prepare for AI-Native Technical Interviews in 2025 | Xebot Blog</title>
+    <meta name="description" content="A practical guide for engineers preparing for AI-assisted coding interviews. Learn what skills matter, how to practice, and what interviewers look for in vibe coding assessments.">
+    <meta name="keywords" content="ai interview preparation, vibe coding preparation, ai coding interview tips, technical interview prep, ai-assisted interview, developer interview 2025">
+    <meta name="author" content="Jennifer Wu">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.xebot.ai/blog/prepare-for-ai-interviews">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="How to Prepare for AI-Native Technical Interviews in 2025">
+    <meta property="og:description" content="A practical guide for engineers preparing for AI-assisted coding interviews.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.xebot.ai/blog/prepare-for-ai-interviews">
+    <meta property="og:image" content="https://www.xebot.ai/images/blog/prepare-ai-interviews-og.png">
+    <meta property="article:published_time" content="2025-01-09T10:00:00Z">
+    <meta property="article:author" content="Jennifer Wu">
+    <meta property="article:section" content="Career Advice">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How to Prepare for AI-Native Technical Interviews in 2025">
+    <meta name="twitter:description" content="A practical guide for AI-assisted coding interview preparation.">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "How to Prepare for AI-Native Technical Interviews in 2025",
+        "description": "A practical guide for engineers preparing for AI-assisted coding interviews.",
+        "author": {
+            "@type": "Person",
+            "name": "Jennifer Wu",
+            "jobTitle": "Staff Engineer"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Xebot",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.xebot.ai/logo.png"
+            }
+        },
+        "datePublished": "2025-01-09",
+        "dateModified": "2025-01-09",
+        "mainEntityOfPage": "https://www.xebot.ai/blog/prepare-for-ai-interviews"
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>X</text></svg>">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="navbar-brand">
+                <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32" height="32" rx="8" fill="url(#gradient)"/>
+                    <path d="M8 8L16 16M16 16L24 24M16 16L24 8M16 16L8 24" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    <defs><linearGradient id="gradient" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/></linearGradient></defs>
+                </svg>
+                XEBOT
+            </a>
+            <ul class="navbar-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/features">Features</a></li>
+                <li><a href="/pricing">Pricing</a></li>
+                <li><a href="/companies">For Companies</a></li>
+                <li><a href="/blog" class="active">Blog</a></li>
+            </ul>
+            <div class="navbar-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                    <svg class="moon-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+                <a href="/#signup" class="btn btn-gradient btn-open-lead-modal">Get Started Free</a>
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-nav" id="mobile-nav">
+        <div class="mobile-nav-header">
+            <span class="navbar-brand">XEBOT</span>
+            <button class="modal-close" id="mobile-nav-close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/features">Features</a></li>
+            <li><a href="/pricing">Pricing</a></li>
+            <li><a href="/companies">For Companies</a></li>
+            <li><a href="/blog">Blog</a></li>
+        </ul>
+    </div>
+
+    <!-- Lead Capture Modal -->
+    <div class="lead-modal-overlay" id="lead-modal-overlay">
+        <div class="lead-modal">
+            <button class="lead-modal-close" id="lead-modal-close">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            </button>
+            <div class="lead-modal-header">
+                <h2>Get Started with Xebot</h2>
+                <p>Join leading companies using AI-native coding interviews</p>
+            </div>
+            <form class="lead-modal-form" id="lead-modal-form">
+                <div class="lead-form-row">
+                    <div class="lead-form-group">
+                        <label for="lead-first-name">First Name *</label>
+                        <input type="text" id="lead-first-name" name="firstName" required placeholder="John">
+                    </div>
+                    <div class="lead-form-group">
+                        <label for="lead-last-name">Last Name *</label>
+                        <input type="text" id="lead-last-name" name="lastName" required placeholder="Doe">
+                    </div>
+                </div>
+                <div class="lead-form-group">
+                    <label for="lead-email">Work Email *</label>
+                    <input type="email" id="lead-email" name="email" required placeholder="john@company.com">
+                </div>
+                <div class="lead-form-group">
+                    <label for="lead-phone">Phone Number</label>
+                    <input type="tel" id="lead-phone" name="phone" placeholder="+1 (555) 000-0000">
+                </div>
+                <div class="lead-form-group">
+                    <label for="lead-company-size">Company Size *</label>
+                    <select id="lead-company-size" name="companySize" required>
+                        <option value="">Select company size</option>
+                        <option value="1-10">1-10 employees</option>
+                        <option value="11-50">11-50 employees</option>
+                        <option value="51-200">51-200 employees</option>
+                        <option value="201-500">201-500 employees</option>
+                        <option value="501-1000">501-1000 employees</option>
+                        <option value="1000+">1000+ employees</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-gradient btn-full">
+                    <span class="btn-text">Get Started Free</span>
+                    <span class="btn-loader hidden">
+                        <svg class="spinner" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" stroke-opacity="0.25"/><path d="M12 2a10 10 0 0 1 10 10" stroke-linecap="round"/></svg>
+                    </span>
+                </button>
+            </form>
+            <p class="lead-modal-footer">By signing up, you agree to our <a href="/terms">Terms</a> and <a href="/privacy">Privacy Policy</a></p>
+        </div>
+    </div>
+
+    <article class="blog-article">
+        <div class="container">
+            <div class="blog-article-header">
+                <a href="/blog" class="blog-back-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                    Back to Blog
+                </a>
+                <span class="badge badge-gradient">Career Advice</span>
+                <h1>How to Prepare for AI-Native Technical Interviews in 2025</h1>
+                <div class="blog-article-meta">
+                    <span>January 9, 2025</span>
+                    <span>11 min read</span>
+                    <span>By Jennifer Wu</span>
+                </div>
+            </div>
+
+            <div class="blog-article-layout">
+                <!-- Table of Contents Sidebar -->
+                <aside class="blog-toc">
+                    <div class="blog-toc-sticky">
+                        <h4>Table of Contents</h4>
+                        <nav>
+                            <ul>
+                                <li><a href="#new-landscape">The New Interview Landscape</a></li>
+                                <li><a href="#mindset-shift">The Mindset Shift</a></li>
+                                <li><a href="#master-tools">Master Your AI Tools</a></li>
+                                <li><a href="#practice-verification">Practice Verification Skills</a></li>
+                                <li><a href="#think-out-loud">Think Out Loud</a></li>
+                                <li><a href="#build-projects">Build Real Projects</a></li>
+                                <li><a href="#fundamentals">Don't Skip Fundamentals</a></li>
+                                <li><a href="#interview-day">On Interview Day</a></li>
+                                <li><a href="#practice-plan">4-Week Practice Plan</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </aside>
+
+                <div class="blog-article-content">
+                    <!-- Key Takeaways Box -->
+                    <div class="blog-key-takeaways">
+                        <h4>Key Takeaways</h4>
+                        <ul>
+                            <li>AI-native interviews test how you work with AI tools, not how you code without them</li>
+                            <li>Mastering one AI tool deeply is better than superficial familiarity with many</li>
+                            <li>Verification skills are as important as generation - practice reading and testing AI code</li>
+                            <li>Thinking out loud is crucial - interviewers need to understand your process, not just see results</li>
+                            <li>Strong fundamentals help you guide AI better and catch its mistakes</li>
+                        </ul>
+                    </div>
+
+                    <p class="lead">
+                        If you're preparing for technical interviews in 2025, you've probably noticed something different: AI is allowed, even expected. Companies are increasingly running "vibe coding" or "AI-native" interviews where your ability to leverage AI tools is part of what's being assessed. Here's how to prepare.
+                    </p>
+
+                    <h2 id="new-landscape">The New Interview Landscape</h2>
+                    <p>
+                        The technical interview is evolving rapidly. According to recent surveys:
+                    </p>
+                    <ul>
+                        <li><strong>73% of tech companies</strong> will use AI-assisted interview formats by end of 2025</li>
+                        <li><strong>68% of candidates</strong> report being allowed to use AI tools in recent interviews</li>
+                        <li><strong>Traditional LeetCode-style interviews</strong> are declining, especially at startups and modern tech companies</li>
+                    </ul>
+                    <p>
+                        This shift reflects reality: 92% of developers use AI tools daily. Testing candidates without them is like testing pilots without instruments - you might learn something, but it's not relevant to the job.
+                    </p>
+
+                    <h2 id="mindset-shift">The Mindset Shift Required</h2>
+                    <p>
+                        Traditional interview prep focuses on memorization: algorithms, data structures, common patterns. AI-native interview prep is different. You're not trying to store information in your head - you're developing the skills to effectively extract information from AI and use it well.
+                    </p>
+                    <p>
+                        The shift is from <strong>"What can I recall?"</strong> to <strong>"What can I build with the tools available?"</strong>
+                    </p>
+                    <p>
+                        Key skills for AI-native interviews:
+                    </p>
+                    <ul>
+                        <li><strong>Problem decomposition:</strong> Breaking complex problems into pieces AI can help with</li>
+                        <li><strong>Effective prompting:</strong> Communicating clearly with AI tools</li>
+                        <li><strong>Critical evaluation:</strong> Assessing and verifying AI output</li>
+                        <li><strong>Integration:</strong> Combining AI-generated code with your own understanding</li>
+                        <li><strong>Communication:</strong> Explaining your process and decisions</li>
+                    </ul>
+
+                    <h2 id="master-tools">Master Your AI Tools</h2>
+                    <p>
+                        Don't try to learn every AI tool superficially. Pick one or two and master them deeply.
+                    </p>
+
+                    <h3>Choose Your Primary Tool</h3>
+                    <p>
+                        Good options include:
+                    </p>
+                    <ul>
+                        <li><strong>Claude (Anthropic):</strong> Excellent for complex reasoning and code explanation</li>
+                        <li><strong>GitHub Copilot:</strong> Great for inline code completion and continuation</li>
+                        <li><strong>ChatGPT:</strong> Strong general-purpose assistant</li>
+                        <li><strong>Cursor:</strong> IDE with deep AI integration</li>
+                    </ul>
+
+                    <h3>Develop Fluency</h3>
+                    <p>
+                        Use your chosen tool for real work, not just practice. Build actual projects with it. Learn:
+                    </p>
+                    <ul>
+                        <li>Its strengths and weaknesses</li>
+                        <li>When it gives great results vs. when it struggles</li>
+                        <li>Prompting patterns that work well for you</li>
+                        <li>How to iterate when the first output isn't right</li>
+                        <li>Context limits and how to work within them</li>
+                    </ul>
+
+                    <h3>Practice Prompting Patterns</h3>
+                    <p>
+                        Effective prompts share common patterns:
+                    </p>
+                    <div class="blog-code-block">
+                        <pre><code>Good prompt structure:
+
+1. Context: "I'm building a React component for..."
+2. Specific request: "Write a function that..."
+3. Constraints: "It should handle edge cases like..."
+4. Expected format: "Return TypeScript with proper typing"
+
+Example:
+"I'm building a user settings page in React. Write a custom hook
+that manages notification preferences, storing them in localStorage
+and syncing with an API endpoint at /api/preferences on changes.
+Handle loading states and errors gracefully. Use TypeScript."</code></pre>
+                    </div>
+
+                    <h2 id="practice-verification">Practice Verification Skills</h2>
+                    <p>
+                        Anyone can get AI to generate code. What separates strong candidates is the ability to verify that code is correct, secure, and appropriate.
+                    </p>
+
+                    <h3>Read AI Code Critically</h3>
+                    <p>
+                        Practice reading AI-generated code and asking:
+                    </p>
+                    <ul>
+                        <li>Does this actually do what I asked?</li>
+                        <li>What edge cases might it miss?</li>
+                        <li>Are there security implications?</li>
+                        <li>Is this the right approach, or just "an" approach?</li>
+                        <li>How would I test this?</li>
+                    </ul>
+
+                    <h3>Write Tests for AI Code</h3>
+                    <p>
+                        Get in the habit of writing tests for AI-generated code before integrating it:
+                    </p>
+                    <div class="blog-code-block">
+                        <pre><code>// AI generates this function
+function calculateDiscount(price, percentage) {
+  return price * (1 - percentage / 100);
+}
+
+// You should immediately think about tests:
+// - What if percentage is 0? 100? > 100? Negative?
+// - What if price is 0? Negative?
+// - What about floating point precision?
+// - What if inputs aren't numbers?</code></pre>
+                    </div>
+
+                    <h3>Know Common AI Mistakes</h3>
+                    <p>
+                        AI tools make predictable errors:
+                    </p>
+                    <ul>
+                        <li><strong>Off-by-one errors:</strong> Especially in loops and boundary conditions</li>
+                        <li><strong>Null/undefined handling:</strong> Often assumes inputs are valid</li>
+                        <li><strong>Outdated patterns:</strong> May suggest deprecated APIs or old syntax</li>
+                        <li><strong>Security oversights:</strong> Input validation, SQL injection, XSS</li>
+                        <li><strong>Performance issues:</strong> N+1 queries, unnecessary re-renders</li>
+                    </ul>
+
+                    <h2 id="think-out-loud">Think Out Loud</h2>
+                    <p>
+                        In AI-native interviews, your thought process matters as much as the output. Practice verbalizing:
+                    </p>
+
+                    <h3>Before Prompting</h3>
+                    <ul>
+                        <li>"Let me break this problem into pieces..."</li>
+                        <li>"I think I'll start with the data model because..."</li>
+                        <li>"The tricky part here is probably..."</li>
+                    </ul>
+
+                    <h3>While Prompting</h3>
+                    <ul>
+                        <li>"I'm going to ask AI to generate the basic structure first..."</li>
+                        <li>"I'm being specific about error handling because..."</li>
+                    </ul>
+
+                    <h3>After Getting Output</h3>
+                    <ul>
+                        <li>"Let me check if this handles the edge case of..."</li>
+                        <li>"This looks mostly right, but I want to modify..."</li>
+                        <li>"I'm going to ask for a different approach because..."</li>
+                    </ul>
+
+                    <h2 id="build-projects">Build Real Projects with AI</h2>
+                    <p>
+                        The best preparation is building real things. Here's a progression:
+                    </p>
+
+                    <h3>Week 1-2: Simple Full-Stack App</h3>
+                    <p>
+                        Build a CRUD application (todo app, notes app, bookmark manager) using AI for most of the code. Focus on:
+                    </p>
+                    <ul>
+                        <li>Getting AI to scaffold the project</li>
+                        <li>Iterating on AI-generated components</li>
+                        <li>Debugging when AI code doesn't work</li>
+                    </ul>
+
+                    <h3>Week 3-4: Add Complexity</h3>
+                    <p>
+                        Add features that require architectural thinking:
+                    </p>
+                    <ul>
+                        <li>User authentication</li>
+                        <li>Real-time updates</li>
+                        <li>File uploads</li>
+                        <li>Search functionality</li>
+                    </ul>
+                    <p>
+                        Practice explaining your architectural decisions as you go.
+                    </p>
+
+                    <h3>Ongoing: Contribute to Open Source</h3>
+                    <p>
+                        Working with existing codebases is different from greenfield projects. Practice:
+                    </p>
+                    <ul>
+                        <li>Understanding unfamiliar code (with AI help)</li>
+                        <li>Making changes that fit existing patterns</li>
+                        <li>Writing code that matches project style</li>
+                    </ul>
+
+                    <h2 id="fundamentals">Don't Skip Fundamentals</h2>
+                    <p>
+                        Strong fundamentals make you better at AI-assisted coding, not worse. They help you:
+                    </p>
+                    <ul>
+                        <li><strong>Write better prompts:</strong> You can be precise about what you want</li>
+                        <li><strong>Evaluate output faster:</strong> You recognize good vs. bad code</li>
+                        <li><strong>Catch AI mistakes:</strong> You know when something is wrong</li>
+                        <li><strong>Make architectural decisions:</strong> AI can't do this for you</li>
+                    </ul>
+
+                    <h3>Fundamentals That Matter</h3>
+                    <ul>
+                        <li><strong>Data structures:</strong> When to use what, trade-offs</li>
+                        <li><strong>Algorithms:</strong> Complexity basics, common patterns</li>
+                        <li><strong>System design:</strong> How systems scale, common architectures</li>
+                        <li><strong>Web fundamentals:</strong> HTTP, REST, databases, caching</li>
+                        <li><strong>Your language/framework:</strong> Deep knowledge of your primary tools</li>
+                    </ul>
+
+                    <h2 id="interview-day">On Interview Day</h2>
+
+                    <h3>Before Starting</h3>
+                    <ul>
+                        <li>Have your AI tools ready and logged in</li>
+                        <li>Test that everything works</li>
+                        <li>Know the keyboard shortcuts for your setup</li>
+                    </ul>
+
+                    <h3>When You Receive the Problem</h3>
+                    <ul>
+                        <li>Read it completely before doing anything</li>
+                        <li>Ask clarifying questions</li>
+                        <li>Think about edge cases and constraints</li>
+                        <li>Break it down into pieces before prompting AI</li>
+                    </ul>
+
+                    <h3>During Implementation</h3>
+                    <ul>
+                        <li>Narrate your thinking constantly</li>
+                        <li>Don't accept AI output blindly - read and understand it</li>
+                        <li>Test as you go</li>
+                        <li>Be willing to start over if an approach isn't working</li>
+                    </ul>
+
+                    <h3>If You Get Stuck</h3>
+                    <ul>
+                        <li>Verbalize what's blocking you</li>
+                        <li>Try rephrasing your prompt to AI</li>
+                        <li>Step back and reconsider your approach</li>
+                        <li>Ask the interviewer for hints - this is normal and expected</li>
+                    </ul>
+
+                    <h2 id="practice-plan">4-Week Preparation Plan</h2>
+
+                    <h3>Week 1: Tool Mastery</h3>
+                    <ul>
+                        <li>Choose your primary AI tool</li>
+                        <li>Use it for all coding tasks</li>
+                        <li>Document prompts that work well</li>
+                        <li>Build one small project end-to-end</li>
+                    </ul>
+
+                    <h3>Week 2: Verification Skills</h3>
+                    <ul>
+                        <li>Practice reading and critiquing AI code</li>
+                        <li>Write tests for AI-generated code</li>
+                        <li>Learn common AI failure patterns</li>
+                        <li>Practice debugging AI code</li>
+                    </ul>
+
+                    <h3>Week 3: Communication</h3>
+                    <ul>
+                        <li>Practice thinking out loud while coding</li>
+                        <li>Record yourself solving problems</li>
+                        <li>Do mock interviews with friends</li>
+                        <li>Work on explaining technical decisions clearly</li>
+                    </ul>
+
+                    <h3>Week 4: Integration</h3>
+                    <ul>
+                        <li>Do timed practice problems (60-90 minutes)</li>
+                        <li>Practice with realistic, ambiguous problems</li>
+                        <li>Simulate interview conditions</li>
+                        <li>Review and refine your approach</li>
+                    </ul>
+
+                    <h2>Final Advice</h2>
+                    <p>
+                        The goal isn't to become dependent on AI - it's to become effective with the tools that are now standard in the industry. The best candidates in AI-native interviews demonstrate:
+                    </p>
+                    <ul>
+                        <li>Clear thinking and problem decomposition</li>
+                        <li>Effective AI collaboration (not AI dependence)</li>
+                        <li>Critical evaluation of AI output</li>
+                        <li>Strong fundamentals that guide their AI usage</li>
+                        <li>Clear communication throughout the process</li>
+                    </ul>
+                    <p>
+                        Companies using AI-native interviews are looking for engineers who can thrive in modern development environments. If you prepare thoughtfully, these interviews are an opportunity to demonstrate exactly that.
+                    </p>
+
+                    <!-- Author Section -->
+                    <div class="blog-author-section">
+                        <div class="blog-author-avatar">JW</div>
+                        <div class="blog-author-info">
+                            <h4>Jennifer Wu</h4>
+                            <p>Staff Engineer with experience at Google, Stripe, and multiple startups. Has conducted 200+ technical interviews and helped redesign interview processes for the AI age. Writes about engineering career development.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blog-article-footer">
+                <div class="blog-article-tags">
+                    <span class="badge">Interview Prep</span>
+                    <span class="badge">Career Advice</span>
+                    <span class="badge">AI Development</span>
+                    <span class="badge">Vibe Coding</span>
+                    <span class="badge">Technical Skills</span>
+                </div>
+
+                <!-- Related Articles -->
+                <div class="blog-related-articles">
+                    <h3>Related Articles</h3>
+                    <div class="blog-related-grid">
+                        <a href="/blog/ai-coding-interviews-guide" class="blog-related-card">
+                            <span class="badge">Interview Guide</span>
+                            <h4>AI Coding Interviews: The Complete Guide for 2025</h4>
+                            <p>Everything you need to know about AI-assisted technical assessments.</p>
+                        </a>
+                        <a href="/blog/vibe-coding-interviews" class="blog-related-card">
+                            <span class="badge">Industry Trends</span>
+                            <h4>Vibe Coding Interviews: What They Are and Why They Matter</h4>
+                            <p>Understanding the new standard in technical hiring.</p>
+                        </a>
+                        <a href="/blog/debugging-as-core-skill" class="blog-related-card">
+                            <span class="badge">Engineering Skills</span>
+                            <h4>Debugging as a Core Skill: Why AI Makes It More Important</h4>
+                            <p>The systematic debugging skills that matter more than ever.</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="blog-article-cta">
+                    <h3>Practice with real AI-native assessments</h3>
+                    <p>Xebot offers practice problems and mock interviews designed for the AI age. Prepare with realistic scenarios and get feedback on your approach.</p>
+                    <a href="/practice" class="btn btn-gradient">Start Practicing</a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">XEBOT</div>
+                    <p class="footer-description">The modern coding interview platform built for AI-assisted development.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="/features">Features</a></li>
+                        <li><a href="/pricing">Pricing</a></li>
+                        <li><a href="/companies">For Companies</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/careers">Careers</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2025 Xebot Technologies Pvt. Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Theme toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        const sunIcon = themeToggle.querySelector('.sun-icon');
+        const moonIcon = themeToggle.querySelector('.moon-icon');
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+        if (savedTheme === 'dark') { sunIcon.classList.add('hidden'); moonIcon.classList.remove('hidden'); }
+        themeToggle.addEventListener('click', () => {
+            const newTheme = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            sunIcon.classList.toggle('hidden'); moonIcon.classList.toggle('hidden');
+        });
+
+        // Mobile menu
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileNav = document.getElementById('mobile-nav');
+        const mobileNavClose = document.getElementById('mobile-nav-close');
+        mobileMenuBtn.addEventListener('click', () => { mobileNav.classList.add('open'); document.body.style.overflow = 'hidden'; });
+        mobileNavClose.addEventListener('click', () => { mobileNav.classList.remove('open'); document.body.style.overflow = ''; });
+
+        // Lead Modal
+        const leadModalOverlay = document.getElementById('lead-modal-overlay');
+        const leadModalClose = document.getElementById('lead-modal-close');
+        const leadModalForm = document.getElementById('lead-modal-form');
+
+        document.querySelectorAll('.btn-open-lead-modal').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                leadModalOverlay.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        leadModalClose.addEventListener('click', () => {
+            leadModalOverlay.classList.remove('open');
+            document.body.style.overflow = '';
+        });
+
+        leadModalOverlay.addEventListener('click', (e) => {
+            if (e.target === leadModalOverlay) {
+                leadModalOverlay.classList.remove('open');
+                document.body.style.overflow = '';
+            }
+        });
+
+        leadModalForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const submitBtn = leadModalForm.querySelector('button[type="submit"]');
+            const btnText = submitBtn.querySelector('.btn-text');
+            const btnLoader = submitBtn.querySelector('.btn-loader');
+
+            btnText.classList.add('hidden');
+            btnLoader.classList.remove('hidden');
+            submitBtn.disabled = true;
+
+            const formData = {
+                firstName: document.getElementById('lead-first-name').value,
+                lastName: document.getElementById('lead-last-name').value,
+                email: document.getElementById('lead-email').value,
+                phone: document.getElementById('lead-phone').value || '',
+                companySize: document.getElementById('lead-company-size').value,
+                source: 'blog-prepare-for-ai-interviews',
+                timestamp: new Date().toISOString()
+            };
+
+            try {
+                await fetch('https://script.google.com/macros/s/AKfycbzG6Jat3LvGHLOOxqa-3LgOuZMmQk10syyL3FYZl3u8_j33EX1CdBmjMLOB4R6G3e78/exec', {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                });
+
+                leadModalForm.innerHTML = `
+                    <div class="lead-form-success">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="48" height="48" style="color: var(--accent-primary); margin-bottom: 1rem;">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        <h3>You're all set!</h3>
+                        <p>We'll be in touch within 24 hours to get you started.</p>
+                    </div>
+                `;
+            } catch (error) {
+                btnText.classList.remove('hidden');
+                btnLoader.classList.add('hidden');
+                submitBtn.disabled = false;
+                alert('Something went wrong. Please try again.');
+            }
+        });
+
+        // Smooth scroll for TOC
+        document.querySelectorAll('.blog-toc a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').slice(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
