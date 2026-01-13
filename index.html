@@ -121,7 +121,7 @@
                         <div class="hero-metric-label">Companies Onboarded</div>
                     </div>
                     <div class="hero-metric">
-                        <div class="hero-metric-value">150+</div>
+                        <div class="hero-metric-value">1000+</div>
                         <div class="hero-metric-label">Interviews Conducted</div>
                     </div>
                     <div class="hero-metric">
@@ -210,7 +210,8 @@
                 </p>
             </div>
 
-            <div class="comparison-table">
+            <!-- Desktop Comparison Table -->
+            <div class="comparison-table comparison-desktop">
                 <div class="comparison-grid">
                     <div class="comparison-header">
                         <div class="comparison-cell"></div>
@@ -285,6 +286,68 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Mobile Comparison Cards -->
+            <div class="comparison-mobile">
+                <div class="comparison-mobile-header">
+                    <div class="comparison-mobile-col comparison-mobile-old">
+                        <span class="comparison-mobile-icon">&#10005;</span>
+                        <span>Traditional</span>
+                    </div>
+                    <div class="comparison-mobile-col comparison-mobile-new">
+                        <span class="comparison-mobile-icon">&#10003;</span>
+                        <span>Xebot</span>
+                    </div>
+                </div>
+
+                <div class="comparison-mobile-card">
+                    <div class="comparison-mobile-label">What's Tested</div>
+                    <div class="comparison-mobile-row">
+                        <div class="comparison-mobile-value comparison-mobile-old">Algorithm memorization</div>
+                        <div class="comparison-mobile-value comparison-mobile-new">Real-world problem solving</div>
+                    </div>
+                </div>
+
+                <div class="comparison-mobile-card">
+                    <div class="comparison-mobile-label">AI Tools</div>
+                    <div class="comparison-mobile-row">
+                        <div class="comparison-mobile-value comparison-mobile-old">Banned / Cheating</div>
+                        <div class="comparison-mobile-value comparison-mobile-new">Encouraged & Measured</div>
+                    </div>
+                </div>
+
+                <div class="comparison-mobile-card">
+                    <div class="comparison-mobile-label">Evaluation Focus</div>
+                    <div class="comparison-mobile-row">
+                        <div class="comparison-mobile-value comparison-mobile-old">Code correctness only</div>
+                        <div class="comparison-mobile-value comparison-mobile-new">Process & collaboration</div>
+                    </div>
+                </div>
+
+                <div class="comparison-mobile-card">
+                    <div class="comparison-mobile-label">Debugging Skills</div>
+                    <div class="comparison-mobile-row">
+                        <div class="comparison-mobile-value comparison-mobile-old">Not measured</div>
+                        <div class="comparison-mobile-value comparison-mobile-new">Core metric</div>
+                    </div>
+                </div>
+
+                <div class="comparison-mobile-card">
+                    <div class="comparison-mobile-label">Observability</div>
+                    <div class="comparison-mobile-row">
+                        <div class="comparison-mobile-value comparison-mobile-old">Not tested</div>
+                        <div class="comparison-mobile-value comparison-mobile-new">Logs, traces, monitoring</div>
+                    </div>
+                </div>
+
+                <div class="comparison-mobile-card">
+                    <div class="comparison-mobile-label">Job Relevance</div>
+                    <div class="comparison-mobile-row">
+                        <div class="comparison-mobile-value comparison-mobile-old">Low correlation</div>
+                        <div class="comparison-mobile-value comparison-mobile-new">Mirrors actual work</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -340,14 +403,15 @@
                 <div class="feature-card">
                     <div class="feature-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                            <circle cx="9" cy="7" r="4"/>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                            <circle cx="12" cy="5" r="3"/>
+                            <circle cx="5" cy="19" r="3"/>
+                            <circle cx="19" cy="19" r="3"/>
+                            <path d="M12 8v4M8.5 16.5L10.5 13M15.5 16.5L13.5 13"/>
                         </svg>
                     </div>
-                    <h3 class="feature-title">Tool Orchestration</h3>
+                    <h3 class="feature-title">Multi-Agent Orchestration</h3>
                     <p class="feature-description">
-                        Coordinating multiple tools, APIs, and services to solve complex problems efficiently.
+                        Coordinating multiple AI agents, tools, and services to solve complex problems efficiently.
                     </p>
                 </div>
 
@@ -368,13 +432,12 @@
                 <div class="feature-card">
                     <div class="feature-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"/>
-                            <path d="M12 6v6l4 2"/>
+                            <path d="M3 3h18v18H3zM9 3v18M15 3v18M3 9h18M3 15h18"/>
                         </svg>
                     </div>
-                    <h3 class="feature-title">Real-Time Adaptation</h3>
+                    <h3 class="feature-title">Planning & Architecture</h3>
                     <p class="feature-description">
-                        Ability to adapt quickly when approaches fail and iterate towards working solutions.
+                        Strategic thinking, system design, and breaking complex projects into executable plans.
                     </p>
                 </div>
             </div>
@@ -884,7 +947,7 @@ logger <span class="operator">=</span> logging.<span class="function">getLogger<
         const sunIcon = themeToggle.querySelector('.sun-icon');
         const moonIcon = themeToggle.querySelector('.moon-icon');
 
-        const savedTheme = localStorage.getItem('theme') || 'light';
+        const savedTheme = localStorage.getItem('theme') || 'dark';
         html.setAttribute('data-theme', savedTheme);
         updateThemeIcon(savedTheme);
 
