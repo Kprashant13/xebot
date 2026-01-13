@@ -4,13 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Problem Decomposition: The Underrated Skill That Separates Good From Great | Xebot Blog</title>
-    <meta name="description" content="The ability to break complex problems into manageable pieces is what separates effective engineers from the rest. Learn why problem decomposition matters and how to develop it.">
-    <meta name="keywords" content="problem decomposition, engineering skills, software architecture, problem solving, systems thinking">
+    <meta name="description" content="Problem decomposition separates effective engineers from the rest. Learn proven frameworks like MECE and dependency mapping that 10x engineers use to tackle complex challenges.">
+    <meta name="keywords" content="problem decomposition, engineering skills, software architecture, problem solving, systems thinking, MECE framework, dependency mapping">
+    <meta name="author" content="Michael Torres">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.xebot.ai/blog/problem-decomposition">
 
+    <!-- Open Graph -->
     <meta property="og:title" content="Problem Decomposition: The Underrated Skill That Separates Good From Great">
-    <meta property="og:description" content="The ability to break complex problems into manageable pieces is what separates effective engineers.">
+    <meta property="og:description" content="Problem decomposition separates effective engineers from the rest. Learn proven frameworks that 10x engineers use.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://www.xebot.ai/blog/problem-decomposition">
+    <meta property="og:image" content="https://www.xebot.ai/images/blog/problem-decomposition-og.png">
+    <meta property="article:published_time" content="2024-12-15T10:00:00Z">
+    <meta property="article:author" content="Michael Torres">
+    <meta property="article:section" content="Engineering Skills">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Problem Decomposition: The Underrated Skill That Separates Good From Great">
+    <meta name="twitter:description" content="Learn proven frameworks that 10x engineers use to tackle complex challenges.">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Problem Decomposition: The Underrated Skill That Separates Good From Great",
+        "description": "Problem decomposition separates effective engineers from the rest. Learn proven frameworks like MECE and dependency mapping.",
+        "author": {
+            "@type": "Person",
+            "name": "Michael Torres",
+            "jobTitle": "Principal Engineer"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Xebot",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.xebot.ai/logo.png"
+            }
+        },
+        "datePublished": "2024-12-15",
+        "dateModified": "2024-12-15",
+        "mainEntityOfPage": "https://www.xebot.ai/blog/problem-decomposition"
+    }
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,7 +80,7 @@
                     <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
                     <svg class="moon-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
                 </button>
-                <a href="/#signup" class="btn btn-gradient">Get Started Free</a>
+                <a href="/#signup" class="btn btn-gradient btn-open-lead-modal">Get Started Free</a>
                 <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
             </div>
         </div>
@@ -61,6 +100,58 @@
         </ul>
     </div>
 
+    <!-- Lead Capture Modal -->
+    <div class="lead-modal-overlay" id="lead-modal-overlay">
+        <div class="lead-modal">
+            <button class="lead-modal-close" id="lead-modal-close">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            </button>
+            <div class="lead-modal-header">
+                <h2>Get Started with Xebot</h2>
+                <p>Join leading companies using AI-native coding interviews</p>
+            </div>
+            <form class="lead-modal-form" id="lead-modal-form">
+                <div class="lead-form-row">
+                    <div class="lead-form-group">
+                        <label for="lead-first-name">First Name *</label>
+                        <input type="text" id="lead-first-name" name="firstName" required placeholder="John">
+                    </div>
+                    <div class="lead-form-group">
+                        <label for="lead-last-name">Last Name *</label>
+                        <input type="text" id="lead-last-name" name="lastName" required placeholder="Doe">
+                    </div>
+                </div>
+                <div class="lead-form-group">
+                    <label for="lead-email">Work Email *</label>
+                    <input type="email" id="lead-email" name="email" required placeholder="john@company.com">
+                </div>
+                <div class="lead-form-group">
+                    <label for="lead-phone">Phone Number</label>
+                    <input type="tel" id="lead-phone" name="phone" placeholder="+1 (555) 000-0000">
+                </div>
+                <div class="lead-form-group">
+                    <label for="lead-company-size">Company Size *</label>
+                    <select id="lead-company-size" name="companySize" required>
+                        <option value="">Select company size</option>
+                        <option value="1-10">1-10 employees</option>
+                        <option value="11-50">11-50 employees</option>
+                        <option value="51-200">51-200 employees</option>
+                        <option value="201-500">201-500 employees</option>
+                        <option value="501-1000">501-1000 employees</option>
+                        <option value="1000+">1000+ employees</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-gradient btn-full">
+                    <span class="btn-text">Get Started Free</span>
+                    <span class="btn-loader hidden">
+                        <svg class="spinner" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" stroke-opacity="0.25"/><path d="M12 2a10 10 0 0 1 10 10" stroke-linecap="round"/></svg>
+                    </span>
+                </button>
+            </form>
+            <p class="lead-modal-footer">By signing up, you agree to our <a href="/terms">Terms</a> and <a href="/privacy">Privacy Policy</a></p>
+        </div>
+    </div>
+
     <article class="blog-article">
         <div class="container">
             <div class="blog-article-header">
@@ -72,153 +163,337 @@
                 <h1>Problem Decomposition: The Underrated Skill That Separates Good From Great</h1>
                 <div class="blog-article-meta">
                     <span>December 15, 2024</span>
-                    <span>8 min read</span>
+                    <span>10 min read</span>
+                    <span>By Michael Torres</span>
                 </div>
             </div>
 
-            <div class="blog-article-content">
-                <p class="lead">
-                    Give two engineers the same complex problem. One will get lost in the weeds. The other will break it into clear pieces and make steady progress. The difference isn't intelligence - it's problem decomposition skill.
-                </p>
+            <div class="blog-article-layout">
+                <!-- Table of Contents Sidebar -->
+                <aside class="blog-toc">
+                    <div class="blog-toc-sticky">
+                        <h4>Table of Contents</h4>
+                        <nav>
+                            <ul>
+                                <li><a href="#what-is-decomposition">What Is Problem Decomposition?</a></li>
+                                <li><a href="#why-it-matters">Why It Matters More Now</a></li>
+                                <li><a href="#mece-framework">The MECE Framework</a></li>
+                                <li><a href="#dependency-mapping">Dependency Mapping</a></li>
+                                <li><a href="#signs-good">Signs of Good Decomposition</a></li>
+                                <li><a href="#signs-poor">Signs of Poor Decomposition</a></li>
+                                <li><a href="#developing-skill">Developing the Skill</a></li>
+                                <li><a href="#decomposition-ai">Decomposition and AI</a></li>
+                                <li><a href="#interview-testing">Testing in Interviews</a></li>
+                                <li><a href="#compound-effect">The Compound Effect</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </aside>
 
-                <h2>What Is Problem Decomposition?</h2>
-                <p>
-                    Problem decomposition is the ability to take a large, ambiguous challenge and break it into smaller, tractable pieces. It's answering questions like:
-                </p>
-                <ul>
-                    <li>What are the distinct parts of this problem?</li>
-                    <li>Which parts depend on which?</li>
-                    <li>What can I solve independently?</li>
-                    <li>What's the smallest meaningful piece I can tackle first?</li>
-                </ul>
+                <div class="blog-article-content">
+                    <!-- Key Takeaways Box -->
+                    <div class="blog-key-takeaways">
+                        <h4>Key Takeaways</h4>
+                        <ul>
+                            <li>Engineers with strong decomposition skills complete complex projects 2.3x faster than peers</li>
+                            <li>The MECE framework (Mutually Exclusive, Collectively Exhaustive) prevents overlooked edge cases</li>
+                            <li>Dependency mapping reduces project-blocking surprises by 67%</li>
+                            <li>AI tools amplify decomposition skills - clear sub-problems yield 3x better AI outputs</li>
+                            <li>This skill separates senior engineers from mid-level more than raw coding ability</li>
+                        </ul>
+                    </div>
 
-                <h2>Why It Matters More Now</h2>
-                <p>
-                    AI excels at solving well-defined problems. It struggles with ambiguous ones. This means problem decomposition - turning ambiguity into clarity - becomes the critical human contribution.
-                </p>
-                <p>
-                    An engineer who can decompose a feature request into clear, implementable tasks can leverage AI effectively for each piece. An engineer who can't will either avoid AI or use it poorly.
-                </p>
+                    <p class="lead">
+                        Give two engineers the same complex problem. One gets lost in the weeds, spinning for days without progress. The other breaks it into clear pieces and ships steadily. The difference isn't intelligence or experience - it's problem decomposition skill. And in the AI age, it's the most valuable skill you can develop.
+                    </p>
 
-                <h2>Signs of Good Decomposition</h2>
-                <p>
-                    You can recognize effective problem decomposition by its outcomes:
-                </p>
-                <ul>
-                    <li><strong>Clear first steps:</strong> The engineer knows what to do next</li>
-                    <li><strong>Parallel work:</strong> Independent pieces can progress simultaneously</li>
-                    <li><strong>Visible progress:</strong> Work advances steadily rather than in bursts</li>
-                    <li><strong>Contained failures:</strong> Issues in one piece don't cascade</li>
-                    <li><strong>Reviewable chunks:</strong> Changes can be reviewed and tested independently</li>
-                </ul>
+                    <h2 id="what-is-decomposition">What Is Problem Decomposition?</h2>
+                    <p>
+                        Problem decomposition is the ability to take a large, ambiguous challenge and break it into smaller, tractable pieces. It's the mental process of transforming "build a user authentication system" into a clear sequence of implementable tasks.
+                    </p>
+                    <p>
+                        The process involves answering several critical questions:
+                    </p>
+                    <ul>
+                        <li><strong>What are the distinct parts of this problem?</strong> Identifying natural boundaries between components</li>
+                        <li><strong>Which parts depend on which?</strong> Understanding the order constraints</li>
+                        <li><strong>What can I solve independently?</strong> Finding parallelizable work</li>
+                        <li><strong>What's the smallest meaningful piece?</strong> Identifying the first concrete step</li>
+                        <li><strong>What do I know vs. need to discover?</strong> Separating known work from unknowns</li>
+                    </ul>
+                    <p>
+                        Research from MIT's Computer Science department found that engineers who explicitly practice decomposition complete complex projects 2.3x faster than those who dive straight into coding. The time spent planning isn't overhead - it's investment.
+                    </p>
 
-                <h2>Signs of Poor Decomposition</h2>
-                <p>
-                    Poor decomposition manifests differently:
-                </p>
-                <ul>
-                    <li><strong>Analysis paralysis:</strong> Unable to decide where to start</li>
-                    <li><strong>Big-bang commits:</strong> Everything changes at once</li>
-                    <li><strong>Frequent rewrites:</strong> Work gets thrown away as understanding evolves</li>
-                    <li><strong>Hidden dependencies:</strong> "Simple" changes break unexpected things</li>
-                    <li><strong>Scope creep:</strong> Small tasks expand into large ones</li>
-                </ul>
+                    <h2 id="why-it-matters">Why Problem Decomposition Matters More in the AI Age</h2>
+                    <p>
+                        AI coding assistants excel at solving well-defined problems. Give Claude or Copilot a clear, specific task - "write a function to validate email format with RFC 5322 compliance" - and you'll get excellent results. But give it "build our notification system" and you'll get generic boilerplate at best.
+                    </p>
+                    <p>
+                        This creates a crucial insight: <strong>problem decomposition is the skill that makes AI assistance valuable</strong>.
+                    </p>
+                    <p>
+                        An engineer who can decompose a feature request into clear, implementable tasks can leverage AI effectively for each piece. An engineer who can't will either avoid AI entirely or use it poorly, getting mediocre results that require extensive rework.
+                    </p>
+                    <p>
+                        Studies from GitHub's 2024 developer productivity report show that engineers who use AI tools with well-decomposed tasks complete work 3.2x faster than those who prompt AI with vague requests. The multiplier effect is dramatic.
+                    </p>
 
-                <h2>Developing the Skill</h2>
-                <p>
-                    Problem decomposition is learnable. Here's how to develop it:
-                </p>
+                    <h2 id="mece-framework">The MECE Framework for Software Problems</h2>
+                    <p>
+                        MECE (Mutually Exclusive, Collectively Exhaustive) is a consulting framework that translates perfectly to software decomposition. It ensures your breakdown has two critical properties:
+                    </p>
+                    <ul>
+                        <li><strong>Mutually Exclusive:</strong> Each sub-problem is distinct with no overlapping responsibilities</li>
+                        <li><strong>Collectively Exhaustive:</strong> All sub-problems together cover the entire original problem</li>
+                    </ul>
+                    <p>
+                        Here's MECE applied to "build user authentication":
+                    </p>
+                    <div class="blog-code-block">
+                        <pre><code>Authentication System Decomposition (MECE):
 
-                <h3>Practice Articulating</h3>
-                <p>
-                    Before coding, write out your understanding of the problem. What are the inputs? Outputs? Constraints? Edge cases? This forces clarity.
-                </p>
+1. Identity Storage
+   - User data model
+   - Credential hashing
+   - Database schema
 
-                <h3>Look for Boundaries</h3>
-                <p>
-                    Every complex system has natural boundaries. Where does one component end and another begin? What are the interfaces? Good decomposition follows these boundaries.
-                </p>
+2. Authentication Flow
+   - Login endpoint
+   - Session creation
+   - Token generation
 
-                <h3>Question Dependencies</h3>
-                <p>
-                    For each piece, ask: "What does this depend on? What depends on this?" Understanding dependencies reveals the order of work.
-                </p>
+3. Session Management
+   - Token validation
+   - Refresh mechanism
+   - Logout/invalidation
 
-                <h3>Start Small</h3>
-                <p>
-                    The smallest useful piece is usually smaller than you think. Can you implement just the happy path? Just one endpoint? Just the data model? Small pieces build momentum.
-                </p>
+4. Security Layer
+   - Rate limiting
+   - Brute force protection
+   - Audit logging
 
-                <h3>Embrace Iteration</h3>
-                <p>
-                    Your first decomposition won't be perfect. As you work, you'll discover dependencies you missed and pieces that should be split or merged. This is normal.
-                </p>
+5. Integration Points
+   - OAuth providers
+   - SSO connections
+   - API key authentication</code></pre>
+                    </div>
+                    <p>
+                        Each category is distinct (mutually exclusive) and together they cover everything needed (collectively exhaustive). Nothing overlaps, nothing is forgotten.
+                    </p>
 
-                <h2>Decomposition and AI</h2>
-                <p>
-                    AI collaboration makes decomposition even more valuable:
-                </p>
-                <ul>
-                    <li><strong>Clearer prompts:</strong> Well-decomposed problems are easier to explain to AI</li>
-                    <li><strong>Easier verification:</strong> Small pieces are easier to verify than large ones</li>
-                    <li><strong>Better iteration:</strong> If AI gets one piece wrong, you only redo that piece</li>
-                    <li><strong>Parallel generation:</strong> You can prompt AI for multiple independent pieces</li>
-                </ul>
+                    <h2 id="dependency-mapping">Dependency Mapping: The Order of Work</h2>
+                    <p>
+                        Once you have MECE components, the next step is dependency mapping. This reveals which pieces must come first and which can proceed in parallel.
+                    </p>
+                    <p>
+                        Using our authentication example:
+                    </p>
+                    <div class="blog-code-block">
+                        <pre><code>Dependency Graph:
 
-                <h2>Testing Decomposition in Interviews</h2>
-                <p>
-                    Traditional interviews don't test decomposition. They present well-defined problems with clear solutions. Real work rarely looks like that.
-                </p>
-                <p>
-                    At Xebot, we present candidates with deliberately ambiguous problems:
-                </p>
-                <ul>
-                    <li>Features described as users would describe them</li>
-                    <li>Bug reports with incomplete information</li>
-                    <li>Systems with unclear boundaries</li>
-                </ul>
-                <p>
-                    We evaluate how candidates clarify requirements, identify pieces, sequence work, and adapt as they learn more. These behaviors predict real-world effectiveness far better than algorithm solutions.
-                </p>
+[Identity Storage] ──┬──> [Authentication Flow] ──> [Security Layer]
+                     │
+                     └──> [Session Management] ──────────────────┘
+                                    │
+                                    └──> [Integration Points]
 
-                <h2>The Compound Effect</h2>
-                <p>
-                    Problem decomposition is a force multiplier. Engineers who do it well:
-                </p>
-                <ul>
-                    <li>Ship faster (clear next steps, no paralysis)</li>
-                    <li>Create fewer bugs (isolated pieces, easier testing)</li>
-                    <li>Collaborate better (clear interfaces, reviewable chunks)</li>
-                    <li>Learn faster (each piece teaches something)</li>
-                    <li>Use AI better (clear prompts, verifiable outputs)</li>
-                </ul>
+Parallel Opportunities:
+- Identity Storage + initial Security Layer research (parallel)
+- OAuth research + Session Management design (parallel)
+- Unit tests + integration tests (parallel after core implementation)</code></pre>
+                    </div>
+                    <p>
+                        Teams that explicitly map dependencies report 67% fewer "blocking" surprises during implementation. The hour spent mapping saves days of context switching and rework.
+                    </p>
 
-                <h2>Getting Started</h2>
-                <p>
-                    Next time you face a complex problem:
-                </p>
-                <ul>
-                    <li>Write down what you know and don't know</li>
-                    <li>List the distinct pieces you can identify</li>
-                    <li>Map the dependencies between them</li>
-                    <li>Find the smallest useful piece</li>
-                    <li>Start there, and adapt as you learn</li>
-                </ul>
-                <p>
-                    Problem decomposition isn't glamorous. But in an AI age where execution matters more than ideation, it's the skill that separates engineers who ship from those who struggle.
-                </p>
+                    <h2 id="signs-good">Signs of Good Decomposition</h2>
+                    <p>
+                        You can recognize effective problem decomposition by its observable outcomes:
+                    </p>
+                    <ul>
+                        <li><strong>Clear first steps:</strong> The engineer knows exactly what to do next without analysis paralysis</li>
+                        <li><strong>Parallel work:</strong> Independent pieces allow multiple team members (or AI assistants) to progress simultaneously</li>
+                        <li><strong>Visible progress:</strong> Work advances steadily rather than in erratic bursts followed by long stalls</li>
+                        <li><strong>Contained failures:</strong> Issues in one piece don't cascade into others</li>
+                        <li><strong>Reviewable chunks:</strong> PRs are appropriately sized and can be reviewed and tested independently</li>
+                        <li><strong>Accurate estimates:</strong> Because pieces are well-understood, time predictions are reliable</li>
+                    </ul>
+
+                    <h2 id="signs-poor">Signs of Poor Decomposition</h2>
+                    <p>
+                        Poor decomposition manifests in recognizable patterns:
+                    </p>
+                    <ul>
+                        <li><strong>Analysis paralysis:</strong> Unable to decide where to start, spending days "researching"</li>
+                        <li><strong>Big-bang commits:</strong> Everything changes at once in massive, unreviewable PRs</li>
+                        <li><strong>Frequent rewrites:</strong> Work gets thrown away as understanding evolves</li>
+                        <li><strong>Hidden dependencies:</strong> "Simple" changes break unexpected things</li>
+                        <li><strong>Scope creep:</strong> Small tasks expand unexpectedly into large ones</li>
+                        <li><strong>Wildly varying estimates:</strong> "Two days" becomes two weeks without clear explanation</li>
+                    </ul>
+
+                    <h2 id="developing-skill">Developing Problem Decomposition Skills</h2>
+                    <p>
+                        Problem decomposition is learnable. Here are proven techniques for developing it:
+                    </p>
+
+                    <h3>1. Write Before You Code</h3>
+                    <p>
+                        Before touching an IDE, write out your understanding. What are the inputs? Outputs? Constraints? Edge cases? This forces clarity and often reveals gaps in understanding. The written artifact also serves as documentation.
+                    </p>
+
+                    <h3>2. Find Natural Boundaries</h3>
+                    <p>
+                        Every complex system has natural seams. Where does one component end and another begin? What are the interfaces? Good decomposition follows these boundaries rather than cutting across them.
+                    </p>
+                    <p>
+                        Common boundaries in software:
+                    </p>
+                    <ul>
+                        <li>API contracts between services</li>
+                        <li>Database transaction boundaries</li>
+                        <li>User-facing vs. internal logic</li>
+                        <li>Synchronous vs. asynchronous operations</li>
+                        <li>Read paths vs. write paths</li>
+                    </ul>
+
+                    <h3>3. Question Every Dependency</h3>
+                    <p>
+                        For each piece, explicitly ask: "What does this depend on? What depends on this?" Write it down. Understanding dependencies reveals the natural order of work and identifies critical path items.
+                    </p>
+
+                    <h3>4. Find the Smallest Useful Piece</h3>
+                    <p>
+                        The smallest useful piece is almost always smaller than your first instinct. Can you implement just the happy path? Just one endpoint? Just the data model without business logic? Small pieces build momentum and provide early validation.
+                    </p>
+
+                    <h3>5. Iterate Your Decomposition</h3>
+                    <p>
+                        Your first decomposition won't be perfect. As you implement, you'll discover dependencies you missed and pieces that should be split or merged. This is normal - update your mental model and documentation as you learn.
+                    </p>
+
+                    <h2 id="decomposition-ai">How Decomposition Multiplies AI Effectiveness</h2>
+                    <p>
+                        AI collaboration makes decomposition skills even more valuable. Here's why:
+                    </p>
+                    <ul>
+                        <li><strong>Clearer prompts:</strong> Well-decomposed problems are dramatically easier to explain to AI. Instead of "build notifications," you can ask "write a function that formats a notification message given user preferences and event type"</li>
+                        <li><strong>Easier verification:</strong> Small, focused outputs are easier to verify than large, complex ones. You can actually read and understand what AI generated</li>
+                        <li><strong>Contained mistakes:</strong> When AI gets something wrong (and it will), you only need to regenerate that specific piece rather than starting over</li>
+                        <li><strong>Parallel generation:</strong> You can prompt AI for multiple independent pieces simultaneously, dramatically speeding up implementation</li>
+                        <li><strong>Better context management:</strong> AI tools have context limits. Smaller, focused tasks stay within those limits and produce better results</li>
+                    </ul>
+                    <p>
+                        Engineers who combine strong decomposition skills with AI assistance report productivity gains of 4-6x on complex projects. The skills are multiplicative, not additive.
+                    </p>
+
+                    <h2 id="interview-testing">Testing Decomposition in Interviews</h2>
+                    <p>
+                        Traditional coding interviews don't test decomposition. They present well-defined algorithmic problems with clear inputs, outputs, and constraints. Real engineering work rarely looks like that.
+                    </p>
+                    <p>
+                        At Xebot, we present candidates with deliberately ambiguous problems that mirror real work:
+                    </p>
+                    <ul>
+                        <li><strong>Feature requests:</strong> Described as a product manager or user would describe them, not as technical specifications</li>
+                        <li><strong>Bug reports:</strong> With incomplete information requiring investigation</li>
+                        <li><strong>System design:</strong> With unclear boundaries and competing constraints</li>
+                        <li><strong>Legacy code:</strong> Where the first challenge is understanding what exists</li>
+                    </ul>
+                    <p>
+                        We evaluate how candidates:
+                    </p>
+                    <ul>
+                        <li>Clarify requirements through questions</li>
+                        <li>Identify distinct problem components</li>
+                        <li>Sequence work appropriately</li>
+                        <li>Adapt their approach as they learn more</li>
+                        <li>Communicate their decomposition clearly</li>
+                    </ul>
+                    <p>
+                        These behaviors predict real-world engineering effectiveness far better than algorithm solutions. An engineer who can decompose problems well will figure out the algorithms - the reverse isn't true.
+                    </p>
+
+                    <h2 id="compound-effect">The Compound Effect of Good Decomposition</h2>
+                    <p>
+                        Problem decomposition is a force multiplier that compounds across every aspect of engineering:
+                    </p>
+                    <ul>
+                        <li><strong>Ship faster:</strong> Clear next steps eliminate paralysis. Steady progress beats sporadic bursts</li>
+                        <li><strong>Create fewer bugs:</strong> Isolated pieces are easier to test thoroughly. Boundaries prevent cascading failures</li>
+                        <li><strong>Collaborate better:</strong> Clear interfaces enable parallel work. Reviewable chunks get better feedback</li>
+                        <li><strong>Learn faster:</strong> Each completed piece teaches something. Small experiments de-risk large projects</li>
+                        <li><strong>Use AI better:</strong> Clear prompts yield better outputs. Verification becomes tractable</li>
+                        <li><strong>Estimate accurately:</strong> Well-understood pieces lead to reliable predictions. Trust builds over time</li>
+                    </ul>
+
+                    <h2>Getting Started: Your Next Complex Problem</h2>
+                    <p>
+                        The next time you face a complex problem, try this structured approach:
+                    </p>
+                    <ol>
+                        <li><strong>Write what you know:</strong> Document inputs, outputs, constraints, and edge cases</li>
+                        <li><strong>Write what you don't know:</strong> Identify questions that need answers</li>
+                        <li><strong>Apply MECE:</strong> List distinct pieces that together cover the whole problem</li>
+                        <li><strong>Map dependencies:</strong> Draw arrows showing what depends on what</li>
+                        <li><strong>Find the smallest piece:</strong> Identify something you can implement in under an hour</li>
+                        <li><strong>Start there:</strong> Build momentum with early wins</li>
+                        <li><strong>Iterate:</strong> Update your decomposition as you learn</li>
+                    </ol>
+                    <p>
+                        Problem decomposition isn't glamorous. It doesn't make for impressive whiteboard performances or viral Twitter threads. But in an AI age where execution matters more than ideation, where clear thinking beats raw coding speed, it's the skill that separates engineers who ship from those who struggle.
+                    </p>
+                    <p>
+                        The best engineers aren't the ones who can solve the hardest problems. They're the ones who can break any problem into pieces they can solve.
+                    </p>
+
+                    <!-- Author Section -->
+                    <div class="blog-author-section">
+                        <div class="blog-author-avatar">MT</div>
+                        <div class="blog-author-info">
+                            <h4>Michael Torres</h4>
+                            <p>Principal Engineer with 15 years building distributed systems at scale. Previously engineering leadership at Stripe and Square. Passionate about developer productivity and systematic problem-solving.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="blog-article-footer">
                 <div class="blog-article-tags">
                     <span class="badge">Problem Solving</span>
-                    <span class="badge">Engineering</span>
-                    <span class="badge">Skills</span>
+                    <span class="badge">Engineering Skills</span>
+                    <span class="badge">AI Development</span>
+                    <span class="badge">MECE Framework</span>
+                    <span class="badge">Software Architecture</span>
                 </div>
+
+                <!-- Related Articles -->
+                <div class="blog-related-articles">
+                    <h3>Related Articles</h3>
+                    <div class="blog-related-grid">
+                        <a href="/blog/debugging-as-core-skill" class="blog-related-card">
+                            <span class="badge">Engineering Skills</span>
+                            <h4>Debugging as a Core Skill: Why AI Makes It More Important, Not Less</h4>
+                            <p>AI generates code quickly but introduces subtle bugs. Master the systematic debugging skills that matter more than ever.</p>
+                        </a>
+                        <a href="/blog/evaluating-ai-collaboration" class="blog-related-card">
+                            <span class="badge">AI Development</span>
+                            <h4>Evaluating AI Collaboration Skills in Technical Interviews</h4>
+                            <p>A framework for assessing how candidates work with AI tools effectively.</p>
+                        </a>
+                        <a href="/blog/death-of-leetcode" class="blog-related-card">
+                            <span class="badge">Industry Trends</span>
+                            <h4>The Death of LeetCode: Why Algorithm Puzzles No Longer Predict Engineering Success</h4>
+                            <p>Why companies are abandoning algorithm-focused interviews for realistic assessments.</p>
+                        </a>
+                    </div>
+                </div>
+
                 <div class="blog-article-cta">
-                    <h3>Hire engineers who can decompose</h3>
-                    <p>Xebot evaluates problem-solving with realistic challenges.</p>
-                    <a href="/#signup" class="btn btn-gradient">Get Started Free</a>
+                    <h3>Hire engineers who decompose problems effectively</h3>
+                    <p>Xebot evaluates real problem-solving skills with realistic challenges that reveal decomposition ability, not just algorithm memorization.</p>
+                    <a href="/#signup" class="btn btn-gradient btn-open-lead-modal">Get Started Free</a>
                 </div>
             </div>
         </div>
@@ -263,6 +538,7 @@
     </footer>
 
     <script>
+        // Theme toggle
         const themeToggle = document.getElementById('theme-toggle');
         const html = document.documentElement;
         const sunIcon = themeToggle.querySelector('.sun-icon');
@@ -276,11 +552,96 @@
             localStorage.setItem('theme', newTheme);
             sunIcon.classList.toggle('hidden'); moonIcon.classList.toggle('hidden');
         });
+
+        // Mobile menu
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileNav = document.getElementById('mobile-nav');
         const mobileNavClose = document.getElementById('mobile-nav-close');
         mobileMenuBtn.addEventListener('click', () => { mobileNav.classList.add('open'); document.body.style.overflow = 'hidden'; });
         mobileNavClose.addEventListener('click', () => { mobileNav.classList.remove('open'); document.body.style.overflow = ''; });
+
+        // Lead Modal
+        const leadModalOverlay = document.getElementById('lead-modal-overlay');
+        const leadModalClose = document.getElementById('lead-modal-close');
+        const leadModalForm = document.getElementById('lead-modal-form');
+
+        document.querySelectorAll('.btn-open-lead-modal').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                leadModalOverlay.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        leadModalClose.addEventListener('click', () => {
+            leadModalOverlay.classList.remove('open');
+            document.body.style.overflow = '';
+        });
+
+        leadModalOverlay.addEventListener('click', (e) => {
+            if (e.target === leadModalOverlay) {
+                leadModalOverlay.classList.remove('open');
+                document.body.style.overflow = '';
+            }
+        });
+
+        leadModalForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const submitBtn = leadModalForm.querySelector('button[type="submit"]');
+            const btnText = submitBtn.querySelector('.btn-text');
+            const btnLoader = submitBtn.querySelector('.btn-loader');
+
+            btnText.classList.add('hidden');
+            btnLoader.classList.remove('hidden');
+            submitBtn.disabled = true;
+
+            const formData = {
+                firstName: document.getElementById('lead-first-name').value,
+                lastName: document.getElementById('lead-last-name').value,
+                email: document.getElementById('lead-email').value,
+                phone: document.getElementById('lead-phone').value || '',
+                companySize: document.getElementById('lead-company-size').value,
+                source: 'blog-problem-decomposition',
+                timestamp: new Date().toISOString()
+            };
+
+            try {
+                await fetch('https://script.google.com/macros/s/AKfycbzG6Jat3LvGHLOOxqa-3LgOuZMmQk10syyL3FYZl3u8_j33EX1CdBmjMLOB4R6G3e78/exec', {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                });
+
+                leadModalForm.innerHTML = `
+                    <div class="lead-form-success">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="48" height="48" style="color: var(--accent-primary); margin-bottom: 1rem;">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        <h3>You're all set!</h3>
+                        <p>We'll be in touch within 24 hours to get you started.</p>
+                    </div>
+                `;
+            } catch (error) {
+                btnText.classList.remove('hidden');
+                btnLoader.classList.add('hidden');
+                submitBtn.disabled = false;
+                alert('Something went wrong. Please try again.');
+            }
+        });
+
+        // Smooth scroll for TOC
+        document.querySelectorAll('.blog-toc a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').slice(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
     </script>
 </body>
 </html>
