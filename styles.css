@@ -1878,3 +1878,540 @@ a:hover { color: var(--accent-secondary); }
   flex-direction: column;
   gap: var(--space-md);
 }
+
+/* ========================================
+   Comparison Table
+   ======================================== */
+.comparison-table {
+  overflow-x: auto;
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 200px 1fr 1fr;
+  gap: 1px;
+  background: var(--border-primary);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  min-width: 700px;
+}
+
+.comparison-header {
+  display: contents;
+}
+
+.comparison-row {
+  display: contents;
+}
+
+.comparison-cell {
+  padding: var(--space-lg);
+  background: var(--bg-elevated);
+}
+
+.comparison-header .comparison-cell {
+  background: var(--bg-secondary);
+  font-weight: 600;
+}
+
+.comparison-header .comparison-cell h4 {
+  margin-bottom: var(--space-xs);
+}
+
+.comparison-label {
+  font-weight: 500;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+}
+
+.comparison-old {
+  text-align: center;
+}
+
+.comparison-new {
+  text-align: center;
+  background: rgba(99, 102, 241, 0.05);
+}
+
+.comparison-badge {
+  display: inline-block;
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.comparison-badge-old {
+  background: var(--error-bg);
+  color: var(--error);
+}
+
+.comparison-badge-new {
+  background: var(--success-bg);
+  color: var(--success);
+}
+
+/* ========================================
+   Steps Grid
+   ======================================== */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg);
+}
+
+.step-card {
+  text-align: center;
+  padding: var(--space-xl);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-xl);
+  transition: all var(--transition-base);
+}
+
+.step-card:hover {
+  border-color: var(--accent-primary);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto var(--space-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-gradient);
+  color: white;
+  font-weight: 700;
+  font-size: 1.25rem;
+  border-radius: 50%;
+}
+
+.step-visual {
+  margin-bottom: var(--space-lg);
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-visual svg {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+}
+
+.step-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+}
+
+.step-description {
+  font-size: 0.9375rem;
+  color: var(--text-tertiary);
+  line-height: 1.6;
+}
+
+/* ========================================
+   CTA Form
+   ======================================== */
+.cta-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cta-form-row {
+  display: flex;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.cta-form-row .form-input {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.cta-form-row .form-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.cta-form-row .form-input:focus {
+  border-color: var(--accent-primary);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.cta-form-note {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+}
+
+/* ========================================
+   Testimonial Avatar Placeholder
+   ======================================== */
+.testimonial-avatar-placeholder {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-gradient);
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ========================================
+   Blog Styles
+   ======================================== */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: var(--space-xl);
+}
+
+.blog-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  transition: all var(--transition-base);
+}
+
+.blog-card:hover {
+  border-color: var(--accent-primary);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.blog-card-image {
+  width: 100%;
+  height: 200px;
+  background: var(--bg-tertiary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-tertiary);
+}
+
+.blog-card-content {
+  padding: var(--space-xl);
+}
+
+.blog-card-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  font-size: 0.8125rem;
+  color: var(--text-tertiary);
+  margin-bottom: var(--space-md);
+}
+
+.blog-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+  line-height: 1.4;
+}
+
+.blog-card-title a {
+  color: var(--text-primary);
+}
+
+.blog-card-title a:hover {
+  color: var(--accent-primary);
+}
+
+.blog-card-excerpt {
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.blog-tag {
+  display: inline-block;
+  padding: var(--space-xs) var(--space-sm);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--accent-primary);
+  background: rgba(99, 102, 241, 0.1);
+  border-radius: var(--radius-sm);
+}
+
+/* Blog Post */
+.blog-post {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.blog-post-header {
+  text-align: center;
+  margin-bottom: var(--space-3xl);
+}
+
+.blog-post-meta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-lg);
+  font-size: 0.9375rem;
+  color: var(--text-tertiary);
+  margin-bottom: var(--space-lg);
+}
+
+.blog-post-content {
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+
+.blog-post-content h2 {
+  margin-top: var(--space-2xl);
+  margin-bottom: var(--space-lg);
+}
+
+.blog-post-content h3 {
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-md);
+}
+
+.blog-post-content p {
+  margin-bottom: var(--space-lg);
+  color: var(--text-secondary);
+}
+
+.blog-post-content ul, .blog-post-content ol {
+  margin-bottom: var(--space-lg);
+  padding-left: var(--space-xl);
+}
+
+.blog-post-content li {
+  margin-bottom: var(--space-sm);
+  color: var(--text-secondary);
+}
+
+.blog-post-content blockquote {
+  margin: var(--space-xl) 0;
+  padding: var(--space-lg) var(--space-xl);
+  background: var(--bg-secondary);
+  border-left: 4px solid var(--accent-primary);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  font-style: italic;
+}
+
+/* ========================================
+   Contact & Forms
+   ======================================== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+}
+
+.contact-info h3 {
+  margin-bottom: var(--space-md);
+}
+
+.contact-info p {
+  margin-bottom: var(--space-xl);
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.contact-item-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-md);
+  color: var(--accent-primary);
+  flex-shrink: 0;
+}
+
+.contact-item-content h4 {
+  font-size: 0.9375rem;
+  margin-bottom: var(--space-xs);
+}
+
+.contact-item-content p {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.contact-form {
+  padding: var(--space-2xl);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-xl);
+}
+
+textarea.form-input {
+  min-height: 120px;
+  resize: vertical;
+}
+
+select.form-input {
+  cursor: pointer;
+}
+
+/* File Upload */
+.file-upload {
+  position: relative;
+  border: 2px dashed var(--border-primary);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  text-align: center;
+  transition: all var(--transition-base);
+  cursor: pointer;
+}
+
+.file-upload:hover {
+  border-color: var(--accent-primary);
+  background: rgba(99, 102, 241, 0.05);
+}
+
+.file-upload input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.file-upload-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto var(--space-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-tertiary);
+  border-radius: 50%;
+  color: var(--text-tertiary);
+}
+
+/* ========================================
+   Legal Pages
+   ======================================== */
+.legal-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.legal-content h1 {
+  margin-bottom: var(--space-lg);
+}
+
+.legal-content h2 {
+  margin-top: var(--space-2xl);
+  margin-bottom: var(--space-md);
+  font-size: 1.5rem;
+}
+
+.legal-content h3 {
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-md);
+  font-size: 1.25rem;
+}
+
+.legal-content p {
+  margin-bottom: var(--space-md);
+  line-height: 1.8;
+}
+
+.legal-content ul {
+  margin-bottom: var(--space-lg);
+  padding-left: var(--space-xl);
+}
+
+.legal-content li {
+  margin-bottom: var(--space-sm);
+  line-height: 1.7;
+}
+
+.legal-date {
+  color: var(--text-tertiary);
+  font-size: 0.9375rem;
+  margin-bottom: var(--space-2xl);
+}
+
+/* ========================================
+   Responsive Updates
+   ======================================== */
+@media (max-width: 1024px) {
+  .steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .comparison-grid {
+    grid-template-columns: 150px 1fr 1fr;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .comparison-grid {
+    grid-template-columns: 1fr;
+    min-width: 100%;
+  }
+
+  .comparison-header .comparison-cell:first-child,
+  .comparison-row .comparison-cell:first-child {
+    display: none;
+  }
+
+  .comparison-header {
+    display: flex;
+  }
+
+  .comparison-header .comparison-cell {
+    flex: 1;
+  }
+
+  .comparison-row {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid var(--border-primary);
+  }
+
+  .comparison-row .comparison-cell {
+    padding: var(--space-md);
+  }
+
+  .cta-form-row {
+    flex-direction: column;
+  }
+
+  .cta-form-row .btn {
+    width: 100%;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
