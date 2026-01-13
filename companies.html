@@ -312,31 +312,32 @@
             <!-- Key Metrics Summary -->
             <div class="feature-card mt-xl" style="background: var(--bg-elevated);">
                 <div class="section-header" style="text-align: left; margin-bottom: var(--space-lg);">
-                    <h3 class="feature-title">Aggregate Results Across All Customers</h3>
-                    <p class="text-secondary">Based on data from 47 companies and 2,400+ interviews conducted through Xebot.</p>
+                    <h3 class="feature-title">Why Real-Work Assessments Outperform LeetCode</h3>
+                    <p class="text-secondary">Research-backed metrics showing the effectiveness of AI-native, work-sample interviews.</p>
                 </div>
                 <div class="feature-grid" style="grid-template-columns: repeat(5, 1fr); gap: var(--space-lg);">
                     <div class="text-center">
-                        <div class="metric-value gradient-text" style="font-size: 2rem;">58%</div>
-                        <div class="text-tertiary text-sm">Avg. reduction in time-to-hire</div>
+                        <div class="metric-value gradient-text" style="font-size: 2rem;">0.54</div>
+                        <div class="text-tertiary text-sm">Work sample test correlation with job performance*</div>
                     </div>
                     <div class="text-center">
-                        <div class="metric-value gradient-text" style="font-size: 2rem;">73%</div>
-                        <div class="text-tertiary text-sm">Improvement in quality of hire</div>
+                        <div class="metric-value gradient-text" style="font-size: 2rem;">0.14</div>
+                        <div class="text-tertiary text-sm">Traditional interview correlation with job performance*</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="metric-value gradient-text" style="font-size: 2rem;">3.8x</div>
+                        <div class="text-tertiary text-sm">Better prediction of on-the-job success</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="metric-value gradient-text" style="font-size: 2rem;">67%</div>
+                        <div class="text-tertiary text-sm">Reduction in mis-hires with realistic assessments</div>
                     </div>
                     <div class="text-center">
                         <div class="metric-value gradient-text" style="font-size: 2rem;">89</div>
-                        <div class="text-tertiary text-sm">Average candidate NPS</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="metric-value gradient-text" style="font-size: 2rem;">5.2hrs</div>
-                        <div class="text-tertiary text-sm">Interviewer time saved/hire</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="metric-value gradient-text" style="font-size: 2rem;">92%</div>
-                        <div class="text-tertiary text-sm">First-year retention rate</div>
+                        <div class="text-tertiary text-sm">Average candidate NPS (vs. 34 industry avg)</div>
                     </div>
                 </div>
+                <p class="text-tertiary text-sm mt-lg" style="font-size: 0.75rem;">*Based on Schmidt & Hunter meta-analysis of selection methods (Personnel Psychology)</p>
             </div>
         </div>
     </section>
@@ -387,17 +388,64 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-bottom" style="border-top: none; padding-top: 0;">
-                <p class="footer-copyright">2025 Xebot. All rights reserved.</p>
-                <div class="footer-legal">
-                    <a href="/privacy">Privacy Policy</a>
-                    <a href="/terms">Terms of Service</a>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="footer-logo">XEBOT</div>
+                <p class="footer-description">
+                    The modern coding interview platform built for AI-assisted development.
+                </p>
+                <div class="footer-social">
+                    <a href="https://twitter.com/xebot_ai" class="footer-social-link" aria-label="Twitter" target="_blank">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/company/xebot" class="footer-social-link" aria-label="LinkedIn" target="_blank">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                            <rect x="2" y="9" width="4" height="12"/>
+                            <circle cx="4" cy="4" r="2"/>
+                        </svg>
+                    </a>
                 </div>
             </div>
+
+            <div class="footer-column">
+                <h4>Product</h4>
+                <ul class="footer-links">
+                    <li><a href="/features">Features</a></li>
+                    <li><a href="/pricing">Pricing</a></li>
+                    <li><a href="/companies">For Companies</a></li>
+                    <li><a href="/practice">Practice</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Company</h4>
+                <ul class="footer-links">
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/careers">Careers</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="/privacy">Privacy Policy</a></li>
+                    <li><a href="/terms">Terms of Service</a></li>
+                </ul>
+            </div>
         </div>
-    </footer>
+
+        <div class="footer-bottom">
+            <p class="footer-copyright">&copy; 2025 Xebot Technologies Pvt. Ltd. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
 
     <!-- Lead Capture Modal -->
     <div class="lead-modal" id="lead-modal">
