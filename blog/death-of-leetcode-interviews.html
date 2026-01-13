@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Death of LeetCode Interviews: What Comes Next | Xebot Blog</title>
+    <meta name="description" content="Why algorithm-focused interviews are becoming obsolete and what companies should evaluate instead. A look at the future of technical hiring.">
+    <meta name="keywords" content="leetcode interviews, technical hiring, coding interviews, algorithm interviews, hiring trends">
+
+    <meta property="og:title" content="The Death of LeetCode Interviews: What Comes Next">
+    <meta property="og:description" content="Why algorithm-focused interviews are becoming obsolete and what companies should evaluate instead.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.xebot.ai/blog/death-of-leetcode-interviews">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>X</text></svg>">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="navbar-brand">
+                <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32" height="32" rx="8" fill="url(#gradient)"/>
+                    <path d="M8 8L16 16M16 16L24 24M16 16L24 8M16 16L8 24" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    <defs><linearGradient id="gradient" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/></linearGradient></defs>
+                </svg>
+                XEBOT
+            </a>
+            <ul class="navbar-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/features">Features</a></li>
+                <li><a href="/pricing">Pricing</a></li>
+                <li><a href="/companies">For Companies</a></li>
+                <li><a href="/blog" class="active">Blog</a></li>
+            </ul>
+            <div class="navbar-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                    <svg class="moon-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+                <a href="/#signup" class="btn btn-gradient">Get Started Free</a>
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-nav" id="mobile-nav">
+        <div class="mobile-nav-header">
+            <span class="navbar-brand">XEBOT</span>
+            <button class="modal-close" id="mobile-nav-close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/features">Features</a></li>
+            <li><a href="/pricing">Pricing</a></li>
+            <li><a href="/companies">For Companies</a></li>
+            <li><a href="/blog">Blog</a></li>
+        </ul>
+    </div>
+
+    <article class="blog-article">
+        <div class="container">
+            <div class="blog-article-header">
+                <a href="/blog" class="blog-back-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                    Back to Blog
+                </a>
+                <span class="badge badge-gradient">Hiring</span>
+                <h1>The Death of LeetCode Interviews: What Comes Next</h1>
+                <div class="blog-article-meta">
+                    <span>January 5, 2025</span>
+                    <span>7 min read</span>
+                </div>
+            </div>
+
+            <div class="blog-article-content">
+                <p class="lead">
+                    For over a decade, LeetCode-style algorithm interviews have been the gatekeepers of tech hiring. But with AI able to solve most of these problems instantly, it's time to ask: what were we actually measuring?
+                </p>
+
+                <h2>The Original Promise</h2>
+                <p>
+                    Algorithm interviews emerged for good reasons. Early tech companies needed to filter thousands of applicants quickly. Standardized problems allowed consistent evaluation. And algorithmic thinking does correlate with engineering ability - to a point.
+                </p>
+                <p>
+                    The problem is that correlation became causation in hiring teams' minds. "Good at LeetCode" became synonymous with "good engineer."
+                </p>
+
+                <h2>What LeetCode Actually Measures</h2>
+                <p>
+                    Let's be honest about what these interviews test:
+                </p>
+                <ul>
+                    <li><strong>Pattern recognition:</strong> Have you seen this problem type before?</li>
+                    <li><strong>Memorization:</strong> Do you remember the standard approaches?</li>
+                    <li><strong>Performance under pressure:</strong> Can you think while someone watches?</li>
+                    <li><strong>Preparation time:</strong> How many hours did you study?</li>
+                </ul>
+                <p>
+                    Notice what's missing: debugging, system design, code review, collaboration, communication, and judgment. The skills that actually determine whether someone ships reliable software.
+                </p>
+
+                <h2>The AI Disruption</h2>
+                <p>
+                    AI didn't just make LeetCode problems easier to solve - it exposed their fundamental weakness. If a problem can be solved by describing it to an AI, the solution wasn't the valuable part.
+                </p>
+                <p>
+                    What AI can't do (yet) is understand messy requirements, debug distributed systems, make architectural trade-offs, or communicate effectively with stakeholders. These are the skills that matter.
+                </p>
+
+                <h2>What Should Replace LeetCode?</h2>
+                <p>
+                    The next generation of technical interviews should evaluate:
+                </p>
+                <ul>
+                    <li><strong>Problem decomposition:</strong> Can candidates break ambiguous requirements into clear tasks?</li>
+                    <li><strong>Verification skills:</strong> Do they test their assumptions? Catch edge cases?</li>
+                    <li><strong>AI collaboration:</strong> Can they effectively guide and verify AI-generated code?</li>
+                    <li><strong>Debugging:</strong> Can they trace issues through complex systems using logs and traces?</li>
+                    <li><strong>Communication:</strong> Can they explain their thinking clearly?</li>
+                </ul>
+
+                <h2>The Resistance</h2>
+                <p>
+                    Change is slow in hiring. LeetCode interviews persist because they're easy to administer, easy to compare, and "that's how we've always done it."
+                </p>
+                <p>
+                    But companies paying the price - in bad hires, missed talent, and engineering hours wasted on interview prep - are starting to experiment with alternatives.
+                </p>
+
+                <h2>Making the Transition</h2>
+                <p>
+                    If you're a hiring manager considering the switch, start small:
+                </p>
+                <ul>
+                    <li>Add a debugging challenge alongside your algorithm round</li>
+                    <li>Let candidates use AI assistants and evaluate their collaboration</li>
+                    <li>Include a system design discussion focused on trade-offs, not optimal solutions</li>
+                    <li>Track which interview signals actually predict on-the-job performance</li>
+                </ul>
+
+                <h2>The Future</h2>
+                <p>
+                    In five years, asking candidates to implement quicksort on a whiteboard will seem as outdated as asking them to write machine code. The engineers who thrive will be those who can leverage AI effectively while maintaining the judgment to build reliable systems.
+                </p>
+                <p>
+                    The question isn't whether LeetCode interviews will die - it's whether your company will adapt before or after your competitors.
+                </p>
+            </div>
+
+            <div class="blog-article-footer">
+                <div class="blog-article-tags">
+                    <span class="badge">Hiring</span>
+                    <span class="badge">Interviews</span>
+                    <span class="badge">LeetCode</span>
+                </div>
+                <div class="blog-article-cta">
+                    <h3>Ready to modernize your interviews?</h3>
+                    <p>Xebot helps you evaluate the skills that actually matter.</p>
+                    <a href="/#signup" class="btn btn-gradient">Get Started Free</a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">XEBOT</div>
+                    <p class="footer-description">The modern coding interview platform built for AI-assisted development.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="/features">Features</a></li>
+                        <li><a href="/pricing">Pricing</a></li>
+                        <li><a href="/companies">For Companies</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/careers">Careers</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2025 Xebot Technologies Pvt. Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        const sunIcon = themeToggle.querySelector('.sun-icon');
+        const moonIcon = themeToggle.querySelector('.moon-icon');
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+        if (savedTheme === 'dark') { sunIcon.classList.add('hidden'); moonIcon.classList.remove('hidden'); }
+        themeToggle.addEventListener('click', () => {
+            const newTheme = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            sunIcon.classList.toggle('hidden'); moonIcon.classList.toggle('hidden');
+        });
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileNav = document.getElementById('mobile-nav');
+        const mobileNavClose = document.getElementById('mobile-nav-close');
+        mobileMenuBtn.addEventListener('click', () => { mobileNav.classList.add('open'); document.body.style.overflow = 'hidden'; });
+        mobileNavClose.addEventListener('click', () => { mobileNav.classList.remove('open'); document.body.style.overflow = ''; });
+    </script>
+</body>
+</html>

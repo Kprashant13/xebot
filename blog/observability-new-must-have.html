@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Observability Skills Are the New Must-Have for Engineers | Xebot Blog</title>
+    <meta name="description" content="Observability is becoming a core engineering skill. Learn why understanding logs, traces, and metrics matters more than ever in AI-assisted development.">
+    <meta name="keywords" content="observability, debugging, logs, traces, metrics, engineering skills, monitoring">
+
+    <meta property="og:title" content="Why Observability Skills Are the New Must-Have for Engineers">
+    <meta property="og:description" content="Observability is becoming a core engineering skill in AI-assisted development.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.xebot.ai/blog/observability-new-must-have">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>X</text></svg>">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="navbar-brand">
+                <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32" height="32" rx="8" fill="url(#gradient)"/>
+                    <path d="M8 8L16 16M16 16L24 24M16 16L24 8M16 16L8 24" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    <defs><linearGradient id="gradient" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/></linearGradient></defs>
+                </svg>
+                XEBOT
+            </a>
+            <ul class="navbar-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/features">Features</a></li>
+                <li><a href="/pricing">Pricing</a></li>
+                <li><a href="/companies">For Companies</a></li>
+                <li><a href="/blog" class="active">Blog</a></li>
+            </ul>
+            <div class="navbar-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                    <svg class="moon-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+                <a href="/#signup" class="btn btn-gradient">Get Started Free</a>
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-nav" id="mobile-nav">
+        <div class="mobile-nav-header">
+            <span class="navbar-brand">XEBOT</span>
+            <button class="modal-close" id="mobile-nav-close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/features">Features</a></li>
+            <li><a href="/pricing">Pricing</a></li>
+            <li><a href="/companies">For Companies</a></li>
+            <li><a href="/blog">Blog</a></li>
+        </ul>
+    </div>
+
+    <article class="blog-article">
+        <div class="container">
+            <div class="blog-article-header">
+                <a href="/blog" class="blog-back-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                    Back to Blog
+                </a>
+                <span class="badge badge-gradient">Engineering Skills</span>
+                <h1>Why Observability Skills Are the New Must-Have for Engineers</h1>
+                <div class="blog-article-meta">
+                    <span>January 3, 2025</span>
+                    <span>6 min read</span>
+                </div>
+            </div>
+
+            <div class="blog-article-content">
+                <p class="lead">
+                    As AI takes over more code generation, the ability to understand and debug running systems becomes the differentiating skill. Observability isn't just for SREs anymore - it's becoming a core competency for every engineer.
+                </p>
+
+                <h2>The Shift in Engineering Work</h2>
+                <p>
+                    Ten years ago, most engineering time went into writing code. Today, more time goes into understanding, debugging, and maintaining systems. AI accelerates this trend - you can generate more code faster, but someone still needs to verify it works.
+                </p>
+                <p>
+                    This shift makes observability skills essential. Logs, traces, and metrics aren't just for ops teams during incidents - they're how engineers understand what their code actually does in production.
+                </p>
+
+                <h2>The Three Pillars</h2>
+                <p>
+                    Modern observability rests on three pillars, and engineers need fluency in all of them:
+                </p>
+                <ul>
+                    <li><strong>Logs:</strong> Structured records of events. Understanding how to write useful logs and query them efficiently.</li>
+                    <li><strong>Traces:</strong> Following requests across distributed services. Invaluable for debugging microservices.</li>
+                    <li><strong>Metrics:</strong> Aggregate measurements over time. Essential for understanding system behavior and capacity.</li>
+                </ul>
+
+                <h2>Why AI Makes This More Important</h2>
+                <p>
+                    When AI generates code, you lose some of the intimate understanding that comes from writing every line. You might not know exactly how a function handles edge cases until you see it fail in production.
+                </p>
+                <p>
+                    Observability bridges this gap. Good instrumentation lets you understand AI-generated code's behavior without reading every line. You verify through observation rather than inspection.
+                </p>
+
+                <h2>Skills to Develop</h2>
+                <p>
+                    Engineers looking to strengthen their observability skills should focus on:
+                </p>
+                <ul>
+                    <li><strong>Query languages:</strong> Learn to write effective queries in tools like Datadog, Splunk, or Grafana</li>
+                    <li><strong>Instrumentation:</strong> Know how to add useful logging and tracing to code</li>
+                    <li><strong>Dashboard design:</strong> Create visualizations that surface problems quickly</li>
+                    <li><strong>Alert design:</strong> Set thresholds that catch real issues without alert fatigue</li>
+                    <li><strong>Debugging workflows:</strong> Develop systematic approaches to investigating issues</li>
+                </ul>
+
+                <h2>The Interview Gap</h2>
+                <p>
+                    Traditional interviews rarely test observability skills. Candidates write code on whiteboards but never debug it with logs. They design systems but don't explain how they'd monitor them.
+                </p>
+                <p>
+                    This is a significant blind spot. Engineers who can't debug production systems effectively become bottlenecks, no matter how well they perform in algorithm interviews.
+                </p>
+
+                <h2>How We Evaluate This</h2>
+                <p>
+                    At Xebot, our debugging challenges provide candidates with real logs, traces, and metrics. We watch how they:
+                </p>
+                <ul>
+                    <li>Form hypotheses about root causes</li>
+                    <li>Navigate observability tools efficiently</li>
+                    <li>Correlate information across different signals</li>
+                    <li>Communicate their findings clearly</li>
+                </ul>
+                <p>
+                    These skills predict on-the-job effectiveness far better than algorithm puzzles.
+                </p>
+
+                <h2>Getting Started</h2>
+                <p>
+                    If you want to build observability skills, start with your current projects:
+                </p>
+                <ul>
+                    <li>Add structured logging to a service you own</li>
+                    <li>Set up distributed tracing across two services</li>
+                    <li>Build a dashboard that shows your service's key metrics</li>
+                    <li>Practice investigating issues using only observability tools</li>
+                </ul>
+                <p>
+                    The engineers who master these skills will be the ones who can ship reliable software in an AI-assisted world.
+                </p>
+            </div>
+
+            <div class="blog-article-footer">
+                <div class="blog-article-tags">
+                    <span class="badge">Observability</span>
+                    <span class="badge">Debugging</span>
+                    <span class="badge">Engineering</span>
+                </div>
+                <div class="blog-article-cta">
+                    <h3>Hire engineers who can debug</h3>
+                    <p>Xebot evaluates observability skills with real-world challenges.</p>
+                    <a href="/#signup" class="btn btn-gradient">Get Started Free</a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">XEBOT</div>
+                    <p class="footer-description">The modern coding interview platform built for AI-assisted development.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="/features">Features</a></li>
+                        <li><a href="/pricing">Pricing</a></li>
+                        <li><a href="/companies">For Companies</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/careers">Careers</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2025 Xebot Technologies Pvt. Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        const sunIcon = themeToggle.querySelector('.sun-icon');
+        const moonIcon = themeToggle.querySelector('.moon-icon');
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+        if (savedTheme === 'dark') { sunIcon.classList.add('hidden'); moonIcon.classList.remove('hidden'); }
+        themeToggle.addEventListener('click', () => {
+            const newTheme = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            sunIcon.classList.toggle('hidden'); moonIcon.classList.toggle('hidden');
+        });
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileNav = document.getElementById('mobile-nav');
+        const mobileNavClose = document.getElementById('mobile-nav-close');
+        mobileMenuBtn.addEventListener('click', () => { mobileNav.classList.add('open'); document.body.style.overflow = 'hidden'; });
+        mobileNavClose.addEventListener('click', () => { mobileNav.classList.remove('open'); document.body.style.overflow = ''; });
+    </script>
+</body>
+</html>

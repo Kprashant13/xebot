@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem Decomposition: The Underrated Skill That Separates Good From Great | Xebot Blog</title>
+    <meta name="description" content="The ability to break complex problems into manageable pieces is what separates effective engineers from the rest. Learn why problem decomposition matters and how to develop it.">
+    <meta name="keywords" content="problem decomposition, engineering skills, software architecture, problem solving, systems thinking">
+
+    <meta property="og:title" content="Problem Decomposition: The Underrated Skill That Separates Good From Great">
+    <meta property="og:description" content="The ability to break complex problems into manageable pieces is what separates effective engineers.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.xebot.ai/blog/problem-decomposition">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>X</text></svg>">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="navbar-brand">
+                <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32" height="32" rx="8" fill="url(#gradient)"/>
+                    <path d="M8 8L16 16M16 16L24 24M16 16L24 8M16 16L8 24" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    <defs><linearGradient id="gradient" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/></linearGradient></defs>
+                </svg>
+                XEBOT
+            </a>
+            <ul class="navbar-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/features">Features</a></li>
+                <li><a href="/pricing">Pricing</a></li>
+                <li><a href="/companies">For Companies</a></li>
+                <li><a href="/blog" class="active">Blog</a></li>
+            </ul>
+            <div class="navbar-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                    <svg class="moon-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+                <a href="/#signup" class="btn btn-gradient">Get Started Free</a>
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-nav" id="mobile-nav">
+        <div class="mobile-nav-header">
+            <span class="navbar-brand">XEBOT</span>
+            <button class="modal-close" id="mobile-nav-close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/features">Features</a></li>
+            <li><a href="/pricing">Pricing</a></li>
+            <li><a href="/companies">For Companies</a></li>
+            <li><a href="/blog">Blog</a></li>
+        </ul>
+    </div>
+
+    <article class="blog-article">
+        <div class="container">
+            <div class="blog-article-header">
+                <a href="/blog" class="blog-back-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                    Back to Blog
+                </a>
+                <span class="badge badge-gradient">Engineering Skills</span>
+                <h1>Problem Decomposition: The Underrated Skill That Separates Good From Great</h1>
+                <div class="blog-article-meta">
+                    <span>December 15, 2024</span>
+                    <span>8 min read</span>
+                </div>
+            </div>
+
+            <div class="blog-article-content">
+                <p class="lead">
+                    Give two engineers the same complex problem. One will get lost in the weeds. The other will break it into clear pieces and make steady progress. The difference isn't intelligence - it's problem decomposition skill.
+                </p>
+
+                <h2>What Is Problem Decomposition?</h2>
+                <p>
+                    Problem decomposition is the ability to take a large, ambiguous challenge and break it into smaller, tractable pieces. It's answering questions like:
+                </p>
+                <ul>
+                    <li>What are the distinct parts of this problem?</li>
+                    <li>Which parts depend on which?</li>
+                    <li>What can I solve independently?</li>
+                    <li>What's the smallest meaningful piece I can tackle first?</li>
+                </ul>
+
+                <h2>Why It Matters More Now</h2>
+                <p>
+                    AI excels at solving well-defined problems. It struggles with ambiguous ones. This means problem decomposition - turning ambiguity into clarity - becomes the critical human contribution.
+                </p>
+                <p>
+                    An engineer who can decompose a feature request into clear, implementable tasks can leverage AI effectively for each piece. An engineer who can't will either avoid AI or use it poorly.
+                </p>
+
+                <h2>Signs of Good Decomposition</h2>
+                <p>
+                    You can recognize effective problem decomposition by its outcomes:
+                </p>
+                <ul>
+                    <li><strong>Clear first steps:</strong> The engineer knows what to do next</li>
+                    <li><strong>Parallel work:</strong> Independent pieces can progress simultaneously</li>
+                    <li><strong>Visible progress:</strong> Work advances steadily rather than in bursts</li>
+                    <li><strong>Contained failures:</strong> Issues in one piece don't cascade</li>
+                    <li><strong>Reviewable chunks:</strong> Changes can be reviewed and tested independently</li>
+                </ul>
+
+                <h2>Signs of Poor Decomposition</h2>
+                <p>
+                    Poor decomposition manifests differently:
+                </p>
+                <ul>
+                    <li><strong>Analysis paralysis:</strong> Unable to decide where to start</li>
+                    <li><strong>Big-bang commits:</strong> Everything changes at once</li>
+                    <li><strong>Frequent rewrites:</strong> Work gets thrown away as understanding evolves</li>
+                    <li><strong>Hidden dependencies:</strong> "Simple" changes break unexpected things</li>
+                    <li><strong>Scope creep:</strong> Small tasks expand into large ones</li>
+                </ul>
+
+                <h2>Developing the Skill</h2>
+                <p>
+                    Problem decomposition is learnable. Here's how to develop it:
+                </p>
+
+                <h3>Practice Articulating</h3>
+                <p>
+                    Before coding, write out your understanding of the problem. What are the inputs? Outputs? Constraints? Edge cases? This forces clarity.
+                </p>
+
+                <h3>Look for Boundaries</h3>
+                <p>
+                    Every complex system has natural boundaries. Where does one component end and another begin? What are the interfaces? Good decomposition follows these boundaries.
+                </p>
+
+                <h3>Question Dependencies</h3>
+                <p>
+                    For each piece, ask: "What does this depend on? What depends on this?" Understanding dependencies reveals the order of work.
+                </p>
+
+                <h3>Start Small</h3>
+                <p>
+                    The smallest useful piece is usually smaller than you think. Can you implement just the happy path? Just one endpoint? Just the data model? Small pieces build momentum.
+                </p>
+
+                <h3>Embrace Iteration</h3>
+                <p>
+                    Your first decomposition won't be perfect. As you work, you'll discover dependencies you missed and pieces that should be split or merged. This is normal.
+                </p>
+
+                <h2>Decomposition and AI</h2>
+                <p>
+                    AI collaboration makes decomposition even more valuable:
+                </p>
+                <ul>
+                    <li><strong>Clearer prompts:</strong> Well-decomposed problems are easier to explain to AI</li>
+                    <li><strong>Easier verification:</strong> Small pieces are easier to verify than large ones</li>
+                    <li><strong>Better iteration:</strong> If AI gets one piece wrong, you only redo that piece</li>
+                    <li><strong>Parallel generation:</strong> You can prompt AI for multiple independent pieces</li>
+                </ul>
+
+                <h2>Testing Decomposition in Interviews</h2>
+                <p>
+                    Traditional interviews don't test decomposition. They present well-defined problems with clear solutions. Real work rarely looks like that.
+                </p>
+                <p>
+                    At Xebot, we present candidates with deliberately ambiguous problems:
+                </p>
+                <ul>
+                    <li>Features described as users would describe them</li>
+                    <li>Bug reports with incomplete information</li>
+                    <li>Systems with unclear boundaries</li>
+                </ul>
+                <p>
+                    We evaluate how candidates clarify requirements, identify pieces, sequence work, and adapt as they learn more. These behaviors predict real-world effectiveness far better than algorithm solutions.
+                </p>
+
+                <h2>The Compound Effect</h2>
+                <p>
+                    Problem decomposition is a force multiplier. Engineers who do it well:
+                </p>
+                <ul>
+                    <li>Ship faster (clear next steps, no paralysis)</li>
+                    <li>Create fewer bugs (isolated pieces, easier testing)</li>
+                    <li>Collaborate better (clear interfaces, reviewable chunks)</li>
+                    <li>Learn faster (each piece teaches something)</li>
+                    <li>Use AI better (clear prompts, verifiable outputs)</li>
+                </ul>
+
+                <h2>Getting Started</h2>
+                <p>
+                    Next time you face a complex problem:
+                </p>
+                <ul>
+                    <li>Write down what you know and don't know</li>
+                    <li>List the distinct pieces you can identify</li>
+                    <li>Map the dependencies between them</li>
+                    <li>Find the smallest useful piece</li>
+                    <li>Start there, and adapt as you learn</li>
+                </ul>
+                <p>
+                    Problem decomposition isn't glamorous. But in an AI age where execution matters more than ideation, it's the skill that separates engineers who ship from those who struggle.
+                </p>
+            </div>
+
+            <div class="blog-article-footer">
+                <div class="blog-article-tags">
+                    <span class="badge">Problem Solving</span>
+                    <span class="badge">Engineering</span>
+                    <span class="badge">Skills</span>
+                </div>
+                <div class="blog-article-cta">
+                    <h3>Hire engineers who can decompose</h3>
+                    <p>Xebot evaluates problem-solving with realistic challenges.</p>
+                    <a href="/#signup" class="btn btn-gradient">Get Started Free</a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">XEBOT</div>
+                    <p class="footer-description">The modern coding interview platform built for AI-assisted development.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="/features">Features</a></li>
+                        <li><a href="/pricing">Pricing</a></li>
+                        <li><a href="/companies">For Companies</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/careers">Careers</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2025 Xebot Technologies Pvt. Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        const sunIcon = themeToggle.querySelector('.sun-icon');
+        const moonIcon = themeToggle.querySelector('.moon-icon');
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+        if (savedTheme === 'dark') { sunIcon.classList.add('hidden'); moonIcon.classList.remove('hidden'); }
+        themeToggle.addEventListener('click', () => {
+            const newTheme = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            sunIcon.classList.toggle('hidden'); moonIcon.classList.toggle('hidden');
+        });
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileNav = document.getElementById('mobile-nav');
+        const mobileNavClose = document.getElementById('mobile-nav-close');
+        mobileMenuBtn.addEventListener('click', () => { mobileNav.classList.add('open'); document.body.style.overflow = 'hidden'; });
+        mobileNavClose.addEventListener('click', () => { mobileNav.classList.remove('open'); document.body.style.overflow = ''; });
+    </script>
+</body>
+</html>
