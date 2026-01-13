@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Coding Challenges | Xebot - AI-Age Interview Prep</title>
+    <meta name="description" content="Practice vibe coding challenges and prepare for AI-age coding interviews. Sharpen your debugging, AI collaboration, and problem decomposition skills.">
+    <meta name="keywords" content="coding practice, interview prep, vibe coding, AI coding challenges, debugging practice">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Practice Coding Challenges | Xebot">
+    <meta property="og:description" content="Prepare for AI-age coding interviews with real-world challenges.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.xebot.ai/practice">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>X</text></svg>">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="navbar-brand">
+                <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32" height="32" rx="8" fill="url(#gradient)"/>
+                    <path d="M8 8L16 16M16 16L24 24M16 16L24 8M16 16L8 24" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    <defs>
+                        <linearGradient id="gradient" x1="0" y1="0" x2="32" y2="32">
+                            <stop stop-color="#6366f1"/>
+                            <stop offset="1" stop-color="#a855f7"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                XEBOT
+            </a>
+
+            <ul class="navbar-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/features">Features</a></li>
+                <li><a href="/pricing">Pricing</a></li>
+                <li><a href="/companies">For Companies</a></li>
+                <li><a href="/practice" class="active">Practice</a></li>
+            </ul>
+
+            <div class="navbar-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"/>
+                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                    </svg>
+                    <svg class="moon-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </button>
+                <a href="/#signup" class="btn btn-gradient">Get Started Free</a>
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobile-nav">
+        <div class="mobile-nav-header">
+            <span class="navbar-brand">XEBOT</span>
+            <button class="modal-close" id="mobile-nav-close">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                    <path d="M18 6L6 18M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/features">Features</a></li>
+            <li><a href="/pricing">Pricing</a></li>
+            <li><a href="/companies">For Companies</a></li>
+            <li><a href="/practice">Practice</a></li>
+        </ul>
+        <div class="mobile-nav-actions">
+            <a href="/#signup" class="btn btn-gradient btn-lg w-full">Get Started Free</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <span class="badge badge-gradient">Coming Soon</span>
+                <h1>Practice for the AI Age</h1>
+                <p class="page-hero-subtitle">
+                    Sharpen your vibe coding skills with real-world challenges. Practice debugging,
+                    AI collaboration, and problem decomposition before your next interview.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practice Categories -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Challenge Categories</h2>
+                <p class="section-subtitle">
+                    Our practice challenges are designed to evaluate the skills that matter in modern development.
+                </p>
+            </div>
+
+            <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3>AI Collaboration</h3>
+                    <p>Learn to effectively prompt, guide, and verify AI-generated code. Practice the meta-skill of working with AI assistants.</p>
+                    <span class="badge">8 Challenges</span>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <h3>Debugging & Observability</h3>
+                    <p>Track down bugs in complex systems using logs, traces, and metrics. Build debugging intuition that AI can't replace.</p>
+                    <span class="badge">12 Challenges</span>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="3" y1="9" x2="21" y2="9"/>
+                            <line x1="9" y1="21" x2="9" y2="9"/>
+                        </svg>
+                    </div>
+                    <h3>Problem Decomposition</h3>
+                    <p>Break down ambiguous requirements into clear, implementable pieces. The skill that separates good from great engineers.</p>
+                    <span class="badge">10 Challenges</span>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                        </svg>
+                    </div>
+                    <h3>Tool Orchestration</h3>
+                    <p>Coordinate multiple tools, APIs, and services to solve complex problems. Real-world engineering scenarios.</p>
+                    <span class="badge">6 Challenges</span>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                            <line x1="12" y1="22.08" x2="12" y2="12"/>
+                        </svg>
+                    </div>
+                    <h3>System Integration</h3>
+                    <p>Connect disparate systems and handle edge cases. Practice the integration challenges that occur in real projects.</p>
+                    <span class="badge">7 Challenges</span>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                        </svg>
+                    </div>
+                    <h3>Code Review</h3>
+                    <p>Review AI-generated and human-written code for bugs, security issues, and best practices. Develop a critical eye.</p>
+                    <span class="badge">9 Challenges</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sample Challenge -->
+    <section class="section bg-subtle">
+        <div class="container">
+            <div class="section-header">
+                <h2>Sample Challenge</h2>
+                <p class="section-subtitle">
+                    Get a taste of what Xebot practice challenges look like.
+                </p>
+            </div>
+
+            <div class="editor-container" style="max-width: 900px; margin: 0 auto;">
+                <div class="editor-header">
+                    <div class="editor-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="editor-tabs">
+                        <span class="editor-tab active">challenge.md</span>
+                    </div>
+                </div>
+                <div class="editor-content">
+                    <pre><code><span class="code-comment"># Debug the Payment Service</span>
+
+<span class="code-keyword">## Context</span>
+You're on-call and customers are reporting failed payments.
+The service logs show intermittent errors but the root cause
+is unclear.
+
+<span class="code-keyword">## Your Task</span>
+1. Analyze the provided logs and traces
+2. Identify the root cause of the failures
+3. Propose a fix (you may use AI assistance)
+4. Explain how you'd prevent this in the future
+
+<span class="code-keyword">## Resources</span>
+- Service logs (last 24 hours)
+- Distributed traces
+- Service dependency graph
+- AI assistant (Claude/GPT)
+
+<span class="code-keyword">## Evaluation Criteria</span>
+- Problem-solving approach (40%)
+- Effective use of observability tools (25%)
+- AI collaboration quality (20%)
+- Communication clarity (15%)
+
+<span class="code-comment">Time limit: 45 minutes</span></code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Early Access CTA -->
+    <section class="section">
+        <div class="container">
+            <div class="cta-card" style="text-align: center; max-width: 700px; margin: 0 auto;">
+                <h2>Be First to Practice</h2>
+                <p class="text-secondary" style="margin-bottom: 2rem;">
+                    We're building the practice platform now. Join the waitlist to get early access
+                    and help shape the challenges.
+                </p>
+                <form class="cta-form" id="practice-form" style="max-width: 500px; margin: 0 auto;">
+                    <input type="email" name="email" placeholder="Enter your email" required class="cta-input">
+                    <button type="submit" class="btn btn-gradient">Join Waitlist</button>
+                </form>
+                <p class="text-secondary text-sm" style="margin-top: 1rem;">
+                    Currently 250+ engineers on the waitlist
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">XEBOT</div>
+                    <p class="footer-description">
+                        The modern coding interview platform built for AI-assisted development.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://twitter.com/xebot_ai" class="footer-social-link" aria-label="Twitter" target="_blank">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                            </svg>
+                        </a>
+                        <a href="https://linkedin.com/company/xebot" class="footer-social-link" aria-label="LinkedIn" target="_blank">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                <rect x="2" y="9" width="4" height="12"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="/features">Features</a></li>
+                        <li><a href="/pricing">Pricing</a></li>
+                        <li><a href="/companies">For Companies</a></li>
+                        <li><a href="/practice">Practice</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/careers">Careers</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2025 Xebot Technologies Pvt. Ltd. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="/privacy">Privacy</a>
+                    <a href="/terms">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        const sunIcon = themeToggle.querySelector('.sun-icon');
+        const moonIcon = themeToggle.querySelector('.moon-icon');
+
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+        updateThemeIcon(savedTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const newTheme = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+
+        function updateThemeIcon(theme) {
+            if (theme === 'dark') {
+                sunIcon.classList.add('hidden');
+                moonIcon.classList.remove('hidden');
+            } else {
+                sunIcon.classList.remove('hidden');
+                moonIcon.classList.add('hidden');
+            }
+        }
+
+        // Mobile Navigation
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileNav = document.getElementById('mobile-nav');
+        const mobileNavClose = document.getElementById('mobile-nav-close');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileNav.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        });
+
+        mobileNavClose.addEventListener('click', () => {
+            mobileNav.classList.remove('open');
+            document.body.style.overflow = '';
+        });
+
+        // Form Submission
+        const practiceForm = document.getElementById('practice-form');
+        practiceForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(practiceForm);
+            const data = {
+                email: formData.get('email'),
+                source: 'practice-waitlist',
+                timestamp: new Date().toISOString()
+            };
+
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxQ5AqA374MPUA_HBuOHjxN22ktzmC_lqNV8fhplih_vsDye9xqWO8QIB-ABJr7qLOsaA/exec';
+
+            try {
+                await fetch(scriptURL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                alert('Thanks! You\'re on the waitlist.');
+                practiceForm.reset();
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Something went wrong. Please try again.');
+            }
+        });
+    </script>
+</body>
+</html>

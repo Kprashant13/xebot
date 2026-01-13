@@ -10,6 +10,14 @@
     { "source": "/contact", "destination": "/contact.html" },
     { "source": "/careers", "destination": "/careers.html" },
     { "source": "/terms", "destination": "/terms.html" },
-    { "source": "/privacy", "destination": "/privacy.html" }
+    { "source": "/privacy", "destination": "/privacy.html" },
+    { "source": "/practice", "destination": "/practice.html" },
+    { "source": "/blog/why-vibe-coding-is-future", "destination": "/blog/why-vibe-coding-is-future.html" },
+    { "source": "/blog/death-of-leetcode-interviews", "destination": "/blog/death-of-leetcode-interviews.html" },
+    { "source": "/blog/observability-new-must-have", "destination": "/blog/observability-new-must-have.html" },
+    { "source": "/blog/evaluating-ai-collaboration", "destination": "/blog/evaluating-ai-collaboration.html" },
+    { "source": "/blog/debugging-as-core-skill", "destination": "/blog/debugging-as-core-skill.html" },
+    { "source": "/blog/candidate-experience-matters", "destination": "/blog/candidate-experience-matters.html" },
+    { "source": "/blog/problem-decomposition", "destination": "/blog/problem-decomposition.html" }
   ]
 }
