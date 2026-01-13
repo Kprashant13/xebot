@@ -84,7 +84,7 @@
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
                     </svg>
                 </button>
-                <a href="/#signup" class="btn btn-gradient">Get Started Free</a>
+                <a href="/#signup" class="btn btn-gradient btn-open-lead-modal">Get Started Free</a>
                 <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu">
                     <span></span>
                     <span></span>
@@ -112,7 +112,59 @@
             <li><a href="/blog">Blog</a></li>
         </ul>
         <div class="mobile-nav-actions">
-            <a href="/#signup" class="btn btn-gradient btn-lg w-full">Get Started Free</a>
+            <a href="/#signup" class="btn btn-gradient btn-lg w-full btn-open-lead-modal">Get Started Free</a>
+        </div>
+    </div>
+
+    <!-- Lead Capture Modal -->
+    <div class="lead-modal-overlay" id="lead-modal-overlay">
+        <div class="lead-modal">
+            <button class="lead-modal-close" id="lead-modal-close">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            </button>
+            <div class="lead-modal-header">
+                <h2>Get Started with Xebot</h2>
+                <p>Join leading companies using AI-native coding interviews</p>
+            </div>
+            <form class="lead-modal-form" id="lead-modal-form">
+                <div class="lead-form-row">
+                    <div class="lead-form-group">
+                        <label for="lead-first-name">First Name *</label>
+                        <input type="text" id="lead-first-name" name="firstName" required placeholder="John">
+                    </div>
+                    <div class="lead-form-group">
+                        <label for="lead-last-name">Last Name *</label>
+                        <input type="text" id="lead-last-name" name="lastName" required placeholder="Doe">
+                    </div>
+                </div>
+                <div class="lead-form-group">
+                    <label for="lead-email">Work Email *</label>
+                    <input type="email" id="lead-email" name="email" required placeholder="john@company.com">
+                </div>
+                <div class="lead-form-group">
+                    <label for="lead-phone">Phone Number</label>
+                    <input type="tel" id="lead-phone" name="phone" placeholder="+1 (555) 000-0000">
+                </div>
+                <div class="lead-form-group">
+                    <label for="lead-company-size">Company Size *</label>
+                    <select id="lead-company-size" name="companySize" required>
+                        <option value="">Select company size</option>
+                        <option value="1-10">1-10 employees</option>
+                        <option value="11-50">11-50 employees</option>
+                        <option value="51-200">51-200 employees</option>
+                        <option value="201-500">201-500 employees</option>
+                        <option value="501-1000">501-1000 employees</option>
+                        <option value="1000+">1000+ employees</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-gradient btn-full">
+                    <span class="btn-text">Get Started Free</span>
+                    <span class="btn-loader hidden">
+                        <svg class="spinner" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" stroke-opacity="0.25"/><path d="M12 2a10 10 0 0 1 10 10" stroke-linecap="round"/></svg>
+                    </span>
+                </button>
+            </form>
+            <p class="lead-modal-footer">By signing up, you agree to our <a href="/terms">Terms</a> and <a href="/privacy">Privacy Policy</a></p>
         </div>
     </div>
 
@@ -298,7 +350,7 @@
                         <div class="article-cta-inline">
                             <h4>Want to hire engineers who excel at vibe coding?</h4>
                             <p>Xebot's AI-age assessments evaluate the skills that actually predict job performance.</p>
-                            <a href="/#signup" class="btn btn-gradient">Get Started Free</a>
+                            <a href="/#signup" class="btn btn-gradient btn-open-lead-modal">Get Started Free</a>
                         </div>
 
                         <h3>4. Problem Decomposition</h3>
@@ -525,7 +577,7 @@
                     <div class="sidebar-section sidebar-cta">
                         <h4 class="sidebar-title">Ready to transform hiring?</h4>
                         <p>Evaluate engineers on the skills that actually matter in the AI age.</p>
-                        <a href="/#signup" class="btn">Get Started Free</a>
+                        <a href="/#signup" class="btn btn-open-lead-modal">Get Started Free</a>
                     </div>
                 </aside>
             </div>
@@ -669,6 +721,77 @@
                     link.classList.add('active');
                 }
             });
+        });
+
+        // Lead Modal
+        const leadModalOverlay = document.getElementById('lead-modal-overlay');
+        const leadModalClose = document.getElementById('lead-modal-close');
+        const leadModalForm = document.getElementById('lead-modal-form');
+
+        document.querySelectorAll('.btn-open-lead-modal').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                leadModalOverlay.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        leadModalClose.addEventListener('click', () => {
+            leadModalOverlay.classList.remove('open');
+            document.body.style.overflow = '';
+        });
+
+        leadModalOverlay.addEventListener('click', (e) => {
+            if (e.target === leadModalOverlay) {
+                leadModalOverlay.classList.remove('open');
+                document.body.style.overflow = '';
+            }
+        });
+
+        leadModalForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const submitBtn = leadModalForm.querySelector('button[type="submit"]');
+            const btnText = submitBtn.querySelector('.btn-text');
+            const btnLoader = submitBtn.querySelector('.btn-loader');
+
+            btnText.classList.add('hidden');
+            btnLoader.classList.remove('hidden');
+            submitBtn.disabled = true;
+
+            const formData = {
+                firstName: document.getElementById('lead-first-name').value,
+                lastName: document.getElementById('lead-last-name').value,
+                email: document.getElementById('lead-email').value,
+                phone: document.getElementById('lead-phone').value || '',
+                companySize: document.getElementById('lead-company-size').value,
+                source: 'blog-why-vibe-coding-is-future',
+                timestamp: new Date().toISOString()
+            };
+
+            try {
+                await fetch('https://script.google.com/macros/s/AKfycbxQ5AqA374MPUA_HBuOHjxN22ktzmC_lqNV8fhplih_vsDye9xqWO8QIB-ABJr7qLOsaA/exec', {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                });
+
+                leadModalForm.innerHTML = `
+                    <div class="lead-form-success">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="48" height="48" style="color: var(--accent-primary); margin-bottom: 1rem;">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        <h3>You're all set!</h3>
+                        <p>We'll be in touch within 24 hours to get you started.</p>
+                    </div>
+                `;
+            } catch (error) {
+                btnText.classList.remove('hidden');
+                btnLoader.classList.add('hidden');
+                submitBtn.disabled = false;
+                alert('Something went wrong. Please try again.');
+            }
         });
     </script>
 </body>
