@@ -4726,6 +4726,186 @@ select.form-input {
   }
 }
 
+/* Lead Modal Overlay (Blog Pages) */
+.lead-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-base);
+}
+
+.lead-modal-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lead-modal-overlay .lead-modal {
+  width: 100%;
+  max-width: 480px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-xl);
+  transform: scale(0.95);
+  transition: transform var(--transition-base);
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  inset: auto;
+  opacity: 1;
+  visibility: visible;
+}
+
+.lead-modal-overlay.open .lead-modal {
+  transform: scale(1);
+}
+
+.lead-modal-overlay .lead-modal-header {
+  text-align: center;
+  padding: var(--space-xl) var(--space-xl) var(--space-md);
+  border-bottom: none;
+  display: block;
+}
+
+.lead-modal-overlay .lead-modal-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 var(--space-xs);
+}
+
+.lead-modal-overlay .lead-modal-header p {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.lead-modal-overlay .lead-modal-close {
+  position: absolute;
+  top: var(--space-md);
+  right: var(--space-md);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-tertiary);
+  border: none;
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.lead-modal-overlay .lead-modal-close:hover {
+  background: var(--bg-code);
+  color: var(--text-primary);
+}
+
+.lead-modal-overlay .lead-modal-form {
+  padding: var(--space-md) var(--space-xl) var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.lead-modal-overlay .lead-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.lead-modal-overlay .lead-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.lead-modal-overlay .lead-form-group label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.lead-modal-overlay .lead-form-group input,
+.lead-modal-overlay .lead-form-group select {
+  padding: var(--space-sm) var(--space-md);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  color: var(--text-primary);
+  transition: all var(--transition-base);
+}
+
+.lead-modal-overlay .lead-form-group input:focus,
+.lead-modal-overlay .lead-form-group select:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.lead-modal-overlay .lead-form-group input::placeholder {
+  color: var(--text-tertiary);
+}
+
+.lead-modal-overlay .lead-modal-footer {
+  text-align: center;
+  padding: 0 var(--space-xl) var(--space-lg);
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+}
+
+.lead-modal-overlay .lead-modal-footer a {
+  color: var(--accent-primary);
+  text-decoration: none;
+}
+
+.lead-modal-overlay .lead-modal-footer a:hover {
+  text-decoration: underline;
+}
+
+.lead-form-success {
+  text-align: center;
+  padding: var(--space-xl);
+}
+
+.lead-form-success h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.lead-form-success p {
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .lead-modal-overlay .lead-modal {
+    margin: var(--space-md);
+    max-width: calc(100% - var(--space-xl));
+  }
+
+  .lead-modal-overlay .lead-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .lead-modal-overlay .lead-modal-header,
+  .lead-modal-overlay .lead-modal-form {
+    padding-left: var(--space-lg);
+    padding-right: var(--space-lg);
+  }
+}
+
 /* ========================================
    Case Study Pages
    ======================================== */
