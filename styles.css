@@ -2697,36 +2697,90 @@ a:hover { color: var(--accent-secondary); }
   line-height: 1.6;
 }
 
-.productivity-quote {
-  text-align: center;
-  padding: var(--space-2xl);
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(168, 85, 247, 0.05));
-  border-radius: var(--radius-2xl);
+/* Industry Stats Card */
+.industry-stats-card {
+  background: var(--bg-elevated);
   border: 1px solid var(--border-primary);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-2xl);
+  text-align: center;
 }
 
-.productivity-quote blockquote {
-  font-size: 1.25rem;
-  font-style: italic;
+.industry-stats-header {
+  margin-bottom: var(--space-xl);
+}
+
+.industry-stats-header h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
   color: var(--text-primary);
-  margin-bottom: var(--space-lg);
-  line-height: 1.6;
+  margin-top: var(--space-sm);
 }
 
-.productivity-quote cite {
+.industry-stats-grid {
   display: flex;
-  flex-direction: column;
-  gap: var(--space-xs);
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-3xl);
 }
 
-.productivity-quote cite strong {
-  font-size: 1rem;
+.industry-stat {
+  flex: 1;
+  max-width: 280px;
+}
+
+.industry-stat-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.industry-stat-logo span {
+  font-size: 1.125rem;
+  font-weight: 600;
   color: var(--text-primary);
 }
 
-.productivity-quote cite span {
+.industry-stat-value {
+  font-size: 3.5rem;
+  font-weight: 800;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: var(--space-sm);
+}
+
+.industry-stat-label {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-sm);
+}
+
+.industry-stat-source {
   font-size: 0.875rem;
   color: var(--text-tertiary);
+  font-style: italic;
+}
+
+.industry-stat-divider {
+  width: 1px;
+  height: 120px;
+  background: var(--border-primary);
+}
+
+.industry-stats-footer {
+  margin-top: var(--space-xl);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--border-primary);
+  font-size: 1rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (max-width: 1024px) {
@@ -2753,8 +2807,18 @@ a:hover { color: var(--accent-secondary); }
     gap: var(--space-md);
   }
 
-  .productivity-quote blockquote {
-    font-size: 1rem;
+  .industry-stats-grid {
+    flex-direction: column;
+    gap: var(--space-xl);
+  }
+
+  .industry-stat-divider {
+    width: 80px;
+    height: 1px;
+  }
+
+  .industry-stat-value {
+    font-size: 2.5rem;
   }
 }
 
