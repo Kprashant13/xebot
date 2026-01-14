@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200">
+    <defs>
+        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#6366f1"/>
+            <stop offset="100%" stop-color="#a855f7"/>
+        </linearGradient>
+    </defs>
+    <!-- Icon -->
+    <g transform="translate(20, 20)">
+        <rect width="160" height="160" rx="40" fill="url(#gradient)"/>
+        <path d="M45 45L115 115M115 45L45 115" stroke="white" stroke-width="10" stroke-linecap="round" opacity="0.3"/>
+        <path d="M45 45L115 115M115 45L45 115" stroke="white" stroke-width="8" stroke-linecap="round"/>
+        <circle cx="45" cy="45" r="12.5" fill="white"/>
+        <circle cx="115" cy="45" r="12.5" fill="white"/>
+        <circle cx="45" cy="115" r="12.5" fill="white"/>
+        <circle cx="115" cy="115" r="12.5" fill="white"/>
+        <circle cx="80" cy="80" r="15" fill="white"/>
+        <circle cx="80" cy="80" r="7.5" fill="url(#gradient)"/>
+    </g>
+    <!-- Text XEBOT -->
+    <text x="210" y="130" font-family="Inter, system-ui, sans-serif" font-size="90" font-weight="800" letter-spacing="-2" fill="#1a1a2e">XEBOT</text>
+</svg>

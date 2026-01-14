@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+    <defs>
+        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#6366f1"/>
+            <stop offset="100%" stop-color="#a855f7"/>
+        </linearGradient>
+    </defs>
+    <!-- Background rounded rectangle -->
+    <rect width="512" height="512" rx="128" fill="url(#gradient)"/>
+    <!-- X lines with glow effect -->
+    <path d="M144 144L368 368M368 144L144 368" stroke="white" stroke-width="32" stroke-linecap="round" opacity="0.3"/>
+    <path d="M144 144L368 368M368 144L144 368" stroke="white" stroke-width="24" stroke-linecap="round"/>
+    <!-- Corner nodes -->
+    <circle cx="144" cy="144" r="40" fill="white"/>
+    <circle cx="368" cy="144" r="40" fill="white"/>
+    <circle cx="144" cy="368" r="40" fill="white"/>
+    <circle cx="368" cy="368" r="40" fill="white"/>
+    <!-- Center node -->
+    <circle cx="256" cy="256" r="48" fill="white"/>
+    <circle cx="256" cy="256" r="24" fill="url(#gradient)"/>
+</svg>
