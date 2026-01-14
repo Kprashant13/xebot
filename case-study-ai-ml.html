@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study: AI/ML Startup | Xebot</title>
+    <meta name="description" content="How an AI startup achieved 40% lower incident MTTR and zero regretted hires by evaluating production debugging skills in interviews.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>X</text></svg>">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="navbar-brand">
+                <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32" height="32" rx="8" fill="url(#gradient)"/>
+                    <path d="M8 8L16 16M16 16L24 24M16 16L24 8M16 16L8 24" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    <defs><linearGradient id="gradient" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/></linearGradient></defs>
+                </svg>
+                XEBOT
+            </a>
+            <ul class="navbar-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/features">Features</a></li>
+                <li><a href="/pricing">Pricing</a></li>
+                <li><a href="/companies">For Companies</a></li>
+                <li><a href="/blog">Blog</a></li>
+            </ul>
+            <div class="navbar-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                    <svg class="moon-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+                <a href="/#signup" class="btn btn-gradient">Get Started Free</a>
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Case Study Header -->
+    <section class="hero" style="min-height: 50vh;">
+        <div class="hero-grid"></div>
+        <div class="hero-glow"></div>
+        <div class="container">
+            <div class="hero-content" style="max-width: 900px;">
+                <a href="/companies#case-studies" class="hero-badge" style="text-decoration: none;">
+                    <span class="hero-badge-dot"></span>
+                    Case Study
+                </a>
+                <span class="challenge-tag" style="background: rgba(168, 85, 247, 0.1); color: #a855f7; margin-bottom: var(--space-md);">AI/ML Startup</span>
+                <h1>40% Lower Incident MTTR with <span class="gradient-text">Production-Ready Hires</span></h1>
+                <p class="hero-description">
+                    How an AI startup eliminated regretted hires and built a team of exceptional debuggers by evaluating real-world incident response skills.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Metrics Banner -->
+    <section class="trust-bar reveal">
+        <div class="container">
+            <div style="display: flex; justify-content: center; align-items: center; gap: var(--space-3xl); flex-wrap: wrap;">
+                <div class="text-center">
+                    <div class="metric-value gradient-text" style="font-size: 2.5rem;">40%</div>
+                    <div class="text-tertiary">Lower incident MTTR</div>
+                </div>
+                <div class="text-center">
+                    <div class="metric-value gradient-text" style="font-size: 2.5rem;">78%</div>
+                    <div class="text-tertiary">Better hire quality</div>
+                </div>
+                <div class="text-center">
+                    <div class="metric-value gradient-text" style="font-size: 2.5rem;">0%</div>
+                    <div class="text-tertiary">Regretted hires (8 months)</div>
+                </div>
+                <div class="text-center">
+                    <div class="metric-value gradient-text" style="font-size: 2.5rem;">$45K</div>
+                    <div class="text-tertiary">Saved per avoided bad hire</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="section reveal">
+        <div class="container container-md">
+            <div class="blog-content">
+                <h2>The Challenge: Hiring for Production Excellence</h2>
+                <p>
+                    This AI/ML startup builds infrastructure for training and deploying machine learning models at scale. Their engineering culture prioritizes production reliability above all else—a single incident can cost customers thousands of dollars in wasted compute.
+                </p>
+                <p>
+                    But their traditional interview process wasn't identifying the right candidates:
+                </p>
+                <ul>
+                    <li><strong>Algorithm-focused interviews missed operational skills:</strong> Candidates who aced LeetCode often struggled with production systems thinking.</li>
+                    <li><strong>23% regretted hire rate:</strong> Nearly a quarter of engineers hired weren't meeting expectations within their first year.</li>
+                    <li><strong>Hidden talent going unnoticed:</strong> Candidates who looked mediocre on paper often had exceptional debugging instincts that weren't being evaluated.</li>
+                </ul>
+
+                <blockquote class="testimonial-quote" style="border-left: 4px solid var(--accent-primary); padding-left: var(--space-lg); margin: var(--space-xl) 0;">
+                    "The debugging and observability metrics were eye-opening. We discovered candidates who looked mediocre on paper but had exceptional production instincts. Our incident response times dropped 40% after hiring engineers vetted through Xebot."
+                    <cite style="display: block; margin-top: var(--space-md); color: var(--text-tertiary);">— Rachel Liu, VP Engineering</cite>
+                </blockquote>
+
+                <h2>Redefining What "Good" Looks Like</h2>
+                <p>
+                    The VP of Engineering led a fundamental rethinking of what skills actually matter for their team. They identified three core competencies that traditional interviews completely missed:
+                </p>
+
+                <div class="feature-grid" style="margin: var(--space-xl) 0;">
+                    <div class="feature-card">
+                        <h4 style="color: var(--text-primary); margin-bottom: var(--space-sm);">Log Analysis</h4>
+                        <p class="text-secondary">Can candidates quickly parse through noisy logs to identify the root cause? Do they know what to grep for?</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4 style="color: var(--text-primary); margin-bottom: var(--space-sm);">Distributed Tracing</h4>
+                        <p class="text-secondary">Can they follow a request through a microservices architecture and identify where latency is introduced?</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4 style="color: var(--text-primary); margin-bottom: var(--space-sm);">Hypothesis Formation</h4>
+                        <p class="text-secondary">Do they form and test hypotheses systematically, or do they thrash randomly through the codebase?</p>
+                    </div>
+                </div>
+
+                <h2>What Xebot Assessed</h2>
+                <p>
+                    The company designed custom assessment scenarios that mirrored their actual production environment:
+                </p>
+
+                <h3>Assessment Components</h3>
+                <ol>
+                    <li>
+                        <strong>Live Incident Simulation (40 min)</strong><br>
+                        Candidates received a simulated PagerDuty alert with real logs, traces, and metrics from a degraded ML training pipeline. They needed to triage, identify root cause, and propose a fix.
+                    </li>
+                    <li>
+                        <strong>Observability Design (25 min)</strong><br>
+                        Given a new feature spec, candidates designed the logging, metrics, and alerting strategy. The focus was on thinking about failure modes upfront.
+                    </li>
+                    <li>
+                        <strong>AI-Assisted Debugging (30 min)</strong><br>
+                        Candidates used Claude Code to help debug a complex race condition. The assessment evaluated how effectively they collaborated with AI on investigation.
+                    </li>
+                </ol>
+
+                <h2>The Science of Debugging</h2>
+                <p>
+                    Research supports the idea that debugging ability is a distinct skill from algorithm knowledge:
+                </p>
+
+                <div class="pricing-card" style="margin: var(--space-xl) 0;">
+                    <h3 style="color: var(--text-primary); margin-bottom: var(--space-lg);">What the Research Shows</h3>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-xl);">
+                        <div>
+                            <div class="metric-value gradient-text" style="font-size: 1.5rem;">50%</div>
+                            <div class="text-secondary">of engineering time is spent debugging, not writing new code</div>
+                            <div class="text-tertiary text-sm" style="margin-top: var(--space-xs);">— Cambridge University Study</div>
+                        </div>
+                        <div>
+                            <div class="metric-value gradient-text" style="font-size: 1.5rem;">0.12</div>
+                            <div class="text-secondary">correlation between algorithm interview scores and debugging performance</div>
+                            <div class="text-tertiary text-sm" style="margin-top: var(--space-xs);">— Internal analysis of 200+ engineers</div>
+                        </div>
+                    </div>
+                </div>
+
+                <blockquote class="testimonial-quote" style="border-left: 4px solid var(--accent-primary); padding-left: var(--space-lg); margin: var(--space-xl) 0; background: var(--bg-elevated); padding: var(--space-xl); border-radius: var(--radius-lg);">
+                    "The hottest new programming language is English. The skill ceiling for prompting is very high and it takes time and practice to get good at it... Most coding will be prompt engineering and debugging."
+                    <cite style="display: block; margin-top: var(--space-md); color: var(--text-tertiary);">— Andrej Karpathy, Former Director of AI at Tesla</cite>
+                </blockquote>
+
+                <h2>Discovering Hidden Talent</h2>
+                <p>
+                    One of the most valuable outcomes was identifying candidates who would have been rejected by traditional screens:
+                </p>
+
+                <div class="feature-card" style="margin: var(--space-xl) 0; background: var(--bg-elevated);">
+                    <h3 style="color: var(--text-primary); margin-bottom: var(--space-lg);">Case: The "Mediocre" Candidate</h3>
+                    <p class="text-secondary">
+                        One candidate struggled with the algorithm portion of their previous interview at another company. Their resume showed "only" 3 years of experience at a smaller startup. Traditional filters would have rejected them.
+                    </p>
+                    <p class="text-secondary" style="margin-top: var(--space-md);">
+                        But in Xebot's debugging assessment, they demonstrated exceptional skills:
+                    </p>
+                    <ul class="text-secondary">
+                        <li>Identified the root cause in 12 minutes (average: 28 minutes)</li>
+                        <li>Used AI assistance effectively to validate hypotheses</li>
+                        <li>Proposed a fix that addressed both the symptom and underlying architectural issue</li>
+                    </ul>
+                    <p class="text-secondary" style="margin-top: var(--space-md);">
+                        <strong>Result:</strong> This engineer is now leading their incident response team and has the lowest MTTR of anyone on staff.
+                    </p>
+                </div>
+
+                <h2>Results After 8 Months</h2>
+                <p>
+                    The impact on both hiring efficiency and production reliability was dramatic:
+                </p>
+
+                <div class="feature-card" style="margin: var(--space-xl) 0;">
+                    <h3 style="color: var(--text-primary); margin-bottom: var(--space-lg);">Hire Quality Improvements</h3>
+                    <ul>
+                        <li><strong>Zero regretted hires:</strong> Down from 23% in the previous 8-month period</li>
+                        <li><strong>Identified 12 exceptional candidates who failed traditional screens:</strong> Candidates other companies rejected</li>
+                        <li><strong>Engineering team NPS increased 34 points:</strong> Existing engineers love working with the new hires</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card" style="margin: var(--space-xl) 0;">
+                    <h3 style="color: var(--text-primary); margin-bottom: var(--space-lg);">Production Impact</h3>
+                    <ul>
+                        <li><strong>Incident MTTR reduced 40%:</strong> New hires are production-ready from day one</li>
+                        <li><strong>78% improvement in "hire quality" rating from managers:</strong> Based on 90-day performance reviews</li>
+                        <li><strong>$45K saved per avoided bad hire:</strong> Based on recruiting, onboarding, and severance costs</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card" style="margin: var(--space-xl) 0;">
+                    <h3 style="color: var(--text-primary); margin-bottom: var(--space-lg);">Process Efficiency</h3>
+                    <ul>
+                        <li><strong>Interview-to-offer time reduced by 4 days:</strong> Async assessments don't require scheduling</li>
+                        <li><strong>Engineering hours saved: 320 per quarter:</strong> Fewer interview loops needed</li>
+                        <li><strong>Candidate completion rate: 94%:</strong> vs. 67% with previous take-home assignments</li>
+                    </ul>
+                </div>
+
+                <h2>Key Learnings</h2>
+
+                <ol>
+                    <li>
+                        <strong>Production skills are learnable but rarely taught.</strong> Great debuggers often develop their skills through hard-won experience, not formal education. Traditional interviews miss this entirely.
+                    </li>
+                    <li>
+                        <strong>AI amplifies existing debugging skills.</strong> Engineers who are already good at forming hypotheses become even better with AI assistance. The gap between good and great debuggers widens with AI tools.
+                    </li>
+                    <li>
+                        <strong>Observability thinking is a leading indicator.</strong> Candidates who think about failure modes during feature design consistently perform better in production.
+                    </li>
+                </ol>
+
+                <blockquote class="testimonial-quote" style="border-left: 4px solid var(--accent-primary); padding-left: var(--space-lg); margin: var(--space-xl) 0;">
+                    "We used to hire for algorithm speed and hope they'd learn production skills. Now we hire for production skills and trust that smart engineers can look up algorithms when needed. The results speak for themselves."
+                    <cite style="display: block; margin-top: var(--space-md); color: var(--text-tertiary);">— Rachel Liu, VP Engineering</cite>
+                </blockquote>
+
+                <h2>The Debugging-First Future</h2>
+                <p>
+                    As AI assistants handle more code generation, the relative importance of debugging skills will only increase. Engineers who can effectively investigate, diagnose, and fix issues—especially in AI-generated code they didn't write—will be invaluable.
+                </p>
+                <p>
+                    This startup is betting that evaluating these skills early gives them a permanent advantage in building reliable ML infrastructure. The early results suggest they're right.
+                </p>
+            </div>
+
+            <!-- CTA -->
+            <div class="text-center" style="margin-top: var(--space-3xl);">
+                <h3 style="margin-bottom: var(--space-md);">Ready to hire production-ready engineers?</h3>
+                <p class="text-secondary" style="margin-bottom: var(--space-xl);">Join 23 companies already using Xebot to evaluate real-world debugging skills.</p>
+                <div class="hero-actions" style="justify-content: center;">
+                    <a href="/#signup" class="btn btn-gradient btn-lg">Get Started Free</a>
+                    <a href="/companies#contact" class="btn btn-secondary btn-lg">Schedule Demo</a>
+                </div>
+            </div>
+
+            <!-- More Case Studies -->
+            <div style="margin-top: var(--space-3xl); padding-top: var(--space-xl); border-top: 1px solid var(--border-primary);">
+                <h3 style="margin-bottom: var(--space-xl);">More Case Studies</h3>
+                <div class="feature-grid" style="grid-template-columns: repeat(2, 1fr);">
+                    <a href="/case-study-fintech" class="feature-card" style="text-decoration: none;">
+                        <span class="challenge-tag" style="background: rgba(99, 102, 241, 0.1); color: var(--accent-primary);">Series B FinTech</span>
+                        <h4 style="color: var(--text-primary); margin: var(--space-md) 0;">52% Faster Time-to-Hire</h4>
+                        <p class="text-secondary">How a FinTech startup stopped losing top talent to outdated LeetCode interviews.</p>
+                    </a>
+                    <a href="/case-study-devtools" class="feature-card" style="text-decoration: none;">
+                        <span class="challenge-tag" style="background: rgba(16, 185, 129, 0.1); color: var(--success);">DevTools</span>
+                        <h4 style="color: var(--text-primary); margin: var(--space-md) 0;">67% Faster Ramp-Up</h4>
+                        <p class="text-secondary">How a developer tools company achieved 91 candidate NPS with work-sample assessments.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">XEBOT</div>
+                    <p class="footer-description">The modern coding interview platform built for AI-assisted development.</p>
+                    <div class="footer-social">
+                        <a href="https://x.com/xebot_ai" class="footer-social-link" aria-label="X" target="_blank">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/xebot" class="footer-social-link" aria-label="LinkedIn" target="_blank">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="/features">Features</a></li>
+                        <li><a href="/pricing">Pricing</a></li>
+                        <li><a href="/companies">For Companies</a></li>
+                        <li><a href="/practice">Practice</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="/case-study-fintech">FinTech Case Study</a></li>
+                        <li><a href="/case-study-ai-ml">AI/ML Case Study</a></li>
+                        <li><a href="/case-study-devtools">DevTools Case Study</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/careers">Careers</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2026 Xebot Technologies Pvt. Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lead Capture Modal -->
+    <div class="lead-modal" id="lead-modal">
+        <div class="lead-modal-content">
+            <div class="lead-modal-header">
+                <h3>Get Started with Xebot</h3>
+                <button class="lead-modal-close" id="lead-modal-close">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                </button>
+            </div>
+            <div class="lead-modal-body">
+                <p class="lead-modal-subtitle">Join 23 companies already using Xebot to hire smarter.</p>
+                <div class="lead-modal-benefits">
+                    <div class="lead-modal-benefit">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <span>Free trial with no credit card required</span>
+                    </div>
+                    <div class="lead-modal-benefit">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <span>AI-powered coding assessments</span>
+                    </div>
+                    <div class="lead-modal-benefit">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <span>Evaluate vibe coding skills</span>
+                    </div>
+                </div>
+                <form class="lead-form" id="lead-form">
+                    <div class="lead-form-row">
+                        <div class="lead-form-group">
+                            <label for="lead-first-name">First Name</label>
+                            <input type="text" id="lead-first-name" name="firstName" class="lead-form-input" placeholder="John" required>
+                        </div>
+                        <div class="lead-form-group">
+                            <label for="lead-last-name">Last Name</label>
+                            <input type="text" id="lead-last-name" name="lastName" class="lead-form-input" placeholder="Doe" required>
+                        </div>
+                    </div>
+                    <div class="lead-form-group">
+                        <label for="lead-email">Work Email</label>
+                        <input type="email" id="lead-email" name="email" class="lead-form-input" placeholder="john@company.com" required>
+                    </div>
+                    <div class="lead-form-group">
+                        <label for="lead-phone">Phone Number <span class="optional">(Optional)</span></label>
+                        <input type="tel" id="lead-phone" name="phone" class="lead-form-input" placeholder="+1 (555) 123-4567">
+                    </div>
+                    <div class="lead-form-group">
+                        <label for="lead-company-size">Company Size</label>
+                        <select id="lead-company-size" name="companySize" class="lead-form-select" required>
+                            <option value="">Select company size</option>
+                            <option value="1-10">1-10 employees</option>
+                            <option value="11-50">11-50 employees</option>
+                            <option value="51-200">51-200 employees</option>
+                            <option value="201-500">201-500 employees</option>
+                            <option value="500+">500+ employees</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="lead-form-submit">Get Started Free</button>
+                </form>
+                <div class="lead-form-footer">
+                    <p>By submitting, you agree to our <a href="/terms">Terms</a> and <a href="/privacy">Privacy Policy</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal" id="success-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="success-modal-close">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            </button>
+            <div class="text-center" style="padding: 2rem 0;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2" width="64" height="64" style="margin: 0 auto 1.5rem;"><circle cx="12" cy="12" r="10"/><polyline points="16 10 10 16 8 14"/></svg>
+                <h3 class="modal-title">You're on the list!</h3>
+                <p class="text-secondary" style="margin-bottom: 1.5rem;">We'll reach out soon with your early access invite. Check your email for confirmation.</p>
+                <a href="/blog" class="btn btn-secondary">Read Our Blog While You Wait</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Theme toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        const sunIcon = themeToggle.querySelector('.sun-icon');
+        const moonIcon = themeToggle.querySelector('.moon-icon');
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        html.setAttribute('data-theme', savedTheme);
+        if (savedTheme === 'dark') { sunIcon.classList.add('hidden'); moonIcon.classList.remove('hidden'); }
+        themeToggle.addEventListener('click', () => {
+            const newTheme = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            sunIcon.classList.toggle('hidden'); moonIcon.classList.toggle('hidden');
+        });
+
+        // Reveal animations
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Lead Modal
+        const leadModal = document.getElementById('lead-modal');
+        const leadModalClose = document.getElementById('lead-modal-close');
+        const leadForm = document.getElementById('lead-form');
+        const successModal = document.getElementById('success-modal');
+        const successModalClose = document.getElementById('success-modal-close');
+
+        function openLeadModal() {
+            leadModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeLeadModal() {
+            leadModal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.querySelectorAll('a[href="/#signup"], a[href*="#signup"]').forEach(link => {
+            link.addEventListener('click', (e) => { e.preventDefault(); openLeadModal(); });
+        });
+
+        leadModalClose.addEventListener('click', closeLeadModal);
+        leadModal.addEventListener('click', (e) => { if (e.target === leadModal) closeLeadModal(); });
+
+        leadForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(leadForm);
+            const data = {
+                name: `${formData.get('firstName')} ${formData.get('lastName')}`,
+                email: formData.get('email'),
+                phone: formData.get('phone') || '',
+                companySize: formData.get('companySize'),
+                source: 'case-study-ai-ml',
+                timestamp: new Date().toISOString()
+            };
+            const submitBtn = leadForm.querySelector('.lead-form-submit');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Submitting...';
+            submitBtn.disabled = true;
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxQ5AqA374MPUA_HBuOHjxN22ktzmC_lqNV8fhplih_vsDye9xqWO8QIB-ABJr7qLOsaA/exec';
+            try {
+                await fetch(scriptURL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
+                closeLeadModal();
+                successModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                leadForm.reset();
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Something went wrong. Please try again.');
+            } finally {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }
+        });
+
+        successModalClose.addEventListener('click', () => { successModal.classList.remove('active'); document.body.style.overflow = ''; });
+        successModal.addEventListener('click', (e) => { if (e.target === successModal) { successModal.classList.remove('active'); document.body.style.overflow = ''; } });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { closeLeadModal(); successModal.classList.remove('active'); document.body.style.overflow = ''; } });
+    </script>
+</body>
+</html>
