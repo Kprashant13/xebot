@@ -112,56 +112,74 @@
     </div>
 
     <!-- Lead Capture Modal -->
-    <div class="lead-modal-overlay" id="lead-modal-overlay">
-        <div class="lead-modal">
-            <button class="lead-modal-close" id="lead-modal-close">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M18 6L6 18M6 6l12 12"/></svg>
-            </button>
+    <div class="lead-modal" id="lead-modal">
+        <div class="lead-modal-content">
             <div class="lead-modal-header">
-                <h2>Get Started with Xebot</h2>
-                <p>Join leading companies using AI-native coding interviews</p>
-            </div>
-            <form class="lead-modal-form" id="lead-modal-form">
-                <div class="lead-form-row">
-                    <div class="lead-form-group">
-                        <label for="lead-first-name">First Name *</label>
-                        <input type="text" id="lead-first-name" name="firstName" required placeholder="John">
-                    </div>
-                    <div class="lead-form-group">
-                        <label for="lead-last-name">Last Name *</label>
-                        <input type="text" id="lead-last-name" name="lastName" required placeholder="Doe">
-                    </div>
-                </div>
-                <div class="lead-form-group">
-                    <label for="lead-email">Work Email *</label>
-                    <input type="email" id="lead-email" name="email" required placeholder="john@company.com">
-                </div>
-                <div class="lead-form-group">
-                    <label for="lead-phone">Phone Number</label>
-                    <input type="tel" id="lead-phone" name="phone" placeholder="+1 (555) 000-0000">
-                </div>
-                <div class="lead-form-group">
-                    <label for="lead-company-size">Company Size *</label>
-                    <select id="lead-company-size" name="companySize" required>
-                        <option value="">Select company size</option>
-                        <option value="1-10">1-10 employees</option>
-                        <option value="11-50">11-50 employees</option>
-                        <option value="51-200">51-200 employees</option>
-                        <option value="201-500">201-500 employees</option>
-                        <option value="501-1000">501-1000 employees</option>
-                        <option value="1000+">1000+ employees</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn btn-gradient btn-full">
-                    <span class="btn-text">Get Started Free</span>
-                    <span class="btn-loader hidden">
-                        <svg class="spinner" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" stroke-opacity="0.25"/><path d="M12 2a10 10 0 0 1 10 10" stroke-linecap="round"/></svg>
-                    </span>
+                <h3>Get Started with Xebot</h3>
+                <button class="lead-modal-close" id="lead-modal-close">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                        <path d="M18 6L6 18M6 6l12 12"/>
+                    </svg>
                 </button>
-            </form>
-            <p class="lead-modal-footer">By signing up, you agree to our <a href="/terms">Terms</a> and <a href="/privacy">Privacy Policy</a></p>
+            </div>
+            <div class="lead-modal-body">
+                <p class="lead-modal-subtitle">Join 23 companies already using Xebot to hire smarter.</p>
+
+                <div class="lead-modal-benefits">
+                    <div class="lead-modal-benefit">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <span>Free trial with no credit card required</span>
+                    </div>
+                    <div class="lead-modal-benefit">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <span>AI-powered coding assessments</span>
+                    </div>
+                    <div class="lead-modal-benefit">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <span>Evaluate vibe coding skills</span>
+                    </div>
+                </div>
+
+                <form class="lead-form" id="lead-form">
+                    <div class="lead-form-row">
+                        <div class="lead-form-group">
+                            <label for="lead-first-name">First Name</label>
+                            <input type="text" id="lead-first-name" name="firstName" class="lead-form-input" placeholder="John" required>
+                        </div>
+                        <div class="lead-form-group">
+                            <label for="lead-last-name">Last Name</label>
+                            <input type="text" id="lead-last-name" name="lastName" class="lead-form-input" placeholder="Doe" required>
+                        </div>
+                    </div>
+                    <div class="lead-form-group">
+                        <label for="lead-email">Work Email</label>
+                        <input type="email" id="lead-email" name="email" class="lead-form-input" placeholder="john@company.com" required>
+                    </div>
+                    <div class="lead-form-group">
+                        <label for="lead-phone">Phone Number <span class="optional">(Optional)</span></label>
+                        <input type="tel" id="lead-phone" name="phone" class="lead-form-input" placeholder="+1 (555) 123-4567">
+                    </div>
+                    <div class="lead-form-group">
+                        <label for="lead-company-size">Company Size</label>
+                        <select id="lead-company-size" name="companySize" class="lead-form-select" required>
+                            <option value="">Select company size</option>
+                            <option value="1-10">1-10 employees</option>
+                            <option value="11-50">11-50 employees</option>
+                            <option value="51-200">51-200 employees</option>
+                            <option value="201-500">201-500 employees</option>
+                            <option value="500+">500+ employees</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="lead-form-submit">Get Started Free</button>
+                </form>
+
+                <div class="lead-form-footer">
+                    <p>By submitting, you agree to our <a href="/terms">Terms</a> and <a href="/privacy">Privacy Policy</a>.</p>
+                </div>
+            </div>
         </div>
     </div>
+
 
     <article class="blog-article">
         <div class="container">
@@ -608,38 +626,39 @@
         mobileNavClose.addEventListener('click', () => { mobileNav.classList.remove('open'); document.body.style.overflow = ''; });
 
         // Lead Modal
-        const leadModalOverlay = document.getElementById('lead-modal-overlay');
+        const leadModal = document.getElementById('lead-modal');
         const leadModalClose = document.getElementById('lead-modal-close');
-        const leadModalForm = document.getElementById('lead-modal-form');
+        const leadForm = document.getElementById('lead-form');
 
         document.querySelectorAll('.btn-open-lead-modal').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 e.preventDefault();
-                leadModalOverlay.classList.add('open');
+                leadModal.classList.add('active');
                 document.body.style.overflow = 'hidden';
             });
         });
 
         leadModalClose.addEventListener('click', () => {
-            leadModalOverlay.classList.remove('open');
+            leadModal.classList.remove('active');
             document.body.style.overflow = '';
         });
 
-        leadModalOverlay.addEventListener('click', (e) => {
-            if (e.target === leadModalOverlay) {
-                leadModalOverlay.classList.remove('open');
+        leadModal.addEventListener('click', (e) => {
+            if (e.target === leadModal) {
+                leadModal.classList.remove('active');
                 document.body.style.overflow = '';
             }
         });
 
-        leadModalForm.addEventListener('submit', async (e) => {
+        leadForm.addEventListener('submit', async (e) => {
             e.preventDefault();
-            const submitBtn = leadModalForm.querySelector('button[type="submit"]');
-            const btnText = submitBtn.querySelector('.btn-text');
-            const btnLoader = submitBtn.querySelector('.btn-loader');
+            const submitBtn = leadForm.querySelector('.lead-form-submit');
+            const originalText = submitBtn.textContent;
+            
+            
 
-            btnText.classList.add('hidden');
-            btnLoader.classList.remove('hidden');
+            
+            submitBtn.textContent = 'Submitting...';
             submitBtn.disabled = true;
 
             const formData = {
@@ -660,7 +679,7 @@
                     body: JSON.stringify(formData)
                 });
 
-                leadModalForm.innerHTML = `
+                leadModal.querySelector(".lead-modal-body").innerHTML = `
                     <div class="lead-form-success">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="48" height="48" style="color: var(--accent-primary); margin-bottom: 1rem;">
                             <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
@@ -671,8 +690,8 @@
                     </div>
                 `;
             } catch (error) {
-                btnText.classList.remove('hidden');
-                btnLoader.classList.add('hidden');
+                submitBtn.textContent = originalText;
+                
                 submitBtn.disabled = false;
                 alert('Something went wrong. Please try again.');
             }
