@@ -524,97 +524,351 @@
         </div>
     </section>
 
-    <!-- Platform Preview -->
+    <!-- Platform Preview Carousel -->
     <section class="section bg-secondary reveal" id="demo">
         <div class="container">
             <div class="section-header">
                 <span class="section-label">Platform Preview</span>
-                <h2 class="section-title">AI-assisted coding environment</h2>
+                <h2 class="section-title">World-class AI coding interview platform</h2>
                 <p class="section-description">
-                    Candidates code in a professional environment with AI assistance—just like on the job.
+                    Candidates code with Claude, Cursor, or their preferred AI assistant—just like on the job.
                 </p>
             </div>
 
-            <div class="editor-preview">
-                <div class="editor-header">
-                    <div class="editor-dots">
-                        <span class="editor-dot editor-dot-red"></span>
-                        <span class="editor-dot editor-dot-yellow"></span>
-                        <span class="editor-dot editor-dot-green"></span>
-                    </div>
-                    <span class="editor-title">challenge.py — Xebot Interview Environment</span>
-                </div>
-                <div class="editor-tabs">
-                    <span class="editor-tab active">challenge.py</span>
-                    <span class="editor-tab">test_challenge.py</span>
-                    <span class="editor-tab">README.md</span>
-                </div>
-                <div class="editor-body">
-                    <div class="editor-sidebar">
-                        <div class="editor-sidebar-icon active">
-                            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
-                                <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/>
-                                <polyline points="13 2 13 9 20 9"/>
-                            </svg>
-                        </div>
-                        <div class="editor-sidebar-icon">
-                            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
-                                <circle cx="11" cy="11" r="8"/>
-                                <path d="M21 21l-4.35-4.35"/>
-                            </svg>
-                        </div>
-                        <div class="editor-sidebar-icon">
-                            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
-                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="editor-lines">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16</div>
-                    <div class="editor-code">
-<span class="keyword">import</span> logging<br>
-<span class="keyword">from</span> opentelemetry <span class="keyword">import</span> trace<br>
-<br>
-<span class="comment"># Configure observability</span><br>
-tracer <span class="operator">=</span> trace.<span class="function">get_tracer</span>(<span class="string">"xebot.challenge"</span>)<br>
-logger <span class="operator">=</span> logging.<span class="function">getLogger</span>(__name__)<br>
-<br>
-<span class="keyword">class</span> <span class="function">DataProcessor</span>:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">def</span> <span class="function">__init__</span>(self, config):<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.config <span class="operator">=</span> config<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;logger.<span class="function">info</span>(<span class="string">"Initializing processor"</span>)<br>
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">@</span>tracer.<span class="function">start_as_current_span</span>(<span class="string">"process"</span>)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">def</span> <span class="function">process</span>(self, data):<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment"># AI: Help me add error handling</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result <span class="operator">=</span> self.<span class="function">transform</span>(data)<span class="comment">|</span>
-                    </div>
-                    <div class="editor-ai-panel">
-                        <div class="ai-panel-header">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                            </svg>
-                            AI Assistant
-                        </div>
-                        <div class="ai-suggestion">
-                            <div class="ai-suggestion-label">Suggestion</div>
-                            <div class="ai-suggestion-text">
-                                Add try-except block with proper logging. Include span attributes for tracing.
+            <!-- Carousel -->
+            <div class="platform-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-slides" id="carousel-slides">
+                        <!-- Slide 1: Challenge Overview -->
+                        <div class="carousel-slide active">
+                            <div class="preview-screen">
+                                <div class="preview-header">
+                                    <div class="preview-dots">
+                                        <span class="preview-dot red"></span>
+                                        <span class="preview-dot yellow"></span>
+                                        <span class="preview-dot green"></span>
+                                    </div>
+                                    <span class="preview-title">Xebot — Challenge Overview</span>
+                                </div>
+                                <div class="preview-body preview-challenge">
+                                    <div class="challenge-header-preview">
+                                        <div class="challenge-badge">Backend Engineering</div>
+                                        <div class="challenge-time">90 minutes</div>
+                                    </div>
+                                    <h3 class="challenge-title-preview">Build a Real-time Data Pipeline</h3>
+                                    <div class="challenge-desc-preview">
+                                        <p>Design and implement a data processing pipeline that handles streaming events, with proper error handling, observability, and retry logic.</p>
+                                    </div>
+                                    <div class="challenge-skills">
+                                        <span class="skill-tag">System Design</span>
+                                        <span class="skill-tag">AI Collaboration</span>
+                                        <span class="skill-tag">Debugging</span>
+                                        <span class="skill-tag">Observability</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="ai-suggestion">
-                            <div class="ai-suggestion-label">Best Practice</div>
-                            <div class="ai-suggestion-text">
-                                Consider retry logic with exponential backoff for transient failures.
+
+                        <!-- Slide 2: Planning Phase -->
+                        <div class="carousel-slide">
+                            <div class="preview-screen">
+                                <div class="preview-header">
+                                    <div class="preview-dots">
+                                        <span class="preview-dot red"></span>
+                                        <span class="preview-dot yellow"></span>
+                                        <span class="preview-dot green"></span>
+                                    </div>
+                                    <span class="preview-title">Xebot — Planning & Architecture</span>
+                                </div>
+                                <div class="preview-body preview-planning">
+                                    <div class="planning-sidebar">
+                                        <div class="planning-section">
+                                            <div class="planning-label">Architecture Notes</div>
+                                            <div class="planning-content">
+                                                <div class="planning-item">1. Event ingestion layer</div>
+                                                <div class="planning-item">2. Message queue (Kafka)</div>
+                                                <div class="planning-item">3. Processing workers</div>
+                                                <div class="planning-item">4. Dead letter queue</div>
+                                            </div>
+                                        </div>
+                                        <div class="planning-section">
+                                            <div class="planning-label">Key Decisions</div>
+                                            <div class="planning-content">
+                                                <div class="planning-check">At-least-once delivery</div>
+                                                <div class="planning-check">Idempotent consumers</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="planning-diagram">
+                                        <svg viewBox="0 0 300 180" fill="none">
+                                            <rect x="10" y="70" width="60" height="40" rx="4" fill="var(--accent-primary)" opacity="0.2" stroke="var(--accent-primary)" stroke-width="1"/>
+                                            <text x="40" y="94" text-anchor="middle" fill="var(--text-primary)" font-size="10">Events</text>
+                                            <rect x="100" y="70" width="60" height="40" rx="4" fill="var(--accent-secondary)" opacity="0.2" stroke="var(--accent-secondary)" stroke-width="1"/>
+                                            <text x="130" y="94" text-anchor="middle" fill="var(--text-primary)" font-size="10">Queue</text>
+                                            <rect x="190" y="70" width="60" height="40" rx="4" fill="var(--success)" opacity="0.2" stroke="var(--success)" stroke-width="1"/>
+                                            <text x="220" y="94" text-anchor="middle" fill="var(--text-primary)" font-size="10">Process</text>
+                                            <path d="M70 90 L100 90" stroke="var(--text-tertiary)" stroke-width="2" marker-end="url(#arrow)"/>
+                                            <path d="M160 90 L190 90" stroke="var(--text-tertiary)" stroke-width="2" marker-end="url(#arrow)"/>
+                                            <rect x="190" y="130" width="60" height="30" rx="4" fill="var(--error)" opacity="0.2" stroke="var(--error)" stroke-width="1"/>
+                                            <text x="220" y="149" text-anchor="middle" fill="var(--text-primary)" font-size="9">DLQ</text>
+                                            <path d="M220 110 L220 130" stroke="var(--text-tertiary)" stroke-width="1" stroke-dasharray="4"/>
+                                            <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="var(--text-tertiary)"/></marker></defs>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3: Claude Code Integration -->
+                        <div class="carousel-slide">
+                            <div class="preview-screen">
+                                <div class="preview-header">
+                                    <div class="preview-dots">
+                                        <span class="preview-dot red"></span>
+                                        <span class="preview-dot yellow"></span>
+                                        <span class="preview-dot green"></span>
+                                    </div>
+                                    <span class="preview-title">VS Code + Claude Code — AI Pair Programming</span>
+                                </div>
+                                <div class="preview-body preview-editor">
+                                    <div class="editor-main">
+                                        <div class="editor-sidebar-mini">
+                                            <div class="sidebar-icon active"></div>
+                                            <div class="sidebar-icon"></div>
+                                            <div class="sidebar-icon"></div>
+                                        </div>
+                                        <div class="editor-content">
+                                            <div class="editor-line"><span class="ln">1</span><span class="kw">async def</span> <span class="fn">process_event</span>(event):</div>
+                                            <div class="editor-line"><span class="ln">2</span>    <span class="kw">with</span> tracer.start_span(<span class="st">"process"</span>):</div>
+                                            <div class="editor-line"><span class="ln">3</span>        <span class="kw">try</span>:</div>
+                                            <div class="editor-line"><span class="ln">4</span>            result = <span class="kw">await</span> transform(event)</div>
+                                            <div class="editor-line"><span class="ln">5</span>            <span class="cm"># Claude: Add retry logic here</span></div>
+                                            <div class="editor-line highlight"><span class="ln">6</span>            <span class="cursor"></span></div>
+                                        </div>
+                                    </div>
+                                    <div class="claude-panel">
+                                        <div class="claude-header">
+                                            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+                                            Claude Code
+                                        </div>
+                                        <div class="claude-message">
+                                            <div class="claude-label">Implementing retry with exponential backoff:</div>
+                                            <div class="claude-code">
+                                                <code>@retry(max_attempts=3, backoff=2.0)</code>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 4: Cursor Integration -->
+                        <div class="carousel-slide">
+                            <div class="preview-screen">
+                                <div class="preview-header">
+                                    <div class="preview-dots">
+                                        <span class="preview-dot red"></span>
+                                        <span class="preview-dot yellow"></span>
+                                        <span class="preview-dot green"></span>
+                                    </div>
+                                    <span class="preview-title">Cursor — AI-Native Editor</span>
+                                </div>
+                                <div class="preview-body preview-editor">
+                                    <div class="editor-main">
+                                        <div class="editor-sidebar-mini">
+                                            <div class="sidebar-icon active"></div>
+                                            <div class="sidebar-icon"></div>
+                                            <div class="sidebar-icon"></div>
+                                        </div>
+                                        <div class="editor-content">
+                                            <div class="editor-line"><span class="ln">1</span><span class="kw">class</span> <span class="fn">EventConsumer</span>:</div>
+                                            <div class="editor-line"><span class="ln">2</span>    <span class="kw">def</span> <span class="fn">__init__</span>(self, config):</div>
+                                            <div class="editor-line"><span class="ln">3</span>        self.logger = get_logger()</div>
+                                            <div class="editor-line ghost"><span class="ln">4</span>        <span class="ghost-text">self.metrics = MetricsClient()</span></div>
+                                            <div class="editor-line ghost"><span class="ln">5</span>        <span class="ghost-text">self.tracer = init_tracer()</span></div>
+                                            <div class="editor-line"><span class="ln">6</span>        <span class="cursor"></span></div>
+                                        </div>
+                                    </div>
+                                    <div class="cursor-panel">
+                                        <div class="cursor-header">
+                                            <span class="cursor-icon">⌘K</span>
+                                            Cursor AI
+                                        </div>
+                                        <div class="cursor-suggestion">
+                                            <span class="cursor-tab">Tab</span> to accept autocomplete
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 5: Debugging & Observability -->
+                        <div class="carousel-slide">
+                            <div class="preview-screen">
+                                <div class="preview-header">
+                                    <div class="preview-dots">
+                                        <span class="preview-dot red"></span>
+                                        <span class="preview-dot yellow"></span>
+                                        <span class="preview-dot green"></span>
+                                    </div>
+                                    <span class="preview-title">Xebot — Debug Console & Metrics</span>
+                                </div>
+                                <div class="preview-body preview-debug">
+                                    <div class="debug-main">
+                                        <div class="debug-logs">
+                                            <div class="debug-label">Logs</div>
+                                            <div class="log-entry info">[INFO] Processing event batch_001</div>
+                                            <div class="log-entry warn">[WARN] Retry attempt 1/3</div>
+                                            <div class="log-entry info">[INFO] Successfully processed</div>
+                                            <div class="log-entry error">[ERROR] Connection timeout</div>
+                                        </div>
+                                        <div class="debug-traces">
+                                            <div class="debug-label">Traces</div>
+                                            <div class="trace-item">
+                                                <div class="trace-bar" style="width: 100%;">process_event <span>245ms</span></div>
+                                            </div>
+                                            <div class="trace-item indent">
+                                                <div class="trace-bar" style="width: 60%;">transform <span>147ms</span></div>
+                                            </div>
+                                            <div class="trace-item indent">
+                                                <div class="trace-bar" style="width: 30%;">validate <span>73ms</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="debug-sidebar">
+                                        <div class="metric-card-mini">
+                                            <div class="metric-label">Success Rate</div>
+                                            <div class="metric-value-mini">94.2%</div>
+                                        </div>
+                                        <div class="metric-card-mini">
+                                            <div class="metric-label">Avg Latency</div>
+                                            <div class="metric-value-mini">245ms</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <!-- Carousel Controls -->
+                <div class="carousel-controls">
+                    <button class="carousel-btn carousel-prev" id="carousel-prev" aria-label="Previous slide">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                            <polyline points="15 18 9 12 15 6"/>
+                        </svg>
+                    </button>
+                    <div class="carousel-dots" id="carousel-dots">
+                        <button class="carousel-dot active" data-slide="0" aria-label="Slide 1"></button>
+                        <button class="carousel-dot" data-slide="1" aria-label="Slide 2"></button>
+                        <button class="carousel-dot" data-slide="2" aria-label="Slide 3"></button>
+                        <button class="carousel-dot" data-slide="3" aria-label="Slide 4"></button>
+                        <button class="carousel-dot" data-slide="4" aria-label="Slide 5"></button>
+                    </div>
+                    <button class="carousel-btn carousel-next" id="carousel-next" aria-label="Next slide">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                            <polyline points="9 18 15 12 9 6"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Slide Labels -->
+                <div class="carousel-labels">
+                    <span class="carousel-label active" data-slide="0">Challenge</span>
+                    <span class="carousel-label" data-slide="1">Planning</span>
+                    <span class="carousel-label" data-slide="2">Claude Code</span>
+                    <span class="carousel-label" data-slide="3">Cursor</span>
+                    <span class="carousel-label" data-slide="4">Debugging</span>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- AI Productivity Section -->
+    <section class="section reveal" id="why-ai">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">The Research</span>
+                <h2 class="section-title">Why AI-native developers outperform</h2>
+                <p class="section-description">
+                    Studies show developers using AI assistants complete tasks 55% faster. Here's why traditional interviews fail to identify this new breed of engineer.
+                </p>
+            </div>
+
+            <div class="productivity-grid">
+                <div class="productivity-stats">
+                    <div class="stat-card">
+                        <div class="stat-value">55%</div>
+                        <div class="stat-label">Faster Task Completion</div>
+                        <div class="stat-source">GitHub/Microsoft Study</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">46%</div>
+                        <div class="stat-label">Code Now Written by AI</div>
+                        <div class="stat-source">GitHub Copilot Data</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">84%</div>
+                        <div class="stat-label">Developers Using AI Tools</div>
+                        <div class="stat-source">Stack Overflow 2025</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">35%</div>
+                        <div class="stat-label">Speed Boost for New Hires</div>
+                        <div class="stat-source">Accenture Study</div>
+                    </div>
+                </div>
+
+                <div class="productivity-insights">
+                    <div class="insight-card">
+                        <div class="insight-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                            </svg>
+                        </div>
+                        <h3>The Productivity Gap Is Real</h3>
+                        <p>Google's randomized trial found AI-assisted developers completed tasks 21% faster. Microsoft's study across 5,000 developers showed a 26% productivity increase—effectively turning 8 hours into 10 hours of output.</p>
+                    </div>
+
+                    <div class="insight-card">
+                        <div class="insight-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                                <line x1="12" y1="17" x2="12.01" y2="17"/>
+                            </svg>
+                        </div>
+                        <h3>Traditional Interviews Miss This</h3>
+                        <p>LeetCode-style interviews ban AI tools—the exact tools your new hire will use daily. You're evaluating memorization skills while ignoring the collaboration abilities that actually drive productivity.</p>
+                    </div>
+
+                    <div class="insight-card">
+                        <div class="insight-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 20h9"/>
+                                <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+                            </svg>
+                        </div>
+                        <h3>New Skills Matter More</h3>
+                        <p>90% of developers report feeling more fulfilled when using AI tools. But 46% don't trust AI outputs blindly. The best engineers know when to accept, when to reject, and how to validate—skills no algorithm quiz measures.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="productivity-quote">
+                <blockquote>
+                    "There's a new kind of coding emerging... I call it 'vibe coding' where you fully give in to the vibes, embrace exponentials, and forget that the code even exists."
+                </blockquote>
+                <cite>
+                    <strong>Andrej Karpathy</strong>
+                    <span>Former Director of AI at Tesla, Founding Member of OpenAI</span>
+                </cite>
+            </div>
+        </div>
+    </section>
+
     <!-- Testimonials -->
-    <section class="section reveal">
+    <section class="section bg-secondary reveal">
         <div class="container">
             <div class="section-header">
                 <span class="section-label">Early Feedback</span>
@@ -823,10 +1077,19 @@ logger <span class="operator">=</span> logging.<span class="function">getLogger<
                 </div>
 
                 <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="/case-study-fintech">FinTech Case Study</a></li>
+                        <li><a href="/case-study-ai-ml">AI/ML Case Study</a></li>
+                        <li><a href="/case-study-devtools">DevTools Case Study</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
                     <h4>Company</h4>
                     <ul class="footer-links">
                         <li><a href="/about">About</a></li>
-                        <li><a href="/blog">Blog</a></li>
                         <li><a href="/careers">Careers</a></li>
                         <li><a href="/contact">Contact</a></li>
                     </ul>
@@ -967,6 +1230,50 @@ logger <span class="operator">=</span> logging.<span class="function">getLogger<
                 moonIcon.classList.add('hidden');
             }
         }
+
+        // Platform Carousel
+        const carouselSlides = document.getElementById('carousel-slides');
+        const carouselDots = document.querySelectorAll('.carousel-dot');
+        const carouselLabels = document.querySelectorAll('.carousel-label');
+        const prevBtn = document.getElementById('carousel-prev');
+        const nextBtn = document.getElementById('carousel-next');
+        const slides = document.querySelectorAll('.carousel-slide');
+        let currentSlide = 0;
+        const totalSlides = slides.length;
+
+        function goToSlide(index) {
+            if (index < 0) index = totalSlides - 1;
+            if (index >= totalSlides) index = 0;
+            currentSlide = index;
+
+            carouselSlides.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === currentSlide);
+            });
+
+            carouselDots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentSlide);
+            });
+
+            carouselLabels.forEach((label, i) => {
+                label.classList.toggle('active', i === currentSlide);
+            });
+        }
+
+        prevBtn.addEventListener('click', () => goToSlide(currentSlide - 1));
+        nextBtn.addEventListener('click', () => goToSlide(currentSlide + 1));
+
+        carouselDots.forEach((dot, i) => {
+            dot.addEventListener('click', () => goToSlide(i));
+        });
+
+        carouselLabels.forEach((label, i) => {
+            label.addEventListener('click', () => goToSlide(i));
+        });
+
+        // Auto-advance carousel every 5 seconds
+        setInterval(() => goToSlide(currentSlide + 1), 5000);
 
         // Mobile Navigation
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
