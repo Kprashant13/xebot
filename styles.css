@@ -2560,11 +2560,62 @@ a:hover { color: var(--accent-secondary); }
 
 /* Carousel Mobile */
 @media (max-width: 768px) {
+  .platform-carousel {
+    max-width: 100%;
+    margin: 0 -1rem;
+    width: calc(100% + 2rem);
+  }
+
+  .carousel-container {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+
   .preview-body {
-    min-height: 280px;
+    min-height: 250px;
     padding: var(--space-md);
   }
 
+  .preview-header {
+    padding: var(--space-xs) var(--space-md);
+  }
+
+  .preview-title {
+    font-size: 0.6875rem;
+  }
+
+  .preview-dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  /* Challenge slide mobile */
+  .challenge-header-preview {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-xs);
+  }
+
+  .challenge-title-preview {
+    font-size: 1.125rem;
+  }
+
+  .challenge-desc-preview p {
+    font-size: 0.875rem;
+  }
+
+  .challenge-skills {
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+  }
+
+  .skill-tag {
+    font-size: 0.6875rem;
+    padding: var(--space-xs) var(--space-sm);
+  }
+
+  /* Planning slide mobile */
   .preview-planning {
     grid-template-columns: 1fr;
   }
@@ -2573,6 +2624,20 @@ a:hover { color: var(--accent-secondary); }
     display: none;
   }
 
+  .planning-sidebar {
+    gap: var(--space-md);
+  }
+
+  .planning-label {
+    font-size: 0.75rem;
+  }
+
+  .planning-item,
+  .planning-check {
+    font-size: 0.8125rem;
+  }
+
+  /* Editor slide mobile */
   .preview-editor {
     grid-template-columns: 1fr;
   }
@@ -2581,20 +2646,82 @@ a:hover { color: var(--accent-secondary); }
     display: none;
   }
 
+  .editor-content {
+    font-size: 0.75rem;
+  }
+
+  .editor-line {
+    padding: 2px var(--space-sm);
+  }
+
+  .editor-sidebar-mini {
+    width: 30px;
+    padding: var(--space-sm) var(--space-xs);
+  }
+
+  /* Debug slide mobile */
   .preview-debug {
     grid-template-columns: 1fr;
+    gap: var(--space-md);
   }
 
   .debug-sidebar {
     flex-direction: row;
+    gap: var(--space-sm);
   }
 
   .metric-card-mini {
     flex: 1;
+    padding: var(--space-sm);
   }
 
+  .metric-value-mini {
+    font-size: 1rem;
+  }
+
+  .metric-label-mini {
+    font-size: 0.625rem;
+  }
+
+  .debug-logs {
+    gap: var(--space-xs);
+  }
+
+  .log-entry {
+    font-size: 0.6875rem;
+    padding: var(--space-xs);
+  }
+
+  .debug-label {
+    font-size: 0.6875rem;
+  }
+
+  .trace-item {
+    font-size: 0.6875rem;
+  }
+
+  /* Carousel controls mobile */
   .carousel-labels {
     display: none;
+  }
+
+  .carousel-controls {
+    padding: var(--space-md);
+    gap: var(--space-md);
+  }
+
+  .carousel-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .carousel-dots {
+    gap: var(--space-sm);
+  }
+
+  .carousel-dot {
+    width: 8px;
+    height: 8px;
   }
 }
 
